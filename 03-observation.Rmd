@@ -1,0 +1,16 @@
+# Data Observation and Curation
+
+## Data Management
+
+### Large Files
+
+Git and GitHub are not designed to track or store large files over 100 mb.
+
+- If you have accidentally attempted to commit changes with large files, do this...
+- Recommend saving large files on OSF or Figshare and writing scripts to pull them into the private folder
+
+
+## Accomodate the unexpected!
+
+You will likely encounter unexpected challenges and the need to change your original, pre-analysis registration plan. 
+This is normal: just be diligent about updating your pre-analysis plan, committing changes 

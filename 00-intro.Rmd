@@ -104,7 +104,7 @@ We follow the open science workflow composed of steps for:
 
 1. Provocation
 1. Ideation
-1. Knowledge generation
+1. Data observation and curation ("Knowledge Generation" in NASEM 2018)
 1. Validation
 1. Dissemination
 1. Preservation

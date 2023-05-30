@@ -34,8 +34,11 @@ Reference: www.edreplication.org
 - why make it in Git?
 - why make it *now*?
 - Create new Git repository based on our template
+  - public / private status
+  - changes are tracked with commits
 - Orientation to the template structure / file system
   - top-level readme
+  - license
   - Markdown language
   - metadata
   - docs / reports

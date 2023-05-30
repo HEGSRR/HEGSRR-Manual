@@ -1,22 +1,42 @@
-# Ideation
+# Ideation and Research Design
 
 In the provocation phase, you already developed a specific research question, chose an archetypical research design, and set up a research compendium.
 
 Now it is time to develop your research plan!
+
+Remember, you can amend your research plan later.
+You can even embargo your research plan and git repository for now before making it public later.
+The point is to start increasing the transparency and provenance of your research project *now*, so that it *can* be made public later.
+
+## Develop your Research Plan
+
+It is already time to translate your specific research question and achetypical research design, into a specific research plan.
+
+### Reproduction studies
+
+### Replication studies
+
+
+
+## Project-level metadata
+
+- Many components of the ideation phase will require specific project-level metadata.
+- Most systems are compatible with the DUBLIN Core standards: https://www.dublincore.org/specifications/dublin-core/ 
+- Title
+- Contributors
+- Extent: region / time
 
 ## Collect preliminary data
 
 - metadata!
 - code/scripts for data acquisition
 - directory structure for data
-  - scratch
+  - scratch (not tracked)
   - raw / public 
-  - raw / private
+  - raw / private (not tracked)
   - derived / public
-  - derived / private
+  - derived / private (not tracked)
 - file size limits for GitHub / GitLab
-
-## Pilot study
 
 ## Open Science Writing
 
@@ -28,13 +48,27 @@ Now it is time to develop your research plan!
   - Rmarkdown computational notebook
   - Jupyter Python
 
+## Human Subjects Protocols
+
+- store IRB protocol and any forms or instruments in procedures / protocols 
+- the research compendium is part of the data management plan
+- read ahead to dissemination phase for considering privacy and data management
+
 ## Pre-register Analysis Plan
 
+- OSF and pre-registrations
+- Create an OSF project
+- Link GitHub to OSF
+- 
 
+## Pilot study
+
+- 
 
 ## Conclusion
 
-You have developed your archetypical research design into a specific research plan.
-You have developed your research compendium into ... 
+You have developed your archetypical research design into a specific registered research plan.
+You have developed your research compendium 
+You have connected your research registration on OSF to a GitHub 
 
 
