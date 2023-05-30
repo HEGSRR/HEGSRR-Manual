@@ -1,0 +1,51 @@
+# Provocation
+
+What do you have as you enter the provocation phase? Interest in a topic... 
+
+Framework for discovering and proving causal mechanisms, and extending this to consider types of research questions and motivations for extensions, reanalyses, replications, or reproductions. 
+Include exploratory analysis and case studies in type of research.
+
+Reference: www.edreplication.org 
+
+## Literature review
+
+- create bibtex file for manuscript
+- beyond the manuscripts: pay attention to references to software, code, data, supplementary materials
+- use reference manager to collect references for ease of bibtex generation
+- take notes on search date, keywords, etc.
+- include preprints
+- literature reviews become more powerful with open science
+
+### Reading a research compendium
+
+- give idea of end goal at the beginning by reading one of our finished research compendium
+
+## Data at the provocation phase
+
+- Avoid biasing your research plan by interacting too much with data observations
+  - record / journal any empirical observations / interactions with data
+  - 
+- view descriptive statistics and data visualization
+- Save metadata 
+
+## Setting up research compendium
+
+- what is a research compendium?
+- why make it in Git?
+- why make it *now*?
+- Create new Git repository based on our template
+- Orientation to the template structure / file system
+  - top-level readme
+  - Markdown language
+  - metadata
+  - docs / reports
+- committing some changes to the template
+- Recommended prefixes: Or / RPl / RPr 
+
+## Conclusion
+
+At the conclusion of the provocation phase, you have:
+
+- Specific research question
+- Connect research question to literature and to archetypical research design 
+- Set up template research compendium

@@ -1,0 +1,40 @@
+# Ideation
+
+In the provocation phase, you already developed a specific research question, chose an archetypical research design, and set up a research compendium.
+
+Now it is time to develop your research plan!
+
+## Collect preliminary data
+
+- metadata!
+- code/scripts for data acquisition
+- directory structure for data
+  - scratch
+  - raw / public 
+  - raw / private
+  - derived / public
+  - derived / private
+- file size limits for GitHub / GitLab
+
+## Pilot study
+
+## Open Science Writing
+
+- Write in plain text or code
+- new sentence on each line
+- stored in Git repository with version control
+- options:
+  - non-computational (markdown or latex only)
+  - Rmarkdown computational notebook
+  - Jupyter Python
+
+## Pre-register Analysis Plan
+
+
+
+## Conclusion
+
+You have developed your archetypical research design into a specific research plan.
+You have developed your research compendium into ... 
+
+
