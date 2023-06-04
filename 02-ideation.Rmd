@@ -26,6 +26,48 @@ It is already time to translate your specific research question and achetypical 
 - Contributors
 - Extent: region / time
 
+## Create an OSF project
+
+- https://osf.io
+- Create new project
+- Title: 
+- Storage Location: 
+- Description:  (a short abstract)
+
+Once the project is created, you will need to manage more information about it.
+
+### Project Metadata
+
+- Description (from the initial project creation)
+- Contributors (name, email, and permissions: (administrator, read & write, or read) and biliographic contributor: bibliographic or non-bibliographic)
+- Resource type: likely choose `Standard` for now, and change to a specific publicaiton type once the project reaches the publication phase.
+- Resource language: most likely, `English`
+- Funding/support information
+  - Funder Name (for NSF project, the specific division or directorate)
+  - Award Title
+  - Award info URI (web address)
+  - Award number 
+- Affiliated Institutions (this is derived from contributors if their institutions are formally affiliated with OSF)
+- Date created / modified (automatically recorded)
+- Tags (write in keywords)
+
+## OSF Pre-analysis plan registration
+
+OSF Preregistration resources: https://www.cos.io/initiatives/prereg 
+
+- Title (derived from project title)
+- Description (derived from project description)
+- contributors (derived from proj contributors, or seperate?)
+- category: project
+- license: article on licenses? https://help.osf.io/article/148-licensing 
+  - conservative option: cc-by attribution-non-commercial-no-derivatives 4.0 international 
+  - no license: you retain copyright and full restrictions
+- subjects:
+  - social and behavioral sciences: geography
+  - physical sciences and mathematics: earth sciences or environmental sciences
+- summary: describe the files you are uploading. If you are following this guide, a statement like this will suffice: "preanalysis_plan.pdf contains a pre-analysis plan following Kedron and Holler (2023): HEGSRR Template... "
+
+
 ## Collect preliminary data
 
 - metadata!

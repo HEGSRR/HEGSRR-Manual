@@ -1,0 +1,17 @@
+# Analysis and Validation
+
+## Changes to the pre-analysis plan registration
+
+Researchers will likely encounter the need to deviate from the registered pre-analysis plan.
+
+- save a version of the text file used to write and register the pre-analysis plan
+- major changes to the plan may require updating that document, rendering a new PDF and updating the registration on OSF.
+
+QUESTION: when is a change to the regitered pre-analysis plan big enough to require an update on OSF?
+- if an uncertainty or ambiguity and contingencies for that were already articulated in the pre-analysis plan, there is no need to update the plan.
+- if alterations to the pre-analysis plan may ultimately impact the interpretation of claims made by the research, the changes should be registered on OSF. 
+
+- in parallel, all changes (minor and major) should be identified with bold text or subheadings in the narrative of the analyitical plan as research progresses. Our suggested labels for changes include:
+  - 
+- update the preanalysis plan
+
