@@ -11,7 +11,7 @@ QUESTION: when is a change to the regitered pre-analysis plan big enough to requ
 - if an uncertainty or ambiguity and contingencies for that were already articulated in the pre-analysis plan, there is no need to update the plan.
 - if alterations to the pre-analysis plan may ultimately impact the interpretation of claims made by the research, the changes should be registered on OSF. 
 
-- in parallel, all changes (minor and major) should be identified with bold text or subheadings in the narrative of the analyitical plan as research progresses. Our suggested labels for changes include:
+- in parallel, all changes (minor and major) should be identified with bold text or subheadings in the narrative of the analytical plan as research progresses. Our suggested labels for changes include:
   - 
 - update the preanalysis plan
 
