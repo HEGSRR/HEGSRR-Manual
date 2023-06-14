@@ -21,7 +21,7 @@ It is already time to translate your specific research question and achetypical 
 ## Project-level metadata
 
 - Many components of the ideation phase will require specific project-level metadata.
-- Most systems are compatible with the DUBLIN Core standards: https://www.dublincore.org/specifications/dublin-core/ 
+- Most systems are compatible with the DUBLIN Core standards: https://www.dublincore.org/specifications/dublin-core/
 - Title
 - Contributors
 - Extent: region / time
@@ -30,8 +30,8 @@ It is already time to translate your specific research question and achetypical 
 
 - https://osf.io
 - Create new project
-- Title: 
-- Storage Location: 
+- Title:
+- Storage Location:
 - Description:  (a short abstract)
 
 Once the project is created, you will need to manage more information about it.
@@ -46,21 +46,21 @@ Once the project is created, you will need to manage more information about it.
   - Funder Name (for NSF project, the specific division or directorate)
   - Award Title
   - Award info URI (web address)
-  - Award number 
+  - Award number
 - Affiliated Institutions (this is derived from contributors if their institutions are formally affiliated with OSF)
 - Date created / modified (automatically recorded)
 - Tags (write in keywords)
 
 ## OSF Pre-analysis plan registration
 
-OSF Preregistration resources: https://www.cos.io/initiatives/prereg 
+OSF Preregistration resources: https://www.cos.io/initiatives/prereg
 
 - Title (derived from project title)
 - Description (derived from project description)
 - contributors (derived from proj contributors, or seperate?)
 - category: project
-- license: article on licenses? https://help.osf.io/article/148-licensing 
-  - conservative option: cc-by attribution-non-commercial-no-derivatives 4.0 international 
+- license: article on licenses? https://help.osf.io/article/148-licensing
+  - conservative option: cc-by attribution-non-commercial-no-derivatives 4.0 international
   - no license: you retain copyright and full restrictions
 - subjects:
   - social and behavioral sciences: geography
@@ -74,11 +74,37 @@ OSF Preregistration resources: https://www.cos.io/initiatives/prereg
 - code/scripts for data acquisition
 - directory structure for data
   - scratch (not tracked)
-  - raw / public 
+  - raw / public
   - raw / private (not tracked)
   - derived / public
   - derived / private (not tracked)
 - file size limits for GitHub / GitLab
+
+| Processing | Access | -- |
+| :--: | :--: | :--: |
+|  | Private | Public |
+| Raw | RPri | RPub |
+| Derived | DPri | DPub
+
+### Raw Private Data
+
+Store raw data in this folder as it is collected or downloaded if the data cannot be publicly redistributed. For example, data versioning and sharing my be restricted because of large file sizes, licensing, ethics, privacy, or confidentiality. Best practices are to include code to automate the process of downloading or simulating raw private data in the first step of the methods, or to include instructions here for accessing any private or restricted-access data.
+
+
+
+*This folder is ignored by Git versioning* with the exception of this `readme.md` file by the following lines in `.gitignore`
+
+```gitignore
+# Ignore contents of private folder, with the exception of its readme file
+private/**
+!private/readme.md
+```
+
+### Caution: Dealing with large files
+
+- GitHub will not store files larger than 100mb
+- These should be placed in `private` directories so that they are not tracked by Git or uploaded to GitHub
+- OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs. Significant data sources could be registered with their own DOI links.
 
 ## Open Science Writing
 
@@ -92,7 +118,7 @@ OSF Preregistration resources: https://www.cos.io/initiatives/prereg
 
 ## Human Subjects Protocols
 
-- store IRB protocol and any forms or instruments in procedures / protocols 
+- store IRB protocol and any forms or instruments in procedures / protocols
 - the research compendium is part of the data management plan
 - read ahead to dissemination phase for considering privacy and data management
 
@@ -101,16 +127,14 @@ OSF Preregistration resources: https://www.cos.io/initiatives/prereg
 - OSF and pre-registrations
 - Create an OSF project
 - Link GitHub to OSF
-- 
+-
 
 ## Pilot study
 
-- 
+-
 
 ## Conclusion
 
 You have developed your archetypical research design into a specific registered research plan.
-You have developed your research compendium 
-You have connected your research registration on OSF to a GitHub 
-
-
+You have developed your research compendium
+You have connected your research registration on OSF to a GitHub

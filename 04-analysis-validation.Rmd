@@ -12,6 +12,13 @@ QUESTION: when is a change to the regitered pre-analysis plan big enough to requ
 - if alterations to the pre-analysis plan may ultimately impact the interpretation of claims made by the research, the changes should be registered on OSF. 
 
 - in parallel, all changes (minor and major) should be identified with bold text or subheadings in the narrative of the analytical plan as research progresses. Our suggested labels for changes include:
-  - 
+  -
 - update the preanalysis plan
 
+## Coding and Code style
+
+R should follow Tidyverse style: https://style.tidyverse.org/ and there are two great addins:
+- stylr formats your code for you https://styler.r-lib.org/
+- lintr checks your code formatting: https://github.com/jimhester/lintr
+
+Python should follow PEP 8 Style: https://www.python.org/dev/peps/pep-0008/

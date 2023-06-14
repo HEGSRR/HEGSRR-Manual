@@ -1,11 +1,11 @@
 # Provocation
 
-What do you have as you enter the provocation phase? Interest in a topic... 
+What do you have as you enter the provocation phase? Interest in a topic...
 
-Framework for discovering and proving causal mechanisms, and extending this to consider types of research questions and motivations for extensions, reanalyses, replications, or reproductions. 
+Framework for discovering and proving causal mechanisms, and extending this to consider types of research questions and motivations for extensions, reanalyses, replications, or reproductions.
 Include exploratory analysis and case studies in type of research.
 
-Reference: www.edreplication.org 
+Reference: www.edreplication.org
 
 ## Literature review
 
@@ -24,9 +24,9 @@ Reference: www.edreplication.org
 
 - Avoid biasing your research plan by interacting too much with data observations
   - record / journal any empirical observations / interactions with data
-  - 
+  -
 - view descriptive statistics and data visualization
-- Save metadata 
+- Save metadata
 
 ## Setting up research compendium
 
@@ -43,12 +43,13 @@ Reference: www.edreplication.org
   - metadata
   - docs / reports
 - committing some changes to the template
-- Recommended prefixes: Or / RPl / RPr 
+- Recommended prefixes: Or / RPl / RPr
+- Choose appropriate `LICENSE` file for the work
 
 ## Conclusion
 
 At the conclusion of the provocation phase, you have:
 
 - Specific research question
-- Connect research question to literature and to archetypical research design 
+- Connect research question to literature and to archetypical research design
 - Set up template research compendium
