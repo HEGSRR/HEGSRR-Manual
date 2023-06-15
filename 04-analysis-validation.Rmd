@@ -7,9 +7,9 @@ Researchers will likely encounter the need to deviate from the registered pre-an
 - save a version of the text file used to write and register the pre-analysis plan
 - major changes to the plan may require updating that document, rendering a new PDF and updating the registration on OSF.
 
-QUESTION: when is a change to the regitered pre-analysis plan big enough to require an update on OSF?
+QUESTION: when is a change to the registered pre-analysis plan big enough to require an update on OSF?
 - if an uncertainty or ambiguity and contingencies for that were already articulated in the pre-analysis plan, there is no need to update the plan.
-- if alterations to the pre-analysis plan may ultimately impact the interpretation of claims made by the research, the changes should be registered on OSF. 
+- if alterations to the pre-analysis plan may ultimately impact the interpretation of claims made by the research, the changes should be registered on OSF.
 
 - in parallel, all changes (minor and major) should be identified with bold text or subheadings in the narrative of the analytical plan as research progresses. Our suggested labels for changes include:
   -
@@ -22,3 +22,17 @@ R should follow Tidyverse style: https://style.tidyverse.org/ and there are two 
 - lintr checks your code formatting: https://github.com/jimhester/lintr
 
 Python should follow PEP 8 Style: https://www.python.org/dev/peps/pep-0008/
+
+## Store publication-ready outputs in the results directory
+
+Store publication-ready final research outputs, e.g. figures, tables, or other media for publications and presentations in the `results` directory.
+
+Although these types of results will ideally be embedded as outputs in computational notebooks, most researchers will also find it convenient to share and repurpose individual figures and tables for blogs, web designs, presentations, and more.
+Therefore, it makes sense to add a final block of code to computational studies to output important results to separate files.
+As you do so, complete the `results_metadata.csv` file indexing each results file, including the fields:
+
+- `path`: the path from results folder, e.g., `figures`, `other`, or `tables`
+- `name`: the file name
+- `description`: very brief description or figure title
+
+Wise researchers may even edit this `results_metadata.csv` file in their computational notebook!

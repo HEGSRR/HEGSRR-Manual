@@ -10,7 +10,7 @@ The point is to start increasing the transparency and provenance of your researc
 
 ## Develop your Research Plan
 
-It is already time to translate your specific research question and achetypical research design, into a specific research plan.
+It is already time to translate your specific research question and archetypical research design, into a specific research plan.
 
 ### Reproduction studies
 
@@ -18,93 +18,160 @@ It is already time to translate your specific research question and achetypical 
 
 
 
-## Project-level metadata
+## Project metadata
 
-- Many components of the ideation phase will require specific project-level metadata.
-- Most systems are compatible with the DUBLIN Core standards: https://www.dublincore.org/specifications/dublin-core/
-- Title
-- Contributors
-- Extent: region / time
+Open science starts with making your research project *findable*, which will require specifying standard metadata describing your research project.
+Once you take the time to describe this project metadata, you will likely find that you continue to reuse the same information about your research throughout the full life cycle.
+This is no coincidence, as many publishers and repositories have adopted the same DUBLIN Core standards https://www.dublincore.org/specifications/dublin-core/ for describing research artifacts.
+Therefore, it is never too early to create a working draft of your project metadata in the top readme file of your research compendium.
 
-## Create an OSF project
-
-- https://osf.io
-- Create new project
-- Title:
-- Storage Location:
-- Description:  (a short abstract)
-
-Once the project is created, you will need to manage more information about it.
-
-### Project Metadata
-
-- Description (from the initial project creation)
-- Contributors (name, email, and permissions: (administrator, read & write, or read) and biliographic contributor: bibliographic or non-bibliographic)
-- Resource type: likely choose `Standard` for now, and change to a specific publicaiton type once the project reaches the publication phase.
-- Resource language: most likely, `English`
-- Funding/support information
+- `Description`: a brief abstract about your research project.
+- `Contributors`: names and email contact information for contributors. Note the corresponding author with an asterisk `*`. This corresponding author should be considered the `creator` of Dublin Core metadata. On GitHub, you may want to explicitly link to contributors' GitHub profiles with the `@` symbol, e.g. `@josephholler`. On OSF, you will be asked to specify contributors' permissions (administrator, read & write, or read) and whether they are a bibliographic or non-bibliographic contributor.
+- `Affiliated Institutions`: List affiliations of the contributors as one would do for publications. On OSF, this field auto-populates with the registered institutions of any of the contributors as a benefit to institutional subscriptions.
+- `Funding`: If applicable, include information on one or more funding sources for the research project.
   - Funder Name (for NSF project, the specific division or directorate)
   - Award Title
   - Award info URI (web address)
   - Award number
-- Affiliated Institutions (this is derived from contributors if their institutions are formally affiliated with OSF)
-- Date created / modified (automatically recorded)
-- Tags (write in keywords)
+- `Date created`: date when project was started
+- `Date modified`: date of most recent revision
+- `Subject`: select from a controlled vocabulary
+- `Tags`: select a few keywords, separated by commas. This is a feature compatible with GitHub, OSF, and Journal Articles, but is not a Dublin Core element.
+- `Coverage (geographic)`: Specify the geographic extent of your study. This may be a place name and link to a feature in a gazetteer like GeoNames or OpenStreetMap, or a well known text (WKT) representation of a bounding box.
+- `Coverage (temporal)`: Specify the temporal extent of your study---i.e. the range of time represented by the data observations.
+- `Relation`: Identifier links to other related research elements, e.g. the OSF repository, preprints,
+- `Rights`: Maintain the link to a license file and also list the license type here.
+- `Resource type`: The overall research compendium is a `Collection` which will eventually include more specific subcomponents, e.g. `Preprint`, or `JournalArticle`. Dublin Core maintains a list of resource types: https://www.dublincore.org/specifications/dublin-core/resource-typelist/ as does OSF: https://help.osf.io/article/570-resource-types-in-osf
+- `Resource language`: most likely `English`
+- `Conforms To`: Conforms to the research compendium template for reproducible and replicable human-environment and geographical sciences at https://hegsrr.github.com/HEGSRR-Template
 
-## OSF Pre-analysis plan registration
+The project metadata has excluded just a few Dublin Core elements:
+- `Title` is implied by the first-level header of the Markdown document.
+- `Creator` is implied by the contributor noted as the corresponding author and by the history of Git commits.
+- `Publisher` will likely include multiple entities as the repository linked to services like GitHub, GitLab, OSF, Figshare, or other digital Git repositories or archives. Publisher will be implied by the service on which the service is hosted.
+- `Format` is excluded because the research compendium *collection* contains digital files of many different formats.
+
+The metadata also includes a few elements beyond the 15 core elements:
+- `Coverage` is explicitly subdivided into geographic and temporal coverages.
+- `Funding` is added for compatibility with OSF and to fulfill requirements of funding agencies.
+- `Affiliated Institutions` is added for compatibility with OSF and would normally be included with
+
+## Create an OSF project
+
+The Open Science Foundation (OSF, at https://osf.io) is a digital archive for open science digital artifacts.
+We recommend creating an umbrella OSF project mapping directly to your Git research compendium.
+
+First, create new project.
+Make the project settings of `title` and `description` identical to the information in your compendium `readme.md` file.
+The best `category` value for a complete research compendium is `project`.
+The other project categories are more suitable for specific project components, should you need to register those separately.
+
+Second, add additional `contributors`, unless you are developing the project as a solo researcher.
+For each contributor, choose their level of permissions (administer, read and write, or just read) and check the `bibliographic contributor` if they are to be included in citations to this work.
+
+Third, the project `License` can be set on the project home page (click the project title at top-left) under the Description.
+Use the `Add a license` link to choose a license.
+Stodden (XXXX) suggests the BSD 3-Clause "New"/"Revised" License for computational open science research.
+If you do not choose a license or if you choose "No license", then full copyright protections are implied and it will be impossible for other researchers to re-use the project content.
+
+Fourth, complete additional `metadata`.
+The `description` field points to the same data as the project settings `description` and the `contributors` data points to the same data as the `contributors` menu.
+The `affiliated institutions` are controlled by OSF institutional subscriptions, and the `date created` and `date modified` are automatically generated.
+
+This leaves three `metadata` fields to manage:
+- `Resource information`: The `Resource type` should be set to `Collection` for a research compendium composed of multiple resource types and data formats.
+`Resource language` should likely be `English`, unless you have translated the compendium template.
+Other project subcomponents could be registered separately with more specific `resource type` classifications.
+- `Funding/support information`: The funding fields match information in your compendium `readme.md` file.
+- `Tags`: match information in your compendium `readme.md` file.
+
+Fifth, connect your OSF project to your GitHub repository.
+- Add-ons -> GitHub
+- Files -> add repository???
+As you continue to work on your git repository and push changes to GitHub, your OSF project will automatically stay up-to-date with all of the changes.
+Further on in the research life cycle you will create OSF registrations, which will archive a static version of your compendium at the time of registration.
+
+Finally, projects have a `Make Public` option, which OSF warns you not to use until you are ready for the contents to be truly public.
+When you *are* ready for the project to be public, you can also generate a `DOI` for inclusion in your project `Citation`.
+Additionally, you can type `bibtex` into the `get more citations` dropdown to copy BibTex citation data for your OSF project.
+Once your project is public with a DOI, you may crosslink this information from the GitHub repository:
+- Return to the compendium `readme.md` and add the OSF project DOI to the `Related to:` section.
+- Update the `CITATION.cff` file to cite your OSF Project with DOI.
+
+## Data in the ideation phase
+
+At this phase of research, we should avoid directly observing study data to the greatest extent that this can be avoided.
+The pre-analysis plan will require you to disclose any experience or engagement you have had with the data because of the potential biases this engagement introduces into the research process.
+Therefore, our larger discussion about data management with open science research compendiums is in the next chapter on Observation.
+At this stage, we should be more concerned about researching potential secondary data sources and inventing the structure and observation design for primary data to be collected.
+As such, we are more concerned at this phase about *metadata* about the data we are to acquire, create, and analyze, than we are about the data themselves.
+It is recommended to save information about your data into the `data/metadata` folder, to start populating the `data/data_metadata.csv` tabular index to the data directories with a row for each data sources and associated metadata files, and possibly to write preliminary code for accessing data with specialized packages or application programming interfaces (APIs), including using APIs to query and save metadata.
+
+The `data_metadata.csv` file may contain information about data files that do not yet exist
+At this phase of research, you may not know specific paths and names for the files you will create.
+However, you will want to keep track of the different `layers` you intend to create or acquire and their associated metadata files.
+Therefore, you may create temporary working names for the `name` column, keep an accurate list of metadata files in the `metadata` column, n
+
+The `data_metadata.csv` file is a tabular index of each data file in your project, including the fields:
+
+- `path`: the path to the data folder, likely one of: `raw\private`, `raw\public`, `derived\private` or `derived\public`
+- `name`: the file name, including extension. You may refer to individual tables of relational databases (e.g. geopackages) by appending `|` and the layer name, e.g. the `my_layer` table of `my_geopackage.gpkg` could be noted with this name: `my_geopackage.gpkg|my_layer`
+- `metadata`: list of metadata files for this data source, stored in the `data\metadata` folder. These may include ISO-191** or FGDC standard `XML` files, data dictionaries, licenses or attributions, user guides, webpage printouts, etc. Separate multiple files with semicolons: `;`.
+- `status`: which may be `included` for data included in the repository or `create` or `acquire` for data that must created or acquired, `derived` for data that will be generated by code from other data files, or `simulated` for data that replaces the true research data with a simulated data due to confidentiality or legal constraints.
+- `description`: *very* brief description of the dataset.
+
+Researchers are **strongly encouraged** to include additional metadata in the `metadata` folder.
+Further information about the procedures used to create data with 'status = derive' should be maintained in the [procedure_metadata.csv](../procedure/procedure_metadata.csv).
+
+Ideally, metadata should be documented to FGDC or ISO standards and saved in `xml`, `json`, or `yaml` format. Some tools for reading and writing metadata include:
+
+- USGS Metadata Wizard 2.0: https://www.usgs.gov/software/metadata-wizard-20
+- MDEditor: https://www.mdeditor.org/
+- GeoNetwork: https://geonetwork-opensource.org/
+- R geometa: https://cran.r-project.org/web/packages/geometa
+- Python pygeometa: https://pypi.org/project/pygeometa/
+
+## Pre-Analysis Plans
+
+what are they?
+
+### Planning your analysis: the Pre-analysis plan registration template
+
+- guide to using the template
+
+### Analysis plan Registration on OSF
 
 OSF Preregistration resources: https://www.cos.io/initiatives/prereg
+Guide to create registrations: https://help.osf.io/article/345-create-registrations
 
-- Title (derived from project title)
-- Description (derived from project description)
-- contributors (derived from proj contributors, or seperate?)
-- category: project
-- license: article on licenses? https://help.osf.io/article/148-licensing
-  - conservative option: cc-by attribution-non-commercial-no-derivatives 4.0 international
-  - no license: you retain copyright and full restrictions
-- subjects:
-  - social and behavioral sciences: geography
-  - physical sciences and mathematics: earth sciences or environmental sciences
-- summary: describe the files you are uploading. If you are following this guide, a statement like this will suffice: "preanalysis_plan.pdf contains a pre-analysis plan following Kedron and Holler (2023): HEGSRR Template... "
+When you are ready to register your analysis plan, log into OSF and navigate to your project.
+Open the `Registrations` menu and begin a `New registration`.
 
+OSF contains several registration templates.
+To use our own template, select `Open-Ended Registration`.
 
-## Collect preliminary data
+Even an open-ended registration requires standard metadata.
+Fortunately, OSF pulls this metadata from the umbrella project, including `title`, `description`, `contributors`, `category`, and `license`.
 
-- metadata!
-- code/scripts for data acquisition
-- directory structure for data
-  - scratch (not tracked)
-  - raw / public
-  - raw / private (not tracked)
-  - derived / public
-  - derived / private (not tracked)
-- file size limits for GitHub / GitLab
+Curiously, this is the first opportunity to enter a `subject`, which will likely be one of:
+- Social and Behavioral Sciences \ Geography \ (Geographic Information Sciences, Human Geography, Nature and Society Relations, Other Geography, Physical and Environmental Geography, Remote Sensing, Spatial Science)pro
+- Social and Behavioral Sciences \ Environmental Studies \ ...
 
-| Processing | Access | -- |
-| :--: | :--: | :--: |
-|  | Private | Public |
-| Raw | RPri | RPub |
-| Derived | DPri | DPub
+Following `Metadata`, the `Summary` should be a short description of the file you are uploading, simply to describe that it is a pre-analyis plan registration.
+If you are updating a prior plan, the major updates and rationale should be noted in this summary.
 
-### Raw Private Data
+Upload your pre-analysis plan `pdf` file as a supplementary file.
 
-Store raw data in this folder as it is collected or downloaded if the data cannot be publicly redistributed. For example, data versioning and sharing my be restricted because of large file sizes, licensing, ethics, privacy, or confidentiality. Best practices are to include code to automate the process of downloading or simulating raw private data in the first step of the methods, or to include instructions here for accessing any private or restricted-access data.
+Finally, `Review` the registration and confirm its accuracy before moving on to `Register` the plan.
+At this stage you will have the option to make the publication public immediately or enter the registration into an embargo with a specified end date.
+The embargo option means that the registration will be locked after you `Submit` it, but it will remain private until the embargo date, after which it will be made public.
 
+A submitted registration cannot be deleted or revoked even if it is in embargo: your only recourse for errors in the registration is to make a new registration to supersede the prior one.
+All of the other admin contributors on the registration will have an option to revoke the registration in the first 48 hours after submission.
 
+Once you have registered the pre-analysis plan, remember to copy the DOI and add the DOI link in the `Related to` section of the compendium `readme.md` file.
 
-*This folder is ignored by Git versioning* with the exception of this `readme.md` file by the following lines in `.gitignore`
-
-```gitignore
-# Ignore contents of private folder, with the exception of its readme file
-private/**
-!private/readme.md
-```
-
-### Caution: Dealing with large files
-
-- GitHub will not store files larger than 100mb
-- These should be placed in `private` directories so that they are not tracked by Git or uploaded to GitHub
-- OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs. Significant data sources could be registered with their own DOI links.
+Note: If you need your project and the associated registration to identify specific files in your research compendium as specific types of resources, then prior to registration you can navigate to the file and edit file-level metadata. See these instructions: https://help.osf.io/article/569-add-metadata-to-an-osf-file 
 
 ## Open Science Writing
 
@@ -116,22 +183,24 @@ private/**
   - Rmarkdown computational notebook
   - Jupyter Python
 
+We need to move toward having the pre-analysis plan, code, outputs, everything in the same R markdown file or Jupyter notebook.
+For Markdown, use knitr to generate the report https://yihui.org/knitr/
+For Jupyter, use stitch https://pystitch.github.io/
+
+When knitr or stitch is run, the report can be saved to the reports folder. At that time, the researcher should commit a Version of the Git repository, and then continue revising the main notebook / rmarkdown. This will reduce redundancies while recording provenance of the data, research plan, and code.
+
 ## Human Subjects Protocols
 
 - store IRB protocol and any forms or instruments in procedures / protocols
 - the research compendium is part of the data management plan
 - read ahead to dissemination phase for considering privacy and data management
 
-## Pre-register Analysis Plan
 
-- OSF and pre-registrations
-- Create an OSF project
-- Link GitHub to OSF
--
 
 ## Pilot study
 
--
+- do we need this section?
+- should pilot study data go into the `/scratch` folder?
 
 ## Conclusion
 
