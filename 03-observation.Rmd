@@ -57,14 +57,7 @@ private/**
 
 Git and GitHub are not designed to track or store large files over 100 mb.
 
-- If you have accidentally attempted to commit changes with large files, do this...
-- Recommend saving large files on OSF or Figshare and writing scripts to pull them into the private folder
-
-### Caution: Dealing with large files
-
-- GitHub will not store files larger than 100mb
-- These should be placed in `private` directories so that they are not tracked by Git or uploaded to GitHub
-- OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs. Significant data sources could be registered with their own DOI links.
+- If you have accidentally attempted to commit changes with large files, do this... **INSTRUCTIONS**
 
 
 ## Accommodate the unexpected!
