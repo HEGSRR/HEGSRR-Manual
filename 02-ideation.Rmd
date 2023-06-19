@@ -135,11 +135,14 @@ Ideally, metadata should be documented to FGDC or ISO standards and saved in `xm
 
 ## Pre-Analysis Plans
 
-what are they?
+What is a pre-analysis plan?
 
 ### Planning your analysis: the Pre-analysis plan registration template
 
 - guide to using the template
+References:
+- ISO 19110:2016 Geographic information — Methodology for feature cataloguing
+- ISO 19115-1:2014 Geographic information — Metadata — Part 1: Fundamentals 
 
 ### Analysis plan Registration on OSF
 

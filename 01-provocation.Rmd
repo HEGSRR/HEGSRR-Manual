@@ -16,9 +16,57 @@ Reference: www.edreplication.org
 - include preprints
 - literature reviews become more powerful with open science
 
-### Reading a research compendium
+## Reading a research compendium
 
 - give idea of end goal at the beginning by reading one of our finished research compendium
+
+## Literature for reproduction, reanalysis, or replication
+
+First, how will you choose a study?
+Some criteria for choosing studies include:
+- *intellectual merit* and the study's influence on a field of study
+- *broader impacts* on society or the environment, e.g. through influence on policy
+- *feasibility* based on availability of materials and methods
+- desire to *learn* or *teach* the study and its methods
+- concerns about the *validity* of a study
+
+We argue that any reproduction, reanalysis, or replication starts with assembling and synthesizing the most complete information available about the original study design.
+In order to reproduce a prior study, the reproducing researchers or students will need a comprehensive understanding of the original study.
+We recommend two approaches for systematically approaching a deep reading of the original study resulting in comprehensive understanding and digital resources that link that understanding to the original manuscript and supplementary materials.
+These approaches may be undertaken in parallel, and include:
+
+1. Annotate the original manuscript and supplementary materials
+2. Draw a workflow plan for the original study
+
+### Annotation
+
+We recommend annotating in collaborative software environments, e.g. hypothes.is or Zotero.
+Choose a system of colors to represent important components of the research design, including:
+
+- Main hypotheses or research questions
+- Theoretical concepts
+- Inputs of data or observations
+- Processes and parameters for processes
+- Computational environment
+- Results, especially any result that can be checked or compared
+
+You may also apply tags to indicate the relationship between individual hypotheses or questions and their associated processes and results and to indicate the sequence of processes in the overall research workflow.
+As you approach a final draft of the workflow plan (see next subsection), we recommend assigning a unique identifier to each process and tagging the relevant sections of the original manuscript and supplementary materials with that identifier, creating a link between the original manuscript and the workflow plan.
+
+### Workflow plan
+
+The workflow visually illustrates the research process with three types of symbols:
+
+- Ovals represent inputs and outputs of databases, variables, observations, etc.
+- Rectangles represent processes, algorithms, models, etc.
+- Arrows illustrate the sequence and flow of the research design
+
+Early drafts of the workflow plan may be digital (e.g. on a digital whiteboard, or simply a text outline) or analog and tactile.
+In methods classes, Holler has used stacks of notecards, marker pens and tape to arrange workflows on a board.
+We even printed results from the paper (e.g. tables, graphs, and maps) to use as nodes of the analog board-based workflow graph.
+Remote classes or research teams could do the same with images on a digital whiteboard.
+
+We recommend drawing final draft of the workflow plan in specialized software for this task, e.g. draw.io or ____.
 
 ## Data at the provocation phase
 
