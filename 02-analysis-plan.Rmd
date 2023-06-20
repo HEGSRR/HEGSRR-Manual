@@ -1,0 +1,56 @@
+# Writing an Analysis Plan for Preregistration
+
+So you want a small *p* value?
+What about practicing unbiased science?
+What is a pre-analysis plan?
+
+Pre-analysis plan templates were designed to help researchers specify the research design decisions most susceptible to *p-hacking* in their disciplines.
+It follows intuitively that the templates address research issues in biomedical research, psychology, econometrics, and other disciplines at the forefront of discovering and addressing the "replication crisis".
+The templates are well suited to experimental and quasi-experimental research designs in which the researcher has significant control over sampling and observations.
+
+However, we have not found pre-analysis plans the human-environment and geographical sciences or related disciplines, in which many research designs integrate many different data sources with different spatio-temporal supports.
+These research designs require sophisticated methods involving many researcher decisions and multiple threats to validity: therefore they require attention and detail in any analysis plan for preregistration.
+At the same time, we recognize that other disciplines look to geography when it comes time to specify details about their (spatial) data sources, referring researchers to the Federal Geographic Data Committee (FGDC) or the ISO 191* series of standards for geographic metadata.
+Furthermore, the highest standards for reproducible research compendia and for research data archiving require documentation with international standards.
+Therefore, we have adopted the Dublin Core standard with expanded detail of the `coverage` element to describe the spatio-temporal support of the overall project; and we have adopted the International Standards Organization (ISO) 19115 standard for geographic information metadata to describe the spatio-temporal support of individual data sources.
+
+
+
+### Preregister your analysis plan on OSF
+
+
+When you are ready to register your analysis plan, log into OSF and navigate to your project.
+Open the `Registrations` menu and begin a `New registration`.
+
+OSF contains several registration templates.
+To use our own template, select `Open-Ended Registration`.
+
+Even an open-ended registration requires standard metadata.
+Fortunately, OSF pulls this metadata from the umbrella project, including `title`, `description`, `contributors`, `category`, and `license`.
+
+Curiously, this is the first opportunity to enter a `subject`, which will likely be one of:
+- Social and Behavioral Sciences \ Geography \ (Geographic Information Sciences, Human Geography, Nature and Society Relations, Other Geography, Physical and Environmental Geography, Remote Sensing, Spatial Science)pro
+- Social and Behavioral Sciences \ Environmental Studies \ ...
+
+Following `Metadata`, the `Summary` should be a short description of the file you are uploading, simply to describe that it is a pre-analysis plan registration.
+If you are updating a prior plan, the major updates and rationale should be noted in this summary.
+
+Upload your pre-analysis plan `pdf` file as a supplementary file.
+
+Finally, `Review` the registration and confirm its accuracy before moving on to `Register` the plan.
+At this stage you will have the option to make the publication public immediately or enter the registration into an embargo with a specified end date.
+The embargo option means that the registration will be locked after you `Submit` it, but it will remain private until the embargo date, after which it will be made public.
+
+A submitted registration cannot be deleted or revoked even if it is in embargo: your only recourse for errors in the registration is to make a new registration to supersede the prior one.
+All of the other admin contributors on the registration will have an option to revoke the registration in the first 48 hours after submission.
+
+Once you have registered the pre-analysis plan, remember to copy the DOI and add the DOI link in the `Related to` section of the compendium `readme.md` file.
+
+Note: If you need your project and the associated registration to identify specific files in your research compendium as specific types of resources, then prior to registration you can navigate to the file and edit file-level metadata. See these instructions: https://help.osf.io/article/569-add-metadata-to-an-osf-file
+
+## Resources
+
+Dublin Core:
+ISO 19115:
+OSF Preregistration resources: https://www.cos.io/initiatives/prereg
+Guide to create registrations: https://help.osf.io/article/345-create-registrations

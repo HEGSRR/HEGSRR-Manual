@@ -133,51 +133,6 @@ Ideally, metadata should be documented to FGDC or ISO standards and saved in `xm
 - R geometa: https://cran.r-project.org/web/packages/geometa
 - Python pygeometa: https://pypi.org/project/pygeometa/
 
-## Pre-Analysis Plans
-
-What is a pre-analysis plan?
-
-### Planning your analysis: the Pre-analysis plan registration template
-
-- guide to using the template
-References:
-- ISO 19110:2016 Geographic information — Methodology for feature cataloguing
-- ISO 19115-1:2014 Geographic information — Metadata — Part 1: Fundamentals 
-
-### Analysis plan Registration on OSF
-
-OSF Preregistration resources: https://www.cos.io/initiatives/prereg
-Guide to create registrations: https://help.osf.io/article/345-create-registrations
-
-When you are ready to register your analysis plan, log into OSF and navigate to your project.
-Open the `Registrations` menu and begin a `New registration`.
-
-OSF contains several registration templates.
-To use our own template, select `Open-Ended Registration`.
-
-Even an open-ended registration requires standard metadata.
-Fortunately, OSF pulls this metadata from the umbrella project, including `title`, `description`, `contributors`, `category`, and `license`.
-
-Curiously, this is the first opportunity to enter a `subject`, which will likely be one of:
-- Social and Behavioral Sciences \ Geography \ (Geographic Information Sciences, Human Geography, Nature and Society Relations, Other Geography, Physical and Environmental Geography, Remote Sensing, Spatial Science)pro
-- Social and Behavioral Sciences \ Environmental Studies \ ...
-
-Following `Metadata`, the `Summary` should be a short description of the file you are uploading, simply to describe that it is a pre-analyis plan registration.
-If you are updating a prior plan, the major updates and rationale should be noted in this summary.
-
-Upload your pre-analysis plan `pdf` file as a supplementary file.
-
-Finally, `Review` the registration and confirm its accuracy before moving on to `Register` the plan.
-At this stage you will have the option to make the publication public immediately or enter the registration into an embargo with a specified end date.
-The embargo option means that the registration will be locked after you `Submit` it, but it will remain private until the embargo date, after which it will be made public.
-
-A submitted registration cannot be deleted or revoked even if it is in embargo: your only recourse for errors in the registration is to make a new registration to supersede the prior one.
-All of the other admin contributors on the registration will have an option to revoke the registration in the first 48 hours after submission.
-
-Once you have registered the pre-analysis plan, remember to copy the DOI and add the DOI link in the `Related to` section of the compendium `readme.md` file.
-
-Note: If you need your project and the associated registration to identify specific files in your research compendium as specific types of resources, then prior to registration you can navigate to the file and edit file-level metadata. See these instructions: https://help.osf.io/article/569-add-metadata-to-an-osf-file
-
 ## Open Science Writing
 
 - Write in plain text or code
@@ -239,11 +194,13 @@ Store any non-computational protocols and research procedures in the `protocols`
 - the research compendium is part of the data management plan
 - read ahead to dissemination phase for considering privacy and data management
 
-
-
 ## Pilot study
 
-- do we need this section?
+Some research designs will benefit from a pilot study, which will use a limited set of observations to test and revise (the) data collection instrument(s) or test the methodology on a limited set of data.
+Pilot studies should be specified in the analysis plan methodology and disclosed in the *Prior observations* section of the plan.
+The data observations and findings from a pilot study are not be included in the complete study and will not be disseminated or archived.
+Therefore, pilot study data and materials may be saved in the `data/scratch` directory for temporary use.
+
 - should pilot study data go into the `/scratch` folder?
 
 ## Conclusion
