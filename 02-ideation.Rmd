@@ -20,8 +20,9 @@ It is already time to translate your specific research question and archetypical
 
 ### Original studies
 
-## Project metadata
+## Project metadata: front matter for your study
 
+Every journal article and book starts with front matter, and this is essentially metadata about the publication, including citation and attribution, copyright license, distribution, and more.
 Open science starts with making your research project *findable*, which will require specifying standard metadata describing your research project.
 Once you take the time to describe this project metadata, you will likely find that you continue to reuse the same information about your research throughout the full life cycle.
 This is no coincidence, as many publishers and repositories have adopted the same DUBLIN Core standards https://www.dublincore.org/specifications/dublin-core/ for describing research artifacts.
@@ -133,7 +134,7 @@ Ideally, metadata should be documented to FGDC or ISO standards and saved in `xm
 - R geometa: https://cran.r-project.org/web/packages/geometa
 - Python pygeometa: https://pypi.org/project/pygeometa/
 
-## Open Science Writing
+## Open science writing
 
 - Write in plain text or code
 - new sentence on each line
