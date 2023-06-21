@@ -21,7 +21,10 @@ The next sections of this chapter will guide you through the steps for preparing
 The analysis plan begins with the title and metadata for the project.
 If you have completed the root `readme.md` file for your research compendium, you can probably copy that metadata directly into the top of your analysis plan.
 This redundancy is necessary so that the registered plan document contains all necessary information independently from the research compendium.
-Please see instructions on this overarching metadata in **Ideation Chapter, Section X**.
+This project-level metadata also provides the foundation of the analysis plan by specifying the spatio-temporal characteristics of the study, making explicit from the beginning what the target data support will be for any of the input data.
+Please see instructions on this overarching metadata in **Ideation Chapter, Section X**, and see contingencies for studies with multiple sub-components and replication studies below.
+
+### Studies with multiple spatio-temporal coverages
 
 Some studies may contain subcomponents with different spatio-temporal characteristics, or may contain multi-level models.
 In this case, you will need to enumerate different metadata values for the spatial and/or temporal characteristics that vary across subcomponents of the study.
@@ -36,13 +39,11 @@ For example, in a study of Social Vulnerability Indices across different spatial
 - `Temporal Coverage`: 2017-2022 (this temporal extent encompasses all subcomponents of the study)
 - `Temporal Resolution`: 5-year estimate (this example has only one resolution and therefore does not require a range)
 
-The spatial coverage, resolution, and reference system can be shown to vary across study subcomponents by first adding a statement explaining the subcomponents.
-For example:
+The spatial coverage, resolution, and reference system can be shown to vary across study subcomponents by adding a statement explaining the subcomponents, followed by a hierarchical list. For example:
 
-> There are three subcomponents to the studies with varying spatial coverage, resolution, and reference systems.
+```md
+There are three subcomponents to the studies with varying spatial coverage, resolution, and reference systems.
 The subcomponents are named: Macro level, Meso level, and Micro level.
-
-Following this statement, specify the metadata for each subcomponent in a hierarchical list:
 
 - Macro Level Analysis
   - `Spatial Coverage`: Continental United States
@@ -56,18 +57,82 @@ Following this statement, specify the metadata for each subcomponent in a hierar
   - `Spatial Coverage`: Florida
   - `Spatial Resolution`: Counties (second admin level)
   - `Spatial Reference System`: EPSG:3086
+```
 
-Or in a table:
+A table may be used in place of a hierarchical list.
+For example:
 
-|   | Macro Level | Meso Level | Micro Level |
-| :--: | :--: | :--: | :--: |
-| Spatial Coverage | Continental U.S. | EPA Region 4 | Florida |
-| Spatial Resolution | EPA Regions (aggregations of states) | States (first admin level) | Counties (second admin level) |
-| Spatial Reference System | ESRI:102003 | ESRI:102003 | EPSG:3086
+```md
+|                          | Macro Level    | Meso Level   | Micro Level    |
+| :----------------------: | :------------: | :----------: | :------------: |
+| Spatial Coverage         | Continental US | EPA Region 4 | Florida        |
+| Spatial Resolution       | EPA Regions    | States ADM_1 | Counties ADM_2 |
+| Spatial Reference System | ESRI:102003    | ESRI:102003  | EPSG:3086      |
+```
+
+### Repliction studies with different spatio-temporal coverages
+
+If the study is replication of a prior study with different spatial or temporal characteristics from the prior study, then the first block of metadata should describe the replication study spatio-temporal characteristics.
+Following the replication study metadata and prior to the Study design section, add a sub-section for the original (prior) study spatio-temporal characteristics.
+For example:
+
+```md
+#### Original study spatio-temporal metadata
+
+- `Spatial Coverage`: extent of original study
+- `Spatial Resolution`: resolution of original study
+- `Spatial Reference System`: spatial reference system of original study
+- `Temporal Coverage`: temporal extent of original study
+- `Temporal Resolution`: temporal resolution of original study
+```
+
+## Study design
+
+This section describes the archetypal study design to be used and specifies clear hypotheses or research questions.
+
+Describe how the study relates to prior literature, e.g. is it an **original study** or a **metascience** study (one of: **meta-analysis study**, **reproduction study**, **reanalysis study**, or **replication study**)?
+
+Also describe the original study archetype, e.g. is it **observational**, **experimental**, **quasi-experimental**, or **exploratory**?
+
+Enumerate specific **hypotheses** to be tested or **research questions** to be investigated here, and specify the type of method, statisical test or model to be used on the hypothesis or question.
+For example:
+
+```md
+> H1: Hypothesis number one
+
+`H1` will be tested with a linear regression model.
+```
+
+If the study is a reproduction, reanalysis, replication, or meta-analysis, use prefixes to differentiate between the original study hypothesis and the meta-science hypothesis.
+We recommend the following prefixes:
+
+- `OR-H`: original hypothesis
+- `MA-H`: meta-analysis hypothesis
+- `RPr-H`: reproduction hypothesis
+- `RA-H`: reanalysis hypothesis
+- `RPl-H`: replication hypothesis
+
+enumerate the **original study hypotheses** to be analyzed and the type of test or model to be used for the hypothesis.
+These can be numbered with the prefix `OR-H` for "Original Hypothesis", e.g.
+
+```md
+> OR-H1: Median home prices of census tracts are dependent upon the distace from the central business district (CBD) in Chicago, Illinois.
+
+OR-H1 was tested with a linear regression model having median home prices as the dependent variable and distance between the central business district and the census tract centroid as the independent variable.
+
+> RPl-H1: The coefficient of distance from from CBD in Buffalo, New York will have equivalent direction and magnitude to the coefficient of distance from the CBD in Chicago, Illinois.
+
+RPl-H1 will be tested by substituting data for Chicago, Illinois with data for Buffalo, New York and repeating the linear regression of OR-H1.
+```
+
+
+The original study used a Spearman's Rho rank correlation test for OR-H1.
 
 ## Preregister your analysis plan on OSF
 
-Q: what does preregistration do?
+In the Open Science Foundation ecosystem of open science infrastructure, *registration* means to make and archive a permanent record of the research project at one moment in time.
+When you register an analysis plan or report associated with an OSF project, a copy of the entire project is made to accompany the registration.
+A *preregistration* should be a registration of the research prior to data collection and analysis.
 
 As you are ready to preregister your plan, remember to update the `Date modified` field in your plan and on your project `readme.md` front matter.
 
@@ -90,7 +155,7 @@ If you are updating a prior plan, the major updates and rationale should be note
 Upload your pre-analysis plan `pdf` file as a supplementary file.
 
 Finally, `Review` the registration and confirm its accuracy before moving on to `Register` the plan.
-At this stage you will have the option to make the publication public immediately or enter the registration into an embargo with a specified end date.
+At this stage you will have the option to make the publication public immediately or enter the registration into an `embargo` with a specified end date.
 The embargo option means that the registration will be locked after you `Submit` it, but it will remain private until the embargo date, after which it will be made public.
 
 A submitted registration cannot be deleted or revoked even if it is in embargo: your only recourse for errors in the registration is to make a new registration to supersede the prior one.

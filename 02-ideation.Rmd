@@ -27,6 +27,11 @@ Open science starts with making your research project *findable*, which will req
 Once you take the time to describe this project metadata, you will likely find that you continue to reuse the same information about your research throughout the full life cycle.
 This is no coincidence, as many publishers and repositories have adopted the same DUBLIN Core standards https://www.dublincore.org/specifications/dublin-core/ for describing research artifacts.
 Therefore, it is never too early to create a working draft of your project metadata in the top readme file of your research compendium.
+This same information will be transferred to your analysis plans and research reports.
+
+Some research designs may have multiple subcomponents with different spatio-temporal characteristics.
+However, for this project-level metadata, simply report one all-encompassing set of spatio-temporal coverage metadata inclusive of all subcomponents and at the finest resolution.
+Some reserach designs may be a replication study with plans to alter the prior study's spatio-temporal characteristics, in which case this project-level metadata for the research compendium should report the planned spatio-temporal coverage for the replication study.
 
 - `Description`: a brief abstract about your research project.
 - `Contributors`: names and email contact information for contributors. Note the corresponding author with an asterisk `*`. This corresponding author should be considered the `creator` of Dublin Core metadata. On GitHub, you may want to explicitly link to contributors' GitHub profiles with the `@` symbol, e.g. `@josephholler`. On OSF, you will be asked to specify contributors' permissions (administrator, read & write, or read) and whether they are a bibliographic or non-bibliographic contributor.
