@@ -1,9 +1,5 @@
 # Writing an Analysis Plan for Preregistration
 
-So you want a small *p* value?
-What about practicing unbiased science?
-What is a pre-analysis plan?
-
 Pre-analysis plan templates were designed to help researchers specify the research design decisions most susceptible to *p-hacking* in their disciplines.
 It follows intuitively that the templates address research issues in biomedical research, psychology, econometrics, and other disciplines at the forefront of discovering and addressing the "replication crisis".
 The templates are well suited to experimental and quasi-experimental research designs in which the researcher has significant control over sampling and observations.
@@ -70,7 +66,7 @@ For example:
 | Spatial Reference System | ESRI:102003    | ESRI:102003  | EPSG:3086      |
 ```
 
-### Repliction studies with different spatio-temporal coverages
+### Replication studies with different spatio-temporal coverages
 
 If the study is replication of a prior study with different spatial or temporal characteristics from the prior study, then the first block of metadata should describe the replication study spatio-temporal characteristics.
 Following the replication study metadata and prior to the Study design section, add a sub-section for the original (prior) study spatio-temporal characteristics.
@@ -116,15 +112,14 @@ enumerate the **original study hypotheses** to be analyzed and the type of test 
 These can be numbered with the prefix `OR-H` for "Original Hypothesis", e.g.
 
 ```md
-> OR-H1: Median home prices of census tracts are dependent upon the distace from the central business district (CBD) in Chicago, Illinois.
+> OR-H1: Median home prices of census tracts are dependent upon the distance from the central business district (CBD) in Chicago, Illinois.
 
 OR-H1 was tested with a linear regression model having median home prices as the dependent variable and distance between the central business district and the census tract centroid as the independent variable.
 
-> RPl-H1: The coefficient of distance from from CBD in Buffalo, New York will have equivalent direction and magnitude to the coefficient of distance from the CBD in Chicago, Illinois.
+> RPl-H1: The coefficient of distance from CBD in Buffalo, New York will have equivalent direction and magnitude to the coefficient of distance from the CBD in Chicago, Illinois.
 
 RPl-H1 will be tested by substituting data for Chicago, Illinois with data for Buffalo, New York and repeating the linear regression of OR-H1.
 ```
-
 
 The original study used a Spearman's Rho rank correlation test for OR-H1.
 
