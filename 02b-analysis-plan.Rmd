@@ -90,7 +90,7 @@ Describe how the study relates to prior literature, e.g. is it an **original stu
 
 Also describe the original study archetype, e.g. is it **observational**, **experimental**, **quasi-experimental**, or **exploratory**?
 
-Enumerate specific **hypotheses** to be tested or **research questions** to be investigated here, and specify the type of method, statisical test or model to be used on the hypothesis or question.
+Enumerate specific **hypotheses** to be tested or **research questions** to be investigated here, and specify the type of method, statistical test or model to be used on the hypothesis or question.
 For example:
 
 ```md
@@ -122,6 +122,21 @@ RPl-H1 will be tested by substituting data for Chicago, Illinois with data for B
 ```
 
 The original study used a Spearman's Rho rank correlation test for OR-H1.
+
+## Planned deviations of metascience studies
+
+If the study is a metascience study (i.e. a reproduction, reanalysis, or replication), then most of the analysis plan has simply articulated your best understanding of the prior study.
+However, to different degrees, each metascience study may intend to alter some parameters of the prior study.
+These alterations should be labelled **planned deviation** and include a rationale for the deviation.
+Categorize deviations **for reproduction** if the aim of the deviation is still to reproduce the original methodology and original results.
+Categorize deviations as **for reanalysis** if the aim is to alter a methodological parameter of the study in order to compare results, e.g. as a test of sensitivity, uncertainty, or robustness.
+Categorize deviations as **for replication** if the aim is to alter the spatial-temporal coverage of the study or to otherwise repeat the study methodology with new data/observations.
+
+For example, a recent reproduction study of ours contained a planned deviation with no expectation of altering the data, methods, or results:
+
+```md
+**Planned deviation for reproduction**: Although the original study used SPSS and SaTScan for analysis, we will attempt to reproduce the study using R and its spatialepi and geepack packages for equivalent analysis using an open source software environment.
+```
 
 ## Preregister your analysis plan on OSF
 
@@ -159,6 +174,33 @@ All of the other admin contributors on the registration will have an option to r
 Once you have registered the pre-analysis plan, remember to copy the DOI and add the DOI link in the `Related to` section of the compendium `readme.md` file.
 
 Note: If you need your project and the associated registration to identify specific files in your research compendium as specific types of resources, then prior to registration you can navigate to the file and edit file-level metadata. See these instructions: https://help.osf.io/article/569-add-metadata-to-an-osf-file
+
+## Amending the analysis plan registration
+
+Once registered, an analysis plan is locked in as a permanent record of your research plan at a particular time.
+However, plans change!
+*All* changes to plans between a pre-analysis registration and a post-analysis report must be documented as *unplanned deviations* so that results stemming from those changes may be interpreted appropriately.
+Keeping in mind that the purpose of a preregistration is to reduce increase transparency for the purpose of reducing bias and p-hacking in the research process, a revised preregistration will only be useful if the researcher(s), based on prior observations of the data, can still specify a relatively unbiased analysis plan.
+If the analysis plan is being amended on the fly based on reactions to data observations, it is better to record the amendments as *unplanned deviations* in a final report, rather than to falsely claim the changes as unbiased amendments to the analysis plan prior to the study.
+*If* you need to make significant changes to an analysis plan *and* the amended plan is not already substantially biased by prior analyses and data observations, *then* it is time to amend the analysis plan and update the preregistration.
+
+In case you need to amend the analysis plan, you may edit any section of the prior plan and add an explanation of the changes.
+Be sure to update the `Date modified` field of the study metadata.
+
+We recommend adding a second-level section titled "Rationale for analysis plan update" to the end of the analysis plan, immediately following the Integrity Statement section.
+This new section should begin with a statement including the plan version and the prior registration DOI link, followed by the rationale for the update in one or more paragraphs.
+
+Also include a paragraph discussing any change in prior observations of the data since the prior preregistration, or a statement of no change to prior observations of data.
+
+```md
+### Rationale for updated report
+
+This is the second version of the analysis plan preregistration, superseding the first version, registered at https://doi.org/10.17605/OSF.IO/647EX on July 22, 2022.
+The rationale for this update is...
+
+Our prior observations of the data have changed/not changed.
+Since the prior version, we have now...
+```
 
 ## Resources
 

@@ -35,7 +35,7 @@ See more about metadata in the engaging with data section of the previous chapte
 | Raw | RPri | RPub |
 | Derived | DPri | DPub
 
-### Raw Private Data
+### Raw private data
 
 Store raw data in this folder as it is collected or downloaded if the data cannot be publicly redistributed. For example, data versioning and sharing my be restricted because of large file sizes, licensing, ethics, privacy, or confidentiality. Best practices are to include code to automate the process of downloading or simulating raw private data in the first step of the methods, or to include instructions here for accessing any private or restricted-access data.
 
@@ -60,7 +60,14 @@ Git and GitHub are not designed to track or store large files over 100 mb.
 - If you have accidentally attempted to commit changes with large files, do this... **INSTRUCTIONS**
 
 
-## Accommodate the unexpected!
+## Updating the analysis plan
 
 You will likely encounter unexpected challenges and the need to change your original, pre-analysis registration plan.
-This is normal: just be diligent about updating your pre-analysis plan, committing changes
+This is *normal*: just be diligent about updating your analysis plan, cataloguing deviations from the original plan, and committing changes to the repository.
+
+Document **unplanned deviations** as they occur in the analysis plan.
+If the study is a metascience study, then categorize unplanned deviations **for reproduction** if the aim of the deviation is still to reproduce the original methodology and original results.
+Categorize deviations as **for reanalysis** if the aim is to alter a methodological parameter of the study to compare results, e.g. as a test of sensitivity, uncertainty, or robustness.
+Categorize deviations as **for replication** if the aim is to alter the spatial-temporal coverage of the study or to otherwise repeat the study methodology with new data/observations.
+
+For full transparency, document both the rationale and the form of each deviation.
