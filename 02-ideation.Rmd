@@ -131,7 +131,7 @@ In many cases you may document metadata about data sources that will not be dire
 The  `data_metadata.csv` file should proscribe the location of these types of data as `raw\private` for data sources that need to be downloaded and/or acquired with permission and/or funding or as `derived\private` for large or confidential files that will be created with computational code or scripts.
 
 Researchers are **strongly encouraged** to include additional metadata in the `metadata` folder.
-Further information about the procedures used to create data with 'status = derive' should be maintained in the [procedure_metadata.csv](../procedure/procedure_metadata.csv).
+Further information about the procedures used to create or acquire data to be stored in `private` directories should be maintained in the [procedure_metadata.csv](../procedure/procedure_metadata.csv).
 
 Ideally, metadata should be documented to FGDC or ISO standards and saved in `xml`, `json`, or `yaml` format. Some tools for reading and writing metadata include:
 
@@ -140,6 +140,8 @@ Ideally, metadata should be documented to FGDC or ISO standards and saved in `xm
 - GeoNetwork: https://geonetwork-opensource.org/
 - R geometa: https://cran.r-project.org/web/packages/geometa
 - Python pygeometa: https://pypi.org/project/pygeometa/
+
+Social science metadata may follow the Data Documentation Initiative (DDI) Codebook: https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/metadataguide/ and Project TIER provides good advice about data metadata: https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/.
 
 ## Open science writing
 

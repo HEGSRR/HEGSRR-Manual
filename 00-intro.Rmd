@@ -1,12 +1,15 @@
-# Reproducible research compendia and workflows 
+# Reproducible research compendia and workflows
 
 Introduction paragraph
 
-- analagous to TIER protocol: https://www.projecttier.org/tier-protocol/protocol-4-0/ 
+Other analagous reproducibility infrastructure projects include:
+
+- TIER protocol: https://www.projecttier.org/tier-protocol/protocol-4-0/
+- Social Science Reproduction Platform https://www.socialsciencereproduction.org/ and Guide for Accellerating Computational Reproducibility in the Social Sciences: https://bitss.github.io/ACRE/
 
 ## Open science, reproducibility and replicability
 
-Theoretical foundation for open science practices ... discovering valid and generalizable knowledge. 
+Theoretical foundation for open science practices ... discovering valid and generalizable knowledge.
 
 Open science is...
 
@@ -93,7 +96,7 @@ The FAIR principles of findability, accessibility, interoperatibliy, and reusabi
 
 Once your work is easily reusalbe and extensible, you will want credit for it. DOI's, Citation file in Git Repository, possibly DOI for particular artefacts if you anticpate citing them. Cross-linking differnet research products so that each project becomes an living ecosystem of research components.
 
-## Organization / Structure of this 
+## Organization / Structure of this
 
 1. Template itself and recommended content
 1. Research workflow and recommended actions
