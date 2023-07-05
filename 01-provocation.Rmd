@@ -19,6 +19,7 @@ Reference: www.edreplication.org
 ## Reading a research compendium
 
 - give idea of end goal at the beginning by reading one of our finished research compendium
+- cite Nust's paper on reading a research compendium
 
 ## Literature for reproduction, reanalysis, or replication
 
@@ -78,10 +79,41 @@ We recommend drawing final draft of the workflow plan in specialized software fo
 
 ## Setting up research compendium
 
-- what is a research compendium?
-- why make it in Git?
-- why make it *now*?
-- Create new Git repository based on our template
+### what is a research compendium, and why start one so early?
+
+
+
+### why make your research compendium in Git?
+
+In our experience, there are at least XXX compelling reasons to use some form of git version control for your research compendium.
+
+First, Git allows you to track, control, and revert **versions** of your own work, giving you an `undo` feature for your entire research project.
+But it's more powerful than a simple `undo` feature, because Git also allows you to browse the history of versions, and visualize the changes in each version, and selectively restore elements of previous versions.
+You control exactly when to `commit` new versions and describe the purpose of the new versions.
+Advanced users can even experiment with `branching` multiple alternative versions of the project, e.g. to sandbox a thread of alternative changes to the project without altering the main version and then either discard failed changes or to decide when and how to integrate or `merge` the alternatives into the main project.
+
+Second, Git allows you to manage updates to the project in a **research team**, by allowing each team member to commit changes sequentially, or by allowing team members to check out a branch of the project to work on a project subcomponent until they are ready to merging their contributions back into the main project.
+If research team members work this way, the provenance of individual contributions to the team project will be recorded in git commit metadata.
+If a research team uses a service like GitHub or GitLab to host the Git repository, then the research team will have access to online management and collaboration tools linked to the repository for managing, tracking, and communicating about the research project.
+
+Third, Git and services providing servers for Git (e.g. GitHub and GitLab) make it easy to **share projects** with other researchers and with other computational environments.
+The research compendium can be shared with other researchers via a URL link for `cloning` the repository to a new computer or manually downloading a compressed `zip` archive file of the whole compendium.
+The compendium can also be cloned into a new computational environment, e.g. into an RStudio Server, JupyterHub Server, high performance computing (HPC) service, or Docker container.
+This movement of the full research compendium between computational environments is an essential component for computationally-intensive research and for computational reproducibility.
+
+Fourth, because Git maintains a history of commits or versions to the project, it allows the researcher to passively record the full provenance of a study's development and revision over time, including information about what changes were made, by whom, when, and for what reasons.
+This adds transparency to the revision process, e.g. by making explicit how the research changed through peer review and what each member of a research team contributed.
+
+Fifth, GitHub and GitLab can be integrated with digital archives for open science, e.g. Open Science Foundation or Figshare.
+They also support web services with which researchers may publish webpages with their findings directly within their research compendium
+
+Finally, Git is highly compatible with an open science paradigm of research in which research projects become "living papers" that may be updated over time by the original authors, editors, peer reviewers, or students.
+Other researchers may easily `fork` new versions of the project for the purpose of either making and proposing changes to the original research in the form of a `pull request`, or for developing the project into a new metascience study while maintaining a formal link to the original study for the purposes of receiving updates or tracking provenance of research designs.
+
+
+
+
+### Create new Git repository based on our template
   - public / private status
   - changes are tracked with commits
 - Orientation to the template structure / file system

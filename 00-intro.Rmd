@@ -59,7 +59,7 @@ We followed these principles in making design decisions:
 ### Transparency and Provenance
 
 - applies to individual research products, e.g. data, code, resulting figures or tables
-- also applies to the overall research project in terms of research design, suggesting the need for pre-analyis registrations, tracking changes in research design
+- also applies to the overall research project in terms of research design, suggesting the need for pre-analysis registrations, tracking changes in research design
 
 ### Ethics and Privacy
 
@@ -72,7 +72,7 @@ We followed these principles in making design decisions:
 
 ### FAIR Data
 
-The FAIR principles of findability, accessibility, interoperatibliy, and reusability
+The FAIR principles of findability, accessibility, interoperability, and reusability
 
 - open standards (data formats)
 - licensing
@@ -82,9 +82,9 @@ The FAIR principles of findability, accessibility, interoperatibliy, and reusabi
 
 *economic* definition of transaction costs, maximizing legibility of codified knowledge.
 
-Maximixing efficiency and transparency of research communication and re-use / extensibility, both for other researchers and for students.
+Maximizing efficiency and transparency of research communication and re-use / extensibility, both for other researchers and for students.
 
-The FAIR principles of findability, accessibility, interoperatibliy, and reusability of FAIR data contribute substantially to reducing the transaction costs for other researchers or computer algorithms to access and use the research project. However addition
+The FAIR principles of findability, accessibility, interoperability, and reusability of FAIR data contribute substantially to reducing the transaction costs for other researchers or computer algorithms to access and use the research project. However addition
 
 - adherence to a common organizational structure/template for research compendium (think of principles for communication in education-- standardize format & structure as much as possible)
 - open source software
@@ -94,7 +94,9 @@ The FAIR principles of findability, accessibility, interoperatibliy, and reusabi
 
 ### Citation
 
-Once your work is easily reusalbe and extensible, you will want credit for it. DOI's, Citation file in Git Repository, possibly DOI for particular artefacts if you anticpate citing them. Cross-linking differnet research products so that each project becomes an living ecosystem of research components.
+Once your work is easily reusable and extensible, you will want credit for it.
+DOI's, Citation file in Git Repository, possibly DOI for particular artefacts if you anticipate citing them.
+Cross-linking different research products so that each project becomes an living ecosystem of research components.
 
 ## Organization / Structure of this
 
