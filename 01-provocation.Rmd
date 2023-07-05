@@ -21,6 +21,8 @@ Reference: www.edreplication.org
 - give idea of end goal at the beginning by reading one of our finished research compendium
 - cite Nust's paper on reading a research compendium
 
+- If you are running a study written in R using the `groundhog` package for reproducibility, you may need to run that console or enter "OK" in the console to permit groundhog to install packages for the study to run.
+
 ## Literature for reproduction, reanalysis, or replication
 
 First, how will you choose a study?
