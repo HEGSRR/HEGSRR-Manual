@@ -110,9 +110,6 @@ They also support web services with which researchers may publish webpages with 
 Finally, Git is highly compatible with an open science paradigm of research in which research projects become "living papers" that may be updated over time by the original authors, editors, peer reviewers, or students.
 Other researchers may easily `fork` new versions of the project for the purpose of either making and proposing changes to the original research in the form of a `pull request`, or for developing the project into a new metascience study while maintaining a formal link to the original study for the purposes of receiving updates or tracking provenance of research designs.
 
-
-
-
 ### Create new Git repository based on our template
   - public / private status
   - changes are tracked with commits
