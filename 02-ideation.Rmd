@@ -143,7 +143,7 @@ Ideally, metadata should be documented to FGDC or ISO standards and saved in `xm
 
 Social science metadata may follow the Data Documentation Initiative (DDI) Codebook: https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/metadataguide/ and Project TIER provides good advice about data metadata: https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/.
 
-## Open science writing
+## Writing
 
 - Write in plain text or code
 - new sentence on each line
@@ -157,7 +157,19 @@ We need to move toward having the pre-analysis plan, code, outputs, everything i
 For Markdown, use knitr to generate the report https://yihui.org/knitr/
 For Jupyter, use stitch https://pystitch.github.io/
 
-When knitr or stitch is run, the report can be saved to the reports folder. At that time, the researcher should commit a Version of the Git repository, and then continue revising the main notebook / rmarkdown. This will reduce redundancies while recording provenance of the data, research plan, and code.
+When knitr or stitch is run, the report can be saved to the reports folder.
+At that time, the researcher should commit a Version of the Git repository, and then continue revising the main notebook / rmarkdown.
+This will reduce redundancies while recording provenance of the data, research plan, and code.
+
+## Citing
+
+- Use BibTex for managing citations for integration with Rmarkdown and LaTeX
+- Necessary to cite not only literature, but also software and data
+- Important to give credit to researchers who developed the software packages and/or data you are using by citing their preferred reference
+- GitHub repositories may have .cff files or other information with preferred citations
+- Citations to other versions of the paper and work (e.g. preprint, compendium, data, code)
+- citation package in R https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/
+- Guide to intergating Zotero and RMarkdown: https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/
 
 ## Procedures
 

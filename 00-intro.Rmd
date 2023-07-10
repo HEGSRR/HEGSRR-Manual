@@ -6,6 +6,8 @@ Other analagous reproducibility infrastructure projects include:
 
 - TIER protocol: https://www.projecttier.org/tier-protocol/protocol-4-0/
 - Social Science Reproduction Platform https://www.socialsciencereproduction.org/ and Guide for Accellerating Computational Reproducibility in the Social Sciences: https://bitss.github.io/ACRE/
+- WORCS A workflow for open reproducible code in science https://cjvanlissa.github.io/worcs/
+
 
 ## Open science, reproducibility and replicability
 
