@@ -170,6 +170,7 @@ This will reduce redundancies while recording provenance of the data, research p
 - Citations to other versions of the paper and work (e.g. preprint, compendium, data, code)
 - citation package in R https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/
 - Guide to intergating Zotero and RMarkdown: https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/
+- The `worcs` package in r supports distinguishing "essential" references from "non-essential" references, so that a full reference list can be rendered in a preprint while a limited reference list can be rendered in a journal article with limitations on the number of references or words. See https://cjvanlissa.github.io/worcs/articles/citation.html
 
 ## Procedures
 
@@ -197,12 +198,22 @@ code | script3.R | generate visualizations for results |
 
 ### Environment
 
-Store detailed information about the hardware and software environment requirements for procedures and code here. You may also document a recipe or container of the computational environment here.
+Store detailed information about the hardware and software environment requirements for procedures and code here.
+You may also document a recipe or container of the computational environment here.
 
 This directory is specifically for hardware and software environments.
 Contextual factors or confounds of human subjects research or field research should be communicated in protocol documents and stored in the `protocols` subdirectory.
 
+It is imperative to track the versions of software, software packages, and their dependencies for a research project.
+Package versions change frequently, and may even change while you are working on your project.
+We highly recommend keeping one main list of all software packages and versions requried for a project and using this list to install and load the packages in code and to document metadata about the computational environment.
+Many templates and guides to computational research suggest writing code in a series of scripts, one for each phase of the research workflow.
+If you are taking this approach, beware of loading different sets of packages in different scripts without maintaining one comprehensive list of all required packages.
+
 For users of R, our template code, at a minimum, saves environment information using the `sessionInfo()` function.
+Our Rmarkdown template includes code for using the `groundhog` package to manage loading the version of R and packages and their dependencies as they were on a specific date.
+
+For users of Python, ...
 
 ### Code
 
