@@ -1,0 +1,23 @@
+# Reproduction
+
+The whole concept behind open science is that other researchers or students will be able to reproduce, replicate, and extend scientific studies after they are published.
+This chapter is devoted to that epilogue: how to engage with a published open science study.
+The repurposing of a scientific study will normally start with reproducing the original study results-- a process that will differ depending on the computational environment and original materials.
+We hope that by standardizing a research template, we will have eased the work of reproducing the study.
+
+This chapter provides some guidance for reproducing a study that is specific to research published with an open science workflow and conforming to version 2.0 or greater of the [HEGSRR-Template](https://www.github.com/HEGSRR/HEGSRR-Template).
+The chapter essentially outlines methods for reproducing the computational environment of a prior study.
+
+## R
+
+How to reproduce in R.
+Sentences on new lines, breaks between paragraphs.
+
+## Python
+
+How to reproduce in R.
+Sentences on new lines, breaks between paragraphs.
+
+## Acknowledgement
+
+Special thanks to Yifei Luo for contributions to this chapter.

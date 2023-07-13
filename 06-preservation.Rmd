@@ -14,5 +14,6 @@ Verify that the `CITATION.cff` file on GitHub has appropriate citation informati
 
 ## versioning
 
-- Commit a final version with tag on GitHub
+- Commit a final version with tagged release on GitHub
 - Register a final version on OSF
+- large files can be uploaded to OSF or attatched to a release on GitHub
