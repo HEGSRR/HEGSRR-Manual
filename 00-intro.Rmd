@@ -9,7 +9,7 @@ Other analogous reproducibility infrastructure projects include:
 - WORCS A workflow for open reproducible code in science https://cjvanlissa.github.io/worcs/
 
 
-## Open science, reproducibility and replicability
+## Open science, reproducibility and replicability {.unnumbered}
 
 Theoretical foundation for open science practices ... discovering valid and generalizable knowledge.
 
@@ -31,7 +31,7 @@ Replicability is... A replication study...
 
 : (Christensen et al pg 159)
 
-## Pragmatic principles for designing reproducible research workflows
+## Pragmatic principles for designing reproducible research workflows {.unnumbered}
 
 How did we decide how to construct the research template and workflow?
 
@@ -45,12 +45,12 @@ We followed these principles in making design decisions:
 6.  Lower **transaction costs**
 7.  Ease of appropriate **citation** for research products
 
-### Efficiency
+### Efficiency {.unnumbered}
 
 -   Individual tasks will start to take more time, especially at first, but in the long-term, the amount of time and effort put into the research project from inception to publishing will save effort. In particular, researchers will start to reap dividends when they need to revise research, verify methodology and results for publication, or revise or correct errors early in the research workflow. Adopting reproducible research practices also reduces the transaction costs of pausing a research project (e.g. for a field season or heavy teaching semester) and restarting later.
 - Reduce inefficiencies in research teams, especially teams distributed over space (in different research labs or at home and in the field) or time (e.g. shifting composition of a research team as students come and go from the program)
 
-### Flexibility
+### Flexibility {.unnumbered}
 
 - diversity in geography
 - complexity and heterogeneity of phenomena (NASEM complexity ; precision of replication)
@@ -58,21 +58,21 @@ We followed these principles in making design decisions:
 - original studies, meta-analyses, reproductions, replications
 - ability to fork a reproduction into a replication
 
-### Transparency and Provenance
+### Transparency and Provenance {.unnumbered}
 
 - applies to individual research products, e.g. data, code, resulting figures or tables
 - also applies to the overall research project in terms of research design, suggesting the need for pre-analysis registrations, tracking changes in research design
 
-### Ethics and Privacy
+### Ethics and Privacy {.unnumbered}
 
 - research workflow and template must account for appropriate steps to protect the privacy of human subjects and adhere to standards and  (Institutional review boards (IRB) / independent ethics committees (IEC) / etc.) reviews for responsible and ethical research.
 
-### Compatibility
+### Compatibility {.unnumbered}
 
 - with OSF, with journal & funding agency requirements, with standardized metadata
 - facilitates convergence research if this is interoperable with other disciplines
 
-### FAIR Data
+### FAIR Data {.unnumbered}
 
 The FAIR principles of findability, accessibility, interoperability, and reusability
 
@@ -80,7 +80,7 @@ The FAIR principles of findability, accessibility, interoperability, and reusabi
 - licensing
 - metadata documented with open standards
 
-### Transaction costs
+### Transaction costs {.unnumbered}
 
 *economic* definition of transaction costs, maximizing legibility of codified knowledge.
 
@@ -94,13 +94,13 @@ The FAIR principles of findability, accessibility, interoperability, and reusabi
 - legible code
 - modularity
 
-### Citation
+### Citation {.unnumbered}
 
 Once your work is easily reusable and extensible, you will want credit for it.
 DOI's, Citation file in Git Repository, possibly DOI for particular artefacts if you anticipate citing them.
 Cross-linking different research products so that each project becomes an living ecosystem of research components.
 
-## Organization / Structure of this
+## Organization / Structure of this {.unnumbered}
 
 1. Template itself and recommended content
 1. Research workflow and recommended actions
