@@ -12,13 +12,5 @@ pre {
   word-wrap: normal;
 }
 pre code {
-  font-family: "Fira Code", monospace;
   white-space: inherit;
-}
-
-.book.font-family-0 {
-  font-family: Lora, Georgia, serif;
-}
-.book.font-family-1 {
-  font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

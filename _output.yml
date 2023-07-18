@@ -1,7 +1,7 @@
 bookdown::bs4_book:
   css: style.css
   theme:
-    primary: "#AC0061"
+    primary: "#FF9700"
     base_font: 
       google: Roboto
     heading_font:
