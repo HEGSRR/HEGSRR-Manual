@@ -1,13 +1,14 @@
 # https://github.com/lucacozzuto/test_bookdown/blob/2814fd4c8dd38fe19bd2e981ed8c24ac17372fa7/.github/workflows/deploy_bookdown.yml
 # https://github.com/lucacozzuto/test_bookdown/
 on:
+  workflow_dispatch:
   push:
     branches:
       - main
 permissions:
   contents: write
 
-name: "Publish Book to GitHub Pages"
+name: "gh-pages"
 
 jobs:
   bookdown:

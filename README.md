@@ -1,3 +1,5 @@
+[![gh=pages](https://github.com/HEGSRR/HEGSRR-Manual/actions/workflows/deploy_bookdown.yml/badge.svg?branch=main)](https://github.com/HEGSRR/HEGSRR-Manual/actions/workflows/deploy_bookdown.yml)
+
 Welcome! 
 
 This is a minimal example of a book based on R Markdown and **bookdown** (https://github.com/rstudio/bookdown). 
