@@ -78,25 +78,98 @@ The chapter essentially outlines methods for reproducing the computational envir
 <h2>
 <span class="header-section-number">8.1</span> Our template<a class="anchor" aria-label="anchor" href="#our-template"><i class="fas fa-link"></i></a>
 </h2>
+<p>Our reproducibility template, which can be found at <a href="https://github.com/HEGSRR/HEGSRR-Template">HEGSRR/HEGSRR-Template</a> on GitHub, is designed to reduce common frustrations when trying to execute a compendium for computational geography.
+Here are some tips on recovering the computational environments recorded in packages using our template.</p>
 <div id="r" class="section level3" number="8.1.1">
 <h3>
 <span class="header-section-number">8.1.1</span> R<a class="anchor" aria-label="anchor" href="#r"><i class="fas fa-link"></i></a>
 </h3>
-<p>How to reproduce in R.
-Sentences on new lines, breaks between paragraphs.</p>
+<p>R is “a free software environment for statistical computing and graphics”.
+To install R, navigate to <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>.
+Additionally, install RStudio (<a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a>), the most popular IDE for R. <a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Jetbrains, &lt;a href="https://www.jetbrains.com/lp/devecosystem-2020/r/"&gt;The State of Developer Ecosystem in 2020&lt;/a&gt; survey&lt;/p&gt;'><sup>1</sup></a></p>
+<p>Those looking for a “cloud” solution may want to try out <a href="https://posit.cloud/">Posit Cloud</a>.</p>
+<div id="the-groundhog-package" class="section level4" number="8.1.1.1">
+<h4>
+<span class="header-section-number">8.1.1.1</span> The <code>groundhog</code> package<a class="anchor" aria-label="anchor" href="#the-groundhog-package"><i class="fas fa-link"></i></a>
+</h4>
+<p>Our template (<a href="https://github.com/HEGSRR/HEGSRR-Template">HEGSRR/HEGSRR-Template</a>) uses the package <code>groundhog</code> (<a href="https://github.com/CredibilityLab/groundhog">CredibilityLab/groundhog</a>) to achieve reproducibility of R scripts.</p>
+<p>Given a date and a list of packages needed, <code>groundhog</code> can retrieve the most up-to-date version of both R and these packages on that date.</p>
+<p>To recover the list of packages, in the relevant <code>.Rmd</code> file, look for references to <code>groundhog</code>.
+This is typically in a code chunk that deals with setup tasks.</p>
+<p>As <a href="https://groundhogr.com/using/">recommended</a> by <code>groundhog</code>’s developers, a sensible first step is to change the specified <code>groundhog.day</code> to a reasonably recent date - a date corresponding to your version of R, or a very recent date such as last week.</p>
+<p>Then, we can execute the main function, <code>groundhog.library()</code>.
+Depending on the date you selected, you may need to install another version of R that was up-to-date on that date.
+This is expected, because changes in R itself may impact computational results as well.
+You may also need to give <code>groundhog</code> permission to install its packages to a certain folder; for our template, this has been set to <code>data/scratch/groundhog/</code>.</p>
+<p>If the code functions as expected, then you are all set!
+If not, then we can amend the groundhog day back to the original one;
+after installing the correct version of R, <code>groundhog</code> will proceed to install the packages on that date.</p>
+<p>See the article <a href="https://support.posit.co/hc/en-us/articles/200486138-Changing-R-versions-for-the-RStudio-Desktop-IDE">Changing R version for the RStudio Desktop IDE</a> for how to tell RStudio to use a specific version of R.</p>
+</div>
 </div>
 <div id="python" class="section level3" number="8.1.2">
 <h3>
 <span class="header-section-number">8.1.2</span> Python<a class="anchor" aria-label="anchor" href="#python"><i class="fas fa-link"></i></a>
 </h3>
-<p>How to reproduce in R.
-Sentences on new lines, breaks between paragraphs.</p>
+<p>Installing Python locally can be somewhat complicated.
+In addition to Python, <a href="https://jupyter.org/">Jupyter</a> is also needed to have interactive notebooks.
+Tutorials found on the Internet also frequently mention <a href="https://docs.conda.io/en/latest/">conda</a>, a package manager; <a href="https://stackoverflow.com/a/43197286">additional packages</a> such as <code>ipykernel</code> or <code>nb_conda_kernels</code> may also be needed.</p>
+<p>As an alternative, <a href="https://datasciencenotebook.org/">many platforms</a> offer a “cloud” notebook that requires minimal setup.
+Additional benefits of these cloud notebooks <em>may</em> include:</p>
+<ul>
+<li>Disposable environment (see the <a href="#disposable-environment%3E">Disposable environment</a> section below)</li>
+<li>No hardware requirement for the user</li>
+<li>Access to premium hardware for more computational power, usually at a cost</li>
+<li>Share and collaborate with others</li>
+</ul>
+<div id="the-pigar-package" class="section level4" number="8.1.2.1">
+<h4>
+<span class="header-section-number">8.1.2.1</span> The <code>pigar</code> package<a class="anchor" aria-label="anchor" href="#the-pigar-package"><i class="fas fa-link"></i></a>
+</h4>
+<p>For Python, our template (<a href="https://github.com/HEGSRR/HEGSRR-Template">HEGSRR/HEGSRR-Template</a>) uses the package <code>pigar</code> (<a href="https://github.com/damnever/pigar">damnever/pigar</a>) to generate a list of packages needed.</p>
+<p>The generated list is named <code>requirements.txt</code>, and can be found under <code>procedure/environment/</code>.</p>
+</div>
+<div id="disposable-environment" class="section level4" number="8.1.2.2">
+<h4>
+<span class="header-section-number">8.1.2.2</span> Disposable environment<a class="anchor" aria-label="anchor" href="#disposable-environment"><i class="fas fa-link"></i></a>
+</h4>
+<p>Installing packages, even from <code>pip</code>, can make your system environment messy.</p>
+<p>Fortunately, disposable environments are available so that one does not have to worry about leaving a messy system behind.
+One example is <a href="https://colab.google/">Google Colab</a>, where one is given a fresh machine whenever one connects to a Jupyter runtime.</p>
+<p>If you are using such an environment, then simply run the following code (in Jupyter) to install the required packages:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="reproduction.html#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>r <span class="op">/</span>path<span class="op">/</span>to<span class="op">/</span>requirements.txt</span></code></pre></div>
+</div>
+<div id="package-management" class="section level4" number="8.1.2.3">
+<h4>
+<span class="header-section-number">8.1.2.3</span> Package management<a class="anchor" aria-label="anchor" href="#package-management"><i class="fas fa-link"></i></a>
+</h4>
+<p>However, if you are working on a personal laptop, departmental machine, or another non-disposable environment, then keeping the system tidy is desirable.</p>
+<p>In this case, before installing all the packages listed inside <code>requirements.txt</code>, a “virtual environment” should be created.
+With a virtual environment, no changes are made at the system-level.
+Python’s own <a href="https://docs.python.org/3/library/venv.html">venv</a> and <a href="https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html">conda</a> are two common approaches.</p>
+<p>Here is a tutorial from the website RealPython that walks you through using, as well as motivates, venv: <a href="https://realpython.com/python-virtual-environments-a-primer/">Python Virtual Environments: A Primer</a></p>
+</div>
 </div>
 </div>
 <div id="other-compendiums" class="section level2" number="8.2">
 <h2>
 <span class="header-section-number">8.2</span> Other compendiums<a class="anchor" aria-label="anchor" href="#other-compendiums"><i class="fas fa-link"></i></a>
 </h2>
+<div id="r-1" class="section level3" number="8.2.1">
+<h3>
+<span class="header-section-number">8.2.1</span> R<a class="anchor" aria-label="anchor" href="#r-1"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="python-1" class="section level3" number="8.2.2">
+<h3>
+<span class="header-section-number">8.2.2</span> Python<a class="anchor" aria-label="anchor" href="#python-1"><i class="fas fa-link"></i></a>
+</h3>
+</div>
+<div id="docker" class="section level3" number="8.2.3">
+<h3>
+<span class="header-section-number">8.2.3</span> Docker<a class="anchor" aria-label="anchor" href="#docker"><i class="fas fa-link"></i></a>
+</h3>
+</div>
 </div>
 <div id="acknowledgement" class="section level2" number="8.3">
 <h2>
@@ -106,6 +179,13 @@ Sentences on new lines, breaks between paragraphs.</p>
 
 </div>
 </div>
+
+
+
+
+
+
+
   <div class="chapter-nav">
 <div class="prev"><a href="preservation.html"><span class="header-section-number">7</span> Preservation</a></div>
 <div class="empty"></div>
@@ -119,7 +199,13 @@ Sentences on new lines, breaks between paragraphs.</p>
 <li><a class="nav-link" href="#python"><span class="header-section-number">8.1.2</span> Python</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#other-compendiums"><span class="header-section-number">8.2</span> Other compendiums</a></li>
+<li>
+<a class="nav-link" href="#other-compendiums"><span class="header-section-number">8.2</span> Other compendiums</a><ul class="nav navbar-nav">
+<li><a class="nav-link" href="#r-1"><span class="header-section-number">8.2.1</span> R</a></li>
+<li><a class="nav-link" href="#python-1"><span class="header-section-number">8.2.2</span> Python</a></li>
+<li><a class="nav-link" href="#docker"><span class="header-section-number">8.2.3</span> Docker</a></li>
+</ul>
+</li>
 <li><a class="nav-link" href="#acknowledgement"><span class="header-section-number">8.3</span> Acknowledgement</a></li>
 </ul>
 
