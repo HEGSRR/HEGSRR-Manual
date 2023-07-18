@@ -47,3 +47,8 @@ po/*~
 
 # RStudio Connect folder
 rsconnect/
+
+# Bookdown
+# https://github.com/rstudio/bookdown-demo/blob/main/.gitignore
+_book
+_bookdown_files
