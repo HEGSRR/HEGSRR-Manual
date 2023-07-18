@@ -13,8 +13,6 @@ bookdown::bs4_book:
         # arguments to sass::font_google() 
         family: Fira Code
         # local: false
-  math_method: "katex"
-  fig_retina: 4
   repo: 
     base: https://github.com/HEGSRR/HEGSRR-Manual
     branch: main
