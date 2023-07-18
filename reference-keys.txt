@@ -1,17 +1,3 @@
-usage
-render-book
-preview-book
-open-science-reproducibility-and-replicability
-pragmatic-principles-for-designing-reproducible-research-workflows
-efficiency
-flexibility
-transparency-and-provenance
-ethics-and-privacy
-compatibility
-fair-data
-transaction-costs
-citation
-organization-structure-of-this
 provocation
 literature-review
 reading-a-research-compendium
