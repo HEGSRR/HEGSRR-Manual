@@ -8,15 +8,19 @@ We hope that by standardizing a research template, we will have eased the work o
 This chapter provides some guidance for reproducing a study that is specific to research published with an open science workflow and conforming to version 2.0 or greater of the [HEGSRR-Template](https://www.github.com/HEGSRR/HEGSRR-Template).
 The chapter essentially outlines methods for reproducing the computational environment of a prior study.
 
-## R
+## Our template
+
+### R
 
 How to reproduce in R.
 Sentences on new lines, breaks between paragraphs.
 
-## Python
+### Python
 
 How to reproduce in R.
 Sentences on new lines, breaks between paragraphs.
+
+## Other compendiums
 
 ## Acknowledgement
 
