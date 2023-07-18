@@ -1,8 +1,6 @@
-about
 usage
 render-book
 preview-book
-reproducible-research-compendia-and-workflows
 open-science-reproducibility-and-replicability
 pragmatic-principles-for-designing-reproducible-research-workflows
 efficiency
