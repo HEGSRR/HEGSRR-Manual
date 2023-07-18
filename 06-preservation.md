@@ -1,0 +1,19 @@
+# Preservation
+
+## LICENSE
+
+Verify that you have used an appropriate open access license in your `LICENSE` file
+
+Either here or in the provocation phase, or both, discuss reasons for the BSD 3.0 license.
+
+## CITATION
+
+Verify that the `CITATION.cff` file on GitHub has appropriate citation information and that the "cite this repository" feature correctly generates an appropriate citation for your work.
+
+- https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/about-citation-files
+
+## versioning
+
+- Commit a final version with tagged release on GitHub
+- Register a final version on OSF
+- large files can be uploaded to OSF or attatched to a release on GitHub

@@ -70,6 +70,8 @@ license
 citation-1
 versioning
 reproduction
+our-template
 r
 python
+other-compendiums
 acknowledgement
