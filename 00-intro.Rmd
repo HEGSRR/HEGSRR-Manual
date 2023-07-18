@@ -1,4 +1,4 @@
-# Reproducible research compendia and workflows
+# Reproducible research compendia and workflows {.unnumbered}
 
 Introduction paragraph
 
