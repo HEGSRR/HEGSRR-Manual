@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 5 Writing an Analysis Plan for Preregistration | HEGSRR Manual</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 5 Writing an Analysis Plan for Preregistration | HEGSRR Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="HEGSRR/HEGSRR-Manual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 5 Writing an Analysis Plan for Preregistration | HEGSRR Manual" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Peter Kedron" />
+<meta name="author" content="Joseph Holler" />
+
+
+<meta name="date" content="2023-07-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="ideation-and-research-design.html"/>
+<link rel="next" href="data-observation-and-curation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html"><i class="fa fa-check"></i><b>2</b> Reproducible research compendia and workflows</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#open-science-reproducibility-and-replicability"><i class="fa fa-check"></i><b>2.1</b> Open science, reproducibility and replicability</a></li>
+<li class="chapter" data-level="2.2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#pragmatic-principles-for-designing-reproducible-research-workflows"><i class="fa fa-check"></i><b>2.2</b> Pragmatic principles for designing reproducible research workflows</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#efficiency"><i class="fa fa-check"></i><b>2.2.1</b> Efficiency</a></li>
+<li class="chapter" data-level="2.2.2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#flexibility"><i class="fa fa-check"></i><b>2.2.2</b> Flexibility</a></li>
+<li class="chapter" data-level="2.2.3" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#transparency-and-provenance"><i class="fa fa-check"></i><b>2.2.3</b> Transparency and Provenance</a></li>
+<li class="chapter" data-level="2.2.4" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#ethics-and-privacy"><i class="fa fa-check"></i><b>2.2.4</b> Ethics and Privacy</a></li>
+<li class="chapter" data-level="2.2.5" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#compatibility"><i class="fa fa-check"></i><b>2.2.5</b> Compatibility</a></li>
+<li class="chapter" data-level="2.2.6" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#fair-data"><i class="fa fa-check"></i><b>2.2.6</b> FAIR Data</a></li>
+<li class="chapter" data-level="2.2.7" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#transaction-costs"><i class="fa fa-check"></i><b>2.2.7</b> Transaction costs</a></li>
+<li class="chapter" data-level="2.2.8" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#citation"><i class="fa fa-check"></i><b>2.2.8</b> Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#organization-structure-of-this"><i class="fa fa-check"></i><b>2.3</b> Organization / Structure of this</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="provocation.html"><a href="provocation.html"><i class="fa fa-check"></i><b>3</b> Provocation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="provocation.html"><a href="provocation.html#literature-review"><i class="fa fa-check"></i><b>3.1</b> Literature review</a></li>
+<li class="chapter" data-level="3.2" data-path="provocation.html"><a href="provocation.html#reading-a-research-compendium"><i class="fa fa-check"></i><b>3.2</b> Reading a research compendium</a></li>
+<li class="chapter" data-level="3.3" data-path="provocation.html"><a href="provocation.html#literature-for-reproduction-reanalysis-or-replication"><i class="fa fa-check"></i><b>3.3</b> Literature for reproduction, reanalysis, or replication</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="provocation.html"><a href="provocation.html#annotation"><i class="fa fa-check"></i><b>3.3.1</b> Annotation</a></li>
+<li class="chapter" data-level="3.3.2" data-path="provocation.html"><a href="provocation.html#workflow-plan"><i class="fa fa-check"></i><b>3.3.2</b> Workflow plan</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="provocation.html"><a href="provocation.html#data-at-the-provocation-phase"><i class="fa fa-check"></i><b>3.4</b> Data at the provocation phase</a></li>
+<li class="chapter" data-level="3.5" data-path="provocation.html"><a href="provocation.html#setting-up-research-compendium"><i class="fa fa-check"></i><b>3.5</b> Setting up research compendium</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="provocation.html"><a href="provocation.html#what-is-a-research-compendium-and-why-start-one-so-early"><i class="fa fa-check"></i><b>3.5.1</b> what is a research compendium, and why start one so early?</a></li>
+<li class="chapter" data-level="3.5.2" data-path="provocation.html"><a href="provocation.html#why-make-your-research-compendium-in-git"><i class="fa fa-check"></i><b>3.5.2</b> why make your research compendium in Git?</a></li>
+<li class="chapter" data-level="3.5.3" data-path="provocation.html"><a href="provocation.html#create-new-git-repository-based-on-our-template"><i class="fa fa-check"></i><b>3.5.3</b> Create new Git repository based on our template</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="provocation.html"><a href="provocation.html#conclusion"><i class="fa fa-check"></i><b>3.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html"><i class="fa fa-check"></i><b>4</b> Ideation and Research Design</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#develop-your-research-plan"><i class="fa fa-check"></i><b>4.1</b> Develop your Research Plan</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#reproduction-studies"><i class="fa fa-check"></i><b>4.1.1</b> Reproduction studies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#reanalysis-studies"><i class="fa fa-check"></i><b>4.1.2</b> Reanalysis studies</a></li>
+<li class="chapter" data-level="4.1.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#replication-studies"><i class="fa fa-check"></i><b>4.1.3</b> Replication studies</a></li>
+<li class="chapter" data-level="4.1.4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#original-studies"><i class="fa fa-check"></i><b>4.1.4</b> Original studies</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#project-metadata-front-matter-for-your-study"><i class="fa fa-check"></i><b>4.2</b> Project metadata: front matter for your study</a></li>
+<li class="chapter" data-level="4.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#create-an-osf-project"><i class="fa fa-check"></i><b>4.3</b> Create an OSF project</a></li>
+<li class="chapter" data-level="4.4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#data-in-the-ideation-phase"><i class="fa fa-check"></i><b>4.4</b> Data in the ideation phase</a></li>
+<li class="chapter" data-level="4.5" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#writing"><i class="fa fa-check"></i><b>4.5</b> Writing</a></li>
+<li class="chapter" data-level="4.6" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#citing"><i class="fa fa-check"></i><b>4.6</b> Citing</a></li>
+<li class="chapter" data-level="4.7" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#procedures"><i class="fa fa-check"></i><b>4.7</b> Procedures</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#environment"><i class="fa fa-check"></i><b>4.7.1</b> Environment</a></li>
+<li class="chapter" data-level="4.7.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#code"><i class="fa fa-check"></i><b>4.7.2</b> Code</a></li>
+<li class="chapter" data-level="4.7.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#protocols"><i class="fa fa-check"></i><b>4.7.3</b> Protocols</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#pilot-study"><i class="fa fa-check"></i><b>4.8</b> Pilot study</a></li>
+<li class="chapter" data-level="4.9" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#conclusion-1"><i class="fa fa-check"></i><b>4.9</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html"><i class="fa fa-check"></i><b>5</b> Writing an Analysis Plan for Preregistration</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#study-metadata"><i class="fa fa-check"></i><b>5.1</b> Study metadata</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#studies-with-multiple-spatio-temporal-coverages"><i class="fa fa-check"></i><b>5.1.1</b> Studies with multiple spatio-temporal coverages</a></li>
+<li class="chapter" data-level="5.1.2" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#replication-studies-with-different-spatio-temporal-coverages"><i class="fa fa-check"></i><b>5.1.2</b> Replication studies with different spatio-temporal coverages</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#study-design"><i class="fa fa-check"></i><b>5.2</b> Study design</a></li>
+<li class="chapter" data-level="5.3" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#planned-deviations-of-metascience-studies"><i class="fa fa-check"></i><b>5.3</b> Planned deviations of metascience studies</a></li>
+<li class="chapter" data-level="5.4" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#preregister-your-analysis-plan-on-osf"><i class="fa fa-check"></i><b>5.4</b> Preregister your analysis plan on OSF</a></li>
+<li class="chapter" data-level="5.5" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#amending-the-analysis-plan-registration"><i class="fa fa-check"></i><b>5.5</b> Amending the analysis plan registration</a></li>
+<li class="chapter" data-level="5.6" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#resources"><i class="fa fa-check"></i><b>5.6</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html"><i class="fa fa-check"></i><b>6</b> Data Observation and Curation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#data-management"><i class="fa fa-check"></i><b>6.1</b> Data Management</a></li>
+<li class="chapter" data-level="6.2" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#collect-preliminary-data"><i class="fa fa-check"></i><b>6.2</b> Collect preliminary data</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#raw-private-data"><i class="fa fa-check"></i><b>6.2.1</b> Raw private data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#caution-dealing-with-large-files"><i class="fa fa-check"></i><b>6.2.2</b> Caution: Dealing with large files</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#updating-the-analysis-plan"><i class="fa fa-check"></i><b>6.3</b> Updating the analysis plan</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html"><i class="fa fa-check"></i><b>7</b> Analysis and Validation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#changes-to-the-pre-analysis-plan-registration"><i class="fa fa-check"></i><b>7.1</b> Changes to the pre-analysis plan registration</a></li>
+<li class="chapter" data-level="7.2" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#coding-and-code-style"><i class="fa fa-check"></i><b>7.2</b> Coding and Code style</a></li>
+<li class="chapter" data-level="7.3" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#intermediary-outputs"><i class="fa fa-check"></i><b>7.3</b> Intermediary outputs</a></li>
+<li class="chapter" data-level="7.4" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#function-parameters"><i class="fa fa-check"></i><b>7.4</b> Function parameters</a></li>
+<li class="chapter" data-level="7.5" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#store-publication-ready-outputs-in-the-results-directory"><i class="fa fa-check"></i><b>7.5</b> Store publication-ready outputs in the results directory</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="dissemination.html"><a href="dissemination.html"><i class="fa fa-check"></i><b>8</b> Dissemination</a></li>
+<li class="chapter" data-level="9" data-path="preservation.html"><a href="preservation.html"><i class="fa fa-check"></i><b>9</b> Preservation</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="preservation.html"><a href="preservation.html#license"><i class="fa fa-check"></i><b>9.1</b> LICENSE</a></li>
+<li class="chapter" data-level="9.2" data-path="preservation.html"><a href="preservation.html#citation-1"><i class="fa fa-check"></i><b>9.2</b> CITATION</a></li>
+<li class="chapter" data-level="9.3" data-path="preservation.html"><a href="preservation.html#versioning"><i class="fa fa-check"></i><b>9.3</b> versioning</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reproduction.html"><a href="reproduction.html"><i class="fa fa-check"></i><b>10</b> Reproduction</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="reproduction.html"><a href="reproduction.html#r"><i class="fa fa-check"></i><b>10.1</b> R</a></li>
+<li class="chapter" data-level="10.2" data-path="reproduction.html"><a href="reproduction.html#python"><i class="fa fa-check"></i><b>10.2</b> Python</a></li>
+<li class="chapter" data-level="10.3" data-path="reproduction.html"><a href="reproduction.html#acknowledgement"><i class="fa fa-check"></i><b>10.3</b> Acknowledgement</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HEGSRR Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="writing-an-analysis-plan-for-preregistration" class="section level1 hasAnchor" number="5">
+<h1><span class="header-section-number">Chapter 5</span> Writing an Analysis Plan for Preregistration<a href="writing-an-analysis-plan-for-preregistration.html#writing-an-analysis-plan-for-preregistration" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Pre-analysis plan templates were designed to help researchers specify the research design decisions most susceptible to <em>p-hacking</em> in their disciplines.
+It follows intuitively that the templates address research issues in biomedical research, psychology, econometrics, and other disciplines at the forefront of discovering and addressing the “replication crisis”.
+The templates are well suited to experimental and quasi-experimental research designs in which the researcher has significant control over sampling and observations.</p>
+<p>However, we have not found pre-analysis plans the human-environment and geographical sciences or related disciplines, in which many research designs integrate many different data sources with different spatio-temporal supports.
+These research designs require sophisticated methods involving many researcher decisions and multiple threats to validity: therefore they require attention and detail in any analysis plan for preregistration.
+At the same time, we recognize that other disciplines look to geography when it comes time to specify details about their (spatial) data sources, referring researchers to the Federal Geographic Data Committee (FGDC) or the ISO 191* series of standards for geographic metadata.
+Furthermore, the highest standards for reproducible research compendia and for research data archiving require documentation with international standards.
+Therefore, we have adopted the Dublin Core standard with expanded detail of the <code>coverage</code> element to describe the spatio-temporal support of the overall project; and we have adopted the International Standards Organization (ISO) 19115 standard for geographic information metadata to describe the spatio-temporal support of individual data sources.</p>
+<p>The next sections of this chapter will guide you through the steps for preparing the analysis plan for preregistration, culminating with instructions on registering the plan on OSF.</p>
+<div id="study-metadata" class="section level2 hasAnchor" number="5.1">
+<h2><span class="header-section-number">5.1</span> Study metadata<a href="writing-an-analysis-plan-for-preregistration.html#study-metadata" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The analysis plan begins with the title and metadata for the project.
+If you have completed the root <code>readme.md</code> file for your research compendium, you can probably copy that metadata directly into the top of your analysis plan.
+This redundancy is necessary so that the registered plan document contains all necessary information independently from the research compendium.
+This project-level metadata also provides the foundation of the analysis plan by specifying the spatio-temporal characteristics of the study, making explicit from the beginning what the target data support will be for any of the input data.
+Please see instructions on this overarching metadata in <strong>Ideation Chapter, Section X</strong>, and see contingencies for studies with multiple sub-components and replication studies below.</p>
+<div id="studies-with-multiple-spatio-temporal-coverages" class="section level3 hasAnchor" number="5.1.1">
+<h3><span class="header-section-number">5.1.1</span> Studies with multiple spatio-temporal coverages<a href="writing-an-analysis-plan-for-preregistration.html#studies-with-multiple-spatio-temporal-coverages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Some studies may contain subcomponents with different spatio-temporal characteristics, or may contain multi-level models.
+In this case, you will need to enumerate different metadata values for the spatial and/or temporal characteristics that vary across subcomponents of the study.
+The list of study metadata should contain the overarching metadata for the study (i.e. coverages inclusive of all subcomponents and resolutions as ranges from smallest to largest).</p>
+<p>Below the main metadata fields, make a hierarchical list or a table of the study subcomponents and the metadata characteristics that vary across them.</p>
+<p>For example, in a study of Social Vulnerability Indices across different spatial extents, the overarching metadata may be:
+- <code>Spatial Coverage</code>: Continental United States (this spatial extent encompasses all subcomponents of the study)
+- <code>Spatial Resolution</code>: Counties to EPA Regions (range from smallest resolution or enumeration units to largest)
+- <code>Spatial Reference System</code>: ESRI:102003 (spatial reference system for the overarching spatial coverage)
+- <code>Temporal Coverage</code>: 2017-2022 (this temporal extent encompasses all subcomponents of the study)
+- <code>Temporal Resolution</code>: 5-year estimate (this example has only one resolution and therefore does not require a range)</p>
+<p>The spatial coverage, resolution, and reference system can be shown to vary across study subcomponents by adding a statement explaining the subcomponents, followed by a hierarchical list. For example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb3-1"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-1" aria-hidden="true" tabindex="-1"></a>There are three subcomponents to the studies with varying spatial coverage, resolution, and reference systems.</span>
+<span id="cb3-2"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-2" aria-hidden="true" tabindex="-1"></a>The subcomponents are named: Macro level, Meso level, and Micro level.</span>
+<span id="cb3-3"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Macro Level Analysis</span>
+<span id="cb3-5"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Coverage`</span>: Continental United States</span>
+<span id="cb3-6"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Resolution`</span>: EPA Regions (aggregations of states)</span>
+<span id="cb3-7"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Reference System`</span>: ESRI:102003</span>
+<span id="cb3-8"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Meso Level Analysis</span>
+<span id="cb3-9"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Coverage`</span>: EPA Region 4</span>
+<span id="cb3-10"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Resolution`</span>: States (first admin level)</span>
+<span id="cb3-11"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Reference System`</span>: ESRI:102003</span>
+<span id="cb3-12"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Micro Level Analysis</span>
+<span id="cb3-13"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Coverage`</span>: Florida</span>
+<span id="cb3-14"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Resolution`</span>: Counties (second admin level)</span>
+<span id="cb3-15"><a href="writing-an-analysis-plan-for-preregistration.html#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="ss">  - </span><span class="in">`Spatial Reference System`</span>: EPSG:3086</span></code></pre></div>
+<p>A table may be used in place of a hierarchical list.
+For example:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb4-1"><a href="writing-an-analysis-plan-for-preregistration.html#cb4-1" aria-hidden="true" tabindex="-1"></a>|                          | Macro Level    | Meso Level   | Micro Level    |</span>
+<span id="cb4-2"><a href="writing-an-analysis-plan-for-preregistration.html#cb4-2" aria-hidden="true" tabindex="-1"></a>| :----------------------: | :------------: | :----------: | :------------: |</span>
+<span id="cb4-3"><a href="writing-an-analysis-plan-for-preregistration.html#cb4-3" aria-hidden="true" tabindex="-1"></a>| Spatial Coverage         | Continental US | EPA Region 4 | Florida        |</span>
+<span id="cb4-4"><a href="writing-an-analysis-plan-for-preregistration.html#cb4-4" aria-hidden="true" tabindex="-1"></a>| Spatial Resolution       | EPA Regions    | States ADM_1 | Counties ADM_2 |</span>
+<span id="cb4-5"><a href="writing-an-analysis-plan-for-preregistration.html#cb4-5" aria-hidden="true" tabindex="-1"></a>| Spatial Reference System | ESRI:102003    | ESRI:102003  | EPSG:3086      |</span></code></pre></div>
+</div>
+<div id="replication-studies-with-different-spatio-temporal-coverages" class="section level3 hasAnchor" number="5.1.2">
+<h3><span class="header-section-number">5.1.2</span> Replication studies with different spatio-temporal coverages<a href="writing-an-analysis-plan-for-preregistration.html#replication-studies-with-different-spatio-temporal-coverages" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>If the study is replication of a prior study with different spatial or temporal characteristics from the prior study, then the first block of metadata should describe the replication study spatio-temporal characteristics.
+Following the replication study metadata and prior to the Study design section, add a sub-section for the original (prior) study spatio-temporal characteristics.
+For example:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb5-1"><a href="writing-an-analysis-plan-for-preregistration.html#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">#### Original study spatio-temporal metadata</span></span>
+<span id="cb5-2"><a href="writing-an-analysis-plan-for-preregistration.html#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="writing-an-analysis-plan-for-preregistration.html#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Spatial Coverage`</span>: extent of original study</span>
+<span id="cb5-4"><a href="writing-an-analysis-plan-for-preregistration.html#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Spatial Resolution`</span>: resolution of original study</span>
+<span id="cb5-5"><a href="writing-an-analysis-plan-for-preregistration.html#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Spatial Reference System`</span>: spatial reference system of original study</span>
+<span id="cb5-6"><a href="writing-an-analysis-plan-for-preregistration.html#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Temporal Coverage`</span>: temporal extent of original study</span>
+<span id="cb5-7"><a href="writing-an-analysis-plan-for-preregistration.html#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span><span class="in">`Temporal Resolution`</span>: temporal resolution of original study</span></code></pre></div>
+</div>
+</div>
+<div id="study-design" class="section level2 hasAnchor" number="5.2">
+<h2><span class="header-section-number">5.2</span> Study design<a href="writing-an-analysis-plan-for-preregistration.html#study-design" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>This section describes the archetypal study design to be used and specifies clear hypotheses or research questions.</p>
+<p>Describe how the study relates to prior literature, e.g. is it an <strong>original study</strong> or a <strong>metascience</strong> study (one of: <strong>meta-analysis study</strong>, <strong>reproduction study</strong>, <strong>reanalysis study</strong>, or <strong>replication study</strong>)?</p>
+<p>Also describe the original study archetype, e.g. is it <strong>observational</strong>, <strong>experimental</strong>, <strong>quasi-experimental</strong>, or <strong>exploratory</strong>?</p>
+<p>Enumerate specific <strong>hypotheses</strong> to be tested or <strong>research questions</strong> to be investigated here, and specify the type of method, statistical test or model to be used on the hypothesis or question.
+For example:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb6-1"><a href="writing-an-analysis-plan-for-preregistration.html#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; H1: Hypothesis number one</span></span>
+<span id="cb6-2"><a href="writing-an-analysis-plan-for-preregistration.html#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="writing-an-analysis-plan-for-preregistration.html#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="in">`H1`</span> will be tested with a linear regression model.</span></code></pre></div>
+<p>If the study is a reproduction, reanalysis, replication, or meta-analysis, use prefixes to differentiate between the original study hypothesis and the meta-science hypothesis.
+We recommend the following prefixes:</p>
+<ul>
+<li><code>OR-H</code>: original hypothesis</li>
+<li><code>MA-H</code>: meta-analysis hypothesis</li>
+<li><code>RPr-H</code>: reproduction hypothesis</li>
+<li><code>RA-H</code>: reanalysis hypothesis</li>
+<li><code>RPl-H</code>: replication hypothesis</li>
+</ul>
+<p>enumerate the <strong>original study hypotheses</strong> to be analyzed and the type of test or model to be used for the hypothesis.
+These can be numbered with the prefix <code>OR-H</code> for “Original Hypothesis”, e.g.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb7-1"><a href="writing-an-analysis-plan-for-preregistration.html#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; OR-H1: Median home prices of census tracts are dependent upon the distance from the central business district (CBD) in Chicago, Illinois.</span></span>
+<span id="cb7-2"><a href="writing-an-analysis-plan-for-preregistration.html#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="writing-an-analysis-plan-for-preregistration.html#cb7-3" aria-hidden="true" tabindex="-1"></a>OR-H1 was tested with a linear regression model having median home prices as the dependent variable and distance between the central business district and the census tract centroid as the independent variable.</span>
+<span id="cb7-4"><a href="writing-an-analysis-plan-for-preregistration.html#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="writing-an-analysis-plan-for-preregistration.html#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="at">&gt; RPl-H1: The coefficient of distance from CBD in Buffalo, New York will have equivalent direction and magnitude to the coefficient of distance from the CBD in Chicago, Illinois.</span></span>
+<span id="cb7-6"><a href="writing-an-analysis-plan-for-preregistration.html#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="writing-an-analysis-plan-for-preregistration.html#cb7-7" aria-hidden="true" tabindex="-1"></a>RPl-H1 will be tested by substituting data for Chicago, Illinois with data for Buffalo, New York and repeating the linear regression of OR-H1.</span></code></pre></div>
+<p>The original study used a Spearman’s Rho rank correlation test for OR-H1.</p>
+</div>
+<div id="planned-deviations-of-metascience-studies" class="section level2 hasAnchor" number="5.3">
+<h2><span class="header-section-number">5.3</span> Planned deviations of metascience studies<a href="writing-an-analysis-plan-for-preregistration.html#planned-deviations-of-metascience-studies" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>If the study is a metascience study (i.e. a reproduction, reanalysis, or replication), then most of the analysis plan has simply articulated your best understanding of the prior study.
+However, to different degrees, each metascience study may intend to alter some parameters of the prior study.
+These alterations should be labelled <strong>planned deviation</strong> and include a rationale for the deviation.
+Categorize deviations <strong>for reproduction</strong> if the aim of the deviation is still to reproduce the original methodology and original results.
+Categorize deviations as <strong>for reanalysis</strong> if the aim is to alter a methodological parameter of the study in order to compare results, e.g. as a test of sensitivity, uncertainty, or robustness.
+Categorize deviations as <strong>for replication</strong> if the aim is to alter the spatial-temporal coverage of the study or to otherwise repeat the study methodology with new data/observations.</p>
+<p>For example, a recent reproduction study of ours contained a planned deviation with no expectation of altering the data, methods, or results:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb8-1"><a href="writing-an-analysis-plan-for-preregistration.html#cb8-1" aria-hidden="true" tabindex="-1"></a>**Planned deviation for reproduction**: Although the original study used SPSS and SaTScan for analysis, we will attempt to reproduce the study using R and its spatialepi and geepack packages for equivalent analysis using an open source software environment.</span></code></pre></div>
+</div>
+<div id="preregister-your-analysis-plan-on-osf" class="section level2 hasAnchor" number="5.4">
+<h2><span class="header-section-number">5.4</span> Preregister your analysis plan on OSF<a href="writing-an-analysis-plan-for-preregistration.html#preregister-your-analysis-plan-on-osf" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>In the Open Science Foundation ecosystem of open science infrastructure, <em>registration</em> means to make and archive a permanent record of the research project at one moment in time.
+When you register an analysis plan or report associated with an OSF project, a copy of the entire project is made to accompany the registration.
+A <em>preregistration</em> should be a registration of the research prior to data collection and analysis.</p>
+<p>As you are ready to preregister your plan, remember to update the <code>Date modified</code> field in your plan and on your project <code>readme.md</code> front matter.</p>
+<p>When you are ready to register your analysis plan, log into OSF and navigate to your project.
+Open the <code>Registrations</code> menu and begin a <code>New registration</code>.</p>
+<p>OSF contains several registration templates.
+To use our own template, select <code>Open-Ended Registration</code>.</p>
+<p>Even an open-ended registration requires standard metadata.
+Fortunately, OSF pulls this metadata from the umbrella project, including <code>title</code>, <code>description</code>, <code>contributors</code>, <code>category</code>, and <code>license</code>.</p>
+<p>Curiously, this is the first opportunity to enter a <code>subject</code>, which will likely be one of:
+- Social and Behavioral Sciences  Geography  (Geographic Information Sciences, Human Geography, Nature and Society Relations, Other Geography, Physical and Environmental Geography, Remote Sensing, Spatial Science)pro
+- Social and Behavioral Sciences  Environmental Studies  …</p>
+<p>Following <code>Metadata</code>, the <code>Summary</code> should be a short description of the file you are uploading, simply to describe that it is a pre-analysis plan registration.
+If you are updating a prior plan, the major updates and rationale should be noted in this summary.</p>
+<p>Upload your pre-analysis plan <code>pdf</code> file as a supplementary file.</p>
+<p>Finally, <code>Review</code> the registration and confirm its accuracy before moving on to <code>Register</code> the plan.
+At this stage you will have the option to make the publication public immediately or enter the registration into an <code>embargo</code> with a specified end date.
+The embargo option means that the registration will be locked after you <code>Submit</code> it, but it will remain private until the embargo date, after which it will be made public.</p>
+<p>A submitted registration cannot be deleted or revoked even if it is in embargo: your only recourse for errors in the registration is to make a new registration to supersede the prior one.
+All of the other admin contributors on the registration will have an option to revoke the registration in the first 48 hours after submission.</p>
+<p>Once you have registered the pre-analysis plan, remember to copy the DOI and add the DOI link in the <code>Related to</code> section of the compendium <code>readme.md</code> file.</p>
+<p>Note: If you need your project and the associated registration to identify specific files in your research compendium as specific types of resources, then prior to registration you can navigate to the file and edit file-level metadata. See these instructions: <a href="https://help.osf.io/article/569-add-metadata-to-an-osf-file" class="uri">https://help.osf.io/article/569-add-metadata-to-an-osf-file</a></p>
+</div>
+<div id="amending-the-analysis-plan-registration" class="section level2 hasAnchor" number="5.5">
+<h2><span class="header-section-number">5.5</span> Amending the analysis plan registration<a href="writing-an-analysis-plan-for-preregistration.html#amending-the-analysis-plan-registration" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Once registered, an analysis plan is locked in as a permanent record of your research plan at a particular time.
+However, plans change!
+<em>All</em> changes to plans between a pre-analysis registration and a post-analysis report must be documented as <em>unplanned deviations</em> so that results stemming from those changes may be interpreted appropriately.
+Keeping in mind that the purpose of a preregistration is to reduce increase transparency for the purpose of reducing bias and p-hacking in the research process, a revised preregistration will only be useful if the researcher(s), based on prior observations of the data, can still specify a relatively unbiased analysis plan.
+If the analysis plan is being amended on the fly based on reactions to data observations, it is better to record the amendments as <em>unplanned deviations</em> in a final report, rather than to falsely claim the changes as unbiased amendments to the analysis plan prior to the study.
+<em>If</em> you need to make significant changes to an analysis plan <em>and</em> the amended plan is not already substantially biased by prior analyses and data observations, <em>then</em> it is time to amend the analysis plan and update the preregistration.</p>
+<p>In case you need to amend the analysis plan, you may edit any section of the prior plan and add an explanation of the changes.
+Be sure to update the <code>Date modified</code> field of the study metadata.</p>
+<p>We recommend adding a second-level section titled “Rationale for analysis plan update” to the end of the analysis plan, immediately following the Integrity Statement section.
+This new section should begin with a statement including the plan version and the prior registration DOI link, followed by the rationale for the update in one or more paragraphs.</p>
+<p>Also include a paragraph discussing any change in prior observations of the data since the prior preregistration, or a statement of no change to prior observations of data.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode md"><code class="sourceCode markdown"><span id="cb9-1"><a href="writing-an-analysis-plan-for-preregistration.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">### Rationale for updated report</span></span>
+<span id="cb9-2"><a href="writing-an-analysis-plan-for-preregistration.html#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-3"><a href="writing-an-analysis-plan-for-preregistration.html#cb9-3" aria-hidden="true" tabindex="-1"></a>This is the second version of the analysis plan preregistration, superseding the first version, registered at https://doi.org/10.17605/OSF.IO/647EX on July 22, 2022.</span>
+<span id="cb9-4"><a href="writing-an-analysis-plan-for-preregistration.html#cb9-4" aria-hidden="true" tabindex="-1"></a>The rationale for this update is...</span>
+<span id="cb9-5"><a href="writing-an-analysis-plan-for-preregistration.html#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-6"><a href="writing-an-analysis-plan-for-preregistration.html#cb9-6" aria-hidden="true" tabindex="-1"></a>Our prior observations of the data have changed/not changed.</span>
+<span id="cb9-7"><a href="writing-an-analysis-plan-for-preregistration.html#cb9-7" aria-hidden="true" tabindex="-1"></a>Since the prior version, we have now...</span></code></pre></div>
+</div>
+<div id="resources" class="section level2 hasAnchor" number="5.6">
+<h2><span class="header-section-number">5.6</span> Resources<a href="writing-an-analysis-plan-for-preregistration.html#resources" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Dublin Core:
+ISO 19115:
+OSF Preregistration resources: <a href="https://www.cos.io/initiatives/prereg" class="uri">https://www.cos.io/initiatives/prereg</a>
+Guide to create registrations: <a href="https://help.osf.io/article/345-create-registrations" class="uri">https://help.osf.io/article/345-create-registrations</a></p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="ideation-and-research-design.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="data-observation-and-curation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02b-analysis-plan.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

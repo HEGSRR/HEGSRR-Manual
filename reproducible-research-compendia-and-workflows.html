@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 2 Reproducible research compendia and workflows | HEGSRR Manual</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 2 Reproducible research compendia and workflows | HEGSRR Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="HEGSRR/HEGSRR-Manual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 2 Reproducible research compendia and workflows | HEGSRR Manual" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Peter Kedron" />
+<meta name="author" content="Joseph Holler" />
+
+
+<meta name="date" content="2023-07-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+<link rel="next" href="provocation.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html"><i class="fa fa-check"></i><b>2</b> Reproducible research compendia and workflows</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#open-science-reproducibility-and-replicability"><i class="fa fa-check"></i><b>2.1</b> Open science, reproducibility and replicability</a></li>
+<li class="chapter" data-level="2.2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#pragmatic-principles-for-designing-reproducible-research-workflows"><i class="fa fa-check"></i><b>2.2</b> Pragmatic principles for designing reproducible research workflows</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#efficiency"><i class="fa fa-check"></i><b>2.2.1</b> Efficiency</a></li>
+<li class="chapter" data-level="2.2.2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#flexibility"><i class="fa fa-check"></i><b>2.2.2</b> Flexibility</a></li>
+<li class="chapter" data-level="2.2.3" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#transparency-and-provenance"><i class="fa fa-check"></i><b>2.2.3</b> Transparency and Provenance</a></li>
+<li class="chapter" data-level="2.2.4" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#ethics-and-privacy"><i class="fa fa-check"></i><b>2.2.4</b> Ethics and Privacy</a></li>
+<li class="chapter" data-level="2.2.5" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#compatibility"><i class="fa fa-check"></i><b>2.2.5</b> Compatibility</a></li>
+<li class="chapter" data-level="2.2.6" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#fair-data"><i class="fa fa-check"></i><b>2.2.6</b> FAIR Data</a></li>
+<li class="chapter" data-level="2.2.7" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#transaction-costs"><i class="fa fa-check"></i><b>2.2.7</b> Transaction costs</a></li>
+<li class="chapter" data-level="2.2.8" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#citation"><i class="fa fa-check"></i><b>2.2.8</b> Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#organization-structure-of-this"><i class="fa fa-check"></i><b>2.3</b> Organization / Structure of this</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="provocation.html"><a href="provocation.html"><i class="fa fa-check"></i><b>3</b> Provocation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="provocation.html"><a href="provocation.html#literature-review"><i class="fa fa-check"></i><b>3.1</b> Literature review</a></li>
+<li class="chapter" data-level="3.2" data-path="provocation.html"><a href="provocation.html#reading-a-research-compendium"><i class="fa fa-check"></i><b>3.2</b> Reading a research compendium</a></li>
+<li class="chapter" data-level="3.3" data-path="provocation.html"><a href="provocation.html#literature-for-reproduction-reanalysis-or-replication"><i class="fa fa-check"></i><b>3.3</b> Literature for reproduction, reanalysis, or replication</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="provocation.html"><a href="provocation.html#annotation"><i class="fa fa-check"></i><b>3.3.1</b> Annotation</a></li>
+<li class="chapter" data-level="3.3.2" data-path="provocation.html"><a href="provocation.html#workflow-plan"><i class="fa fa-check"></i><b>3.3.2</b> Workflow plan</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="provocation.html"><a href="provocation.html#data-at-the-provocation-phase"><i class="fa fa-check"></i><b>3.4</b> Data at the provocation phase</a></li>
+<li class="chapter" data-level="3.5" data-path="provocation.html"><a href="provocation.html#setting-up-research-compendium"><i class="fa fa-check"></i><b>3.5</b> Setting up research compendium</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="provocation.html"><a href="provocation.html#what-is-a-research-compendium-and-why-start-one-so-early"><i class="fa fa-check"></i><b>3.5.1</b> what is a research compendium, and why start one so early?</a></li>
+<li class="chapter" data-level="3.5.2" data-path="provocation.html"><a href="provocation.html#why-make-your-research-compendium-in-git"><i class="fa fa-check"></i><b>3.5.2</b> why make your research compendium in Git?</a></li>
+<li class="chapter" data-level="3.5.3" data-path="provocation.html"><a href="provocation.html#create-new-git-repository-based-on-our-template"><i class="fa fa-check"></i><b>3.5.3</b> Create new Git repository based on our template</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="provocation.html"><a href="provocation.html#conclusion"><i class="fa fa-check"></i><b>3.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html"><i class="fa fa-check"></i><b>4</b> Ideation and Research Design</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#develop-your-research-plan"><i class="fa fa-check"></i><b>4.1</b> Develop your Research Plan</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#reproduction-studies"><i class="fa fa-check"></i><b>4.1.1</b> Reproduction studies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#reanalysis-studies"><i class="fa fa-check"></i><b>4.1.2</b> Reanalysis studies</a></li>
+<li class="chapter" data-level="4.1.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#replication-studies"><i class="fa fa-check"></i><b>4.1.3</b> Replication studies</a></li>
+<li class="chapter" data-level="4.1.4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#original-studies"><i class="fa fa-check"></i><b>4.1.4</b> Original studies</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#project-metadata-front-matter-for-your-study"><i class="fa fa-check"></i><b>4.2</b> Project metadata: front matter for your study</a></li>
+<li class="chapter" data-level="4.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#create-an-osf-project"><i class="fa fa-check"></i><b>4.3</b> Create an OSF project</a></li>
+<li class="chapter" data-level="4.4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#data-in-the-ideation-phase"><i class="fa fa-check"></i><b>4.4</b> Data in the ideation phase</a></li>
+<li class="chapter" data-level="4.5" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#writing"><i class="fa fa-check"></i><b>4.5</b> Writing</a></li>
+<li class="chapter" data-level="4.6" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#citing"><i class="fa fa-check"></i><b>4.6</b> Citing</a></li>
+<li class="chapter" data-level="4.7" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#procedures"><i class="fa fa-check"></i><b>4.7</b> Procedures</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#environment"><i class="fa fa-check"></i><b>4.7.1</b> Environment</a></li>
+<li class="chapter" data-level="4.7.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#code"><i class="fa fa-check"></i><b>4.7.2</b> Code</a></li>
+<li class="chapter" data-level="4.7.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#protocols"><i class="fa fa-check"></i><b>4.7.3</b> Protocols</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#pilot-study"><i class="fa fa-check"></i><b>4.8</b> Pilot study</a></li>
+<li class="chapter" data-level="4.9" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#conclusion-1"><i class="fa fa-check"></i><b>4.9</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html"><i class="fa fa-check"></i><b>5</b> Writing an Analysis Plan for Preregistration</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#study-metadata"><i class="fa fa-check"></i><b>5.1</b> Study metadata</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#studies-with-multiple-spatio-temporal-coverages"><i class="fa fa-check"></i><b>5.1.1</b> Studies with multiple spatio-temporal coverages</a></li>
+<li class="chapter" data-level="5.1.2" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#replication-studies-with-different-spatio-temporal-coverages"><i class="fa fa-check"></i><b>5.1.2</b> Replication studies with different spatio-temporal coverages</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#study-design"><i class="fa fa-check"></i><b>5.2</b> Study design</a></li>
+<li class="chapter" data-level="5.3" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#planned-deviations-of-metascience-studies"><i class="fa fa-check"></i><b>5.3</b> Planned deviations of metascience studies</a></li>
+<li class="chapter" data-level="5.4" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#preregister-your-analysis-plan-on-osf"><i class="fa fa-check"></i><b>5.4</b> Preregister your analysis plan on OSF</a></li>
+<li class="chapter" data-level="5.5" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#amending-the-analysis-plan-registration"><i class="fa fa-check"></i><b>5.5</b> Amending the analysis plan registration</a></li>
+<li class="chapter" data-level="5.6" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#resources"><i class="fa fa-check"></i><b>5.6</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html"><i class="fa fa-check"></i><b>6</b> Data Observation and Curation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#data-management"><i class="fa fa-check"></i><b>6.1</b> Data Management</a></li>
+<li class="chapter" data-level="6.2" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#collect-preliminary-data"><i class="fa fa-check"></i><b>6.2</b> Collect preliminary data</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#raw-private-data"><i class="fa fa-check"></i><b>6.2.1</b> Raw private data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#caution-dealing-with-large-files"><i class="fa fa-check"></i><b>6.2.2</b> Caution: Dealing with large files</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#updating-the-analysis-plan"><i class="fa fa-check"></i><b>6.3</b> Updating the analysis plan</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html"><i class="fa fa-check"></i><b>7</b> Analysis and Validation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#changes-to-the-pre-analysis-plan-registration"><i class="fa fa-check"></i><b>7.1</b> Changes to the pre-analysis plan registration</a></li>
+<li class="chapter" data-level="7.2" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#coding-and-code-style"><i class="fa fa-check"></i><b>7.2</b> Coding and Code style</a></li>
+<li class="chapter" data-level="7.3" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#intermediary-outputs"><i class="fa fa-check"></i><b>7.3</b> Intermediary outputs</a></li>
+<li class="chapter" data-level="7.4" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#function-parameters"><i class="fa fa-check"></i><b>7.4</b> Function parameters</a></li>
+<li class="chapter" data-level="7.5" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#store-publication-ready-outputs-in-the-results-directory"><i class="fa fa-check"></i><b>7.5</b> Store publication-ready outputs in the results directory</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="dissemination.html"><a href="dissemination.html"><i class="fa fa-check"></i><b>8</b> Dissemination</a></li>
+<li class="chapter" data-level="9" data-path="preservation.html"><a href="preservation.html"><i class="fa fa-check"></i><b>9</b> Preservation</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="preservation.html"><a href="preservation.html#license"><i class="fa fa-check"></i><b>9.1</b> LICENSE</a></li>
+<li class="chapter" data-level="9.2" data-path="preservation.html"><a href="preservation.html#citation-1"><i class="fa fa-check"></i><b>9.2</b> CITATION</a></li>
+<li class="chapter" data-level="9.3" data-path="preservation.html"><a href="preservation.html#versioning"><i class="fa fa-check"></i><b>9.3</b> versioning</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reproduction.html"><a href="reproduction.html"><i class="fa fa-check"></i><b>10</b> Reproduction</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="reproduction.html"><a href="reproduction.html#r"><i class="fa fa-check"></i><b>10.1</b> R</a></li>
+<li class="chapter" data-level="10.2" data-path="reproduction.html"><a href="reproduction.html#python"><i class="fa fa-check"></i><b>10.2</b> Python</a></li>
+<li class="chapter" data-level="10.3" data-path="reproduction.html"><a href="reproduction.html#acknowledgement"><i class="fa fa-check"></i><b>10.3</b> Acknowledgement</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HEGSRR Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="reproducible-research-compendia-and-workflows" class="section level1 hasAnchor" number="2">
+<h1><span class="header-section-number">Chapter 2</span> Reproducible research compendia and workflows<a href="reproducible-research-compendia-and-workflows.html#reproducible-research-compendia-and-workflows" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>Introduction paragraph</p>
+<p>Other analogous reproducibility infrastructure projects include:</p>
+<ul>
+<li>TIER protocol: <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/" class="uri">https://www.projecttier.org/tier-protocol/protocol-4-0/</a></li>
+<li>Social Science Reproduction Platform <a href="https://www.socialsciencereproduction.org/" class="uri">https://www.socialsciencereproduction.org/</a> and Guide for Accelerating Computational Reproducibility in the Social Sciences: <a href="https://bitss.github.io/ACRE/" class="uri">https://bitss.github.io/ACRE/</a></li>
+<li>WORCS A workflow for open reproducible code in science <a href="https://cjvanlissa.github.io/worcs/" class="uri">https://cjvanlissa.github.io/worcs/</a></li>
+</ul>
+<div id="open-science-reproducibility-and-replicability" class="section level2 hasAnchor" number="2.1">
+<h2><span class="header-section-number">2.1</span> Open science, reproducibility and replicability<a href="reproducible-research-compendia-and-workflows.html#open-science-reproducibility-and-replicability" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Theoretical foundation for open science practices … discovering valid and generalizable knowledge.</p>
+<p>Open science is…</p>
+<ul>
+<li>Mertonian norms (1942) (christensen et al pg 23)</li>
+</ul>
+<p>“Replication is a methodological tool based on a reptition procedure that is invovled in establishing a fact, truth, or piece of knowledge.” (Schmidt 20019)</p>
+<p>Reproducibility is… An original study may be considered computationally reproducible if… A reproduction study…</p>
+<p>Replicability is… A replication study…</p>
+<table>
+<caption>(Christensen et al pg 159)</caption>
+<tbody>
+<tr class="odd">
+<td></td>
+<td>Same Procedure</td>
+<td>Difference Procedure</td>
+</tr>
+<tr class="even">
+<td>Same Data</td>
+<td>Reproduction</td>
+<td>Renalysis</td>
+</tr>
+<tr class="odd">
+<td>Different Data</td>
+<td>Replication</td>
+<td>Extension</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="pragmatic-principles-for-designing-reproducible-research-workflows" class="section level2 hasAnchor" number="2.2">
+<h2><span class="header-section-number">2.2</span> Pragmatic principles for designing reproducible research workflows<a href="reproducible-research-compendia-and-workflows.html#pragmatic-principles-for-designing-reproducible-research-workflows" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>How did we decide how to construct the research template and workflow?</p>
+<p>We followed these principles in making design decisions:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Efficiency</strong> for both individual researchers and research teams</li>
+<li><strong>Flexibility</strong> to accommodate many types of research</li>
+<li><strong>Transparency</strong> and <strong>provenance</strong> at both the level of individual research artefacts and the overall research design</li>
+<li><strong>Compatibility</strong> with other research standards</li>
+<li><strong>FAIR</strong> data</li>
+<li>Lower <strong>transaction costs</strong></li>
+<li>Ease of appropriate <strong>citation</strong> for research products</li>
+</ol>
+<div id="efficiency" class="section level3 hasAnchor" number="2.2.1">
+<h3><span class="header-section-number">2.2.1</span> Efficiency<a href="reproducible-research-compendia-and-workflows.html#efficiency" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>Individual tasks will start to take more time, especially at first, but in the long-term, the amount of time and effort put into the research project from inception to publishing will save effort. In particular, researchers will start to reap dividends when they need to revise research, verify methodology and results for publication, or revise or correct errors early in the research workflow. Adopting reproducible research practices also reduces the transaction costs of pausing a research project (e.g. for a field season or heavy teaching semester) and restarting later.</li>
+<li>Reduce inefficiencies in research teams, especially teams distributed over space (in different research labs or at home and in the field) or time (e.g. shifting composition of a research team as students come and go from the program)</li>
+</ul>
+</div>
+<div id="flexibility" class="section level3 hasAnchor" number="2.2.2">
+<h3><span class="header-section-number">2.2.2</span> Flexibility<a href="reproducible-research-compendia-and-workflows.html#flexibility" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>diversity in geography</li>
+<li>complexity and heterogeneity of phenomena (NASEM complexity ; precision of replication)</li>
+<li>not just computational geography - qualitative and mixed methods research as well</li>
+<li>original studies, meta-analyses, reproductions, replications</li>
+<li>ability to fork a reproduction into a replication</li>
+</ul>
+</div>
+<div id="transparency-and-provenance" class="section level3 hasAnchor" number="2.2.3">
+<h3><span class="header-section-number">2.2.3</span> Transparency and Provenance<a href="reproducible-research-compendia-and-workflows.html#transparency-and-provenance" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>applies to individual research products, e.g. data, code, resulting figures or tables</li>
+<li>also applies to the overall research project in terms of research design, suggesting the need for pre-analysis registrations, tracking changes in research design</li>
+</ul>
+</div>
+<div id="ethics-and-privacy" class="section level3 hasAnchor" number="2.2.4">
+<h3><span class="header-section-number">2.2.4</span> Ethics and Privacy<a href="reproducible-research-compendia-and-workflows.html#ethics-and-privacy" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>research workflow and template must account for appropriate steps to protect the privacy of human subjects and adhere to standards and (Institutional review boards (IRB) / independent ethics committees (IEC) / etc.) reviews for responsible and ethical research.</li>
+</ul>
+</div>
+<div id="compatibility" class="section level3 hasAnchor" number="2.2.5">
+<h3><span class="header-section-number">2.2.5</span> Compatibility<a href="reproducible-research-compendia-and-workflows.html#compatibility" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<ul>
+<li>with OSF, with journal &amp; funding agency requirements, with standardized metadata</li>
+<li>facilitates convergence research if this is interoperable with other disciplines</li>
+</ul>
+</div>
+<div id="fair-data" class="section level3 hasAnchor" number="2.2.6">
+<h3><span class="header-section-number">2.2.6</span> FAIR Data<a href="reproducible-research-compendia-and-workflows.html#fair-data" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>The FAIR principles of findability, accessibility, interoperability, and reusability</p>
+<ul>
+<li>open standards (data formats)</li>
+<li>licensing</li>
+<li>metadata documented with open standards</li>
+</ul>
+</div>
+<div id="transaction-costs" class="section level3 hasAnchor" number="2.2.7">
+<h3><span class="header-section-number">2.2.7</span> Transaction costs<a href="reproducible-research-compendia-and-workflows.html#transaction-costs" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p><em>economic</em> definition of transaction costs, maximizing legibility of codified knowledge.</p>
+<p>Maximizing efficiency and transparency of research communication and re-use / extensibility, both for other researchers and for students.</p>
+<p>The FAIR principles of findability, accessibility, interoperability, and reusability of FAIR data contribute substantially to reducing the transaction costs for other researchers or computer algorithms to access and use the research project. However addition</p>
+<ul>
+<li>adherence to a common organizational structure/template for research compendium (think of principles for communication in education– standardize format &amp; structure as much as possible)</li>
+<li>open source software</li>
+<li>computational environment</li>
+<li>legible code</li>
+<li>modularity</li>
+</ul>
+</div>
+<div id="citation" class="section level3 hasAnchor" number="2.2.8">
+<h3><span class="header-section-number">2.2.8</span> Citation<a href="reproducible-research-compendia-and-workflows.html#citation" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Once your work is easily reusable and extensible, you will want credit for it.
+DOI’s, Citation file in Git Repository, possibly DOI for particular artefacts if you anticipate citing them.
+Cross-linking different research products so that each project becomes an living ecosystem of research components.</p>
+</div>
+</div>
+<div id="organization-structure-of-this" class="section level2 hasAnchor" number="2.3">
+<h2><span class="header-section-number">2.3</span> Organization / Structure of this<a href="reproducible-research-compendia-and-workflows.html#organization-structure-of-this" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ol style="list-style-type: decimal">
+<li>Template itself and recommended content</li>
+<li>Research workflow and recommended actions</li>
+</ol>
+<p>We organize this manual to follow a research workflow of recommended actions, including actions interacting with, creating and editing the research compendium.</p>
+<p>We follow the open science workflow composed of steps for:</p>
+<ol style="list-style-type: decimal">
+<li>Provocation</li>
+<li>Ideation</li>
+<li>Data observation and curation (“Knowledge Generation” in NASEM 2018)</li>
+<li>Validation</li>
+<li>Dissemination</li>
+<li>Preservation</li>
+</ol>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="provocation.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/00-intro.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>

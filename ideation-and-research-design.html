@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Chapter 4 Ideation and Research Design | HEGSRR Manual</title>
+  <meta name="description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="generator" content="bookdown 0.34 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Chapter 4 Ideation and Research Design | HEGSRR Manual" />
+  <meta property="og:type" content="book" />
+  
+  <meta property="og:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  <meta name="github-repo" content="HEGSRR/HEGSRR-Manual" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Chapter 4 Ideation and Research Design | HEGSRR Manual" />
+  
+  <meta name="twitter:description" content="<p>This is a minimal example of using the bookdown package to write a book.
+The HTML output format for this example is bookdown::gitbook,
+set in the _output.yml file.</p>" />
+  
+
+<meta name="author" content="Peter Kedron" />
+<meta name="author" content="Joseph Holler" />
+
+
+<meta name="date" content="2023-07-18" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="provocation.html"/>
+<link rel="next" href="writing-an-analysis-plan-for-preregistration.html"/>
+<script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+<link href="libs/anchor-sections-1.1.0/anchor-sections.css" rel="stylesheet" />
+<link href="libs/anchor-sections-1.1.0/anchor-sections-hash.css" rel="stylesheet" />
+<script src="libs/anchor-sections-1.1.0/anchor-sections.js"></script>
+
+
+<style type="text/css">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+<style type="text/css">
+  
+  div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+</style>
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">A Minimal Book Example</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> About</a>
+<ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#usage"><i class="fa fa-check"></i><b>1.1</b> Usage</a></li>
+<li class="chapter" data-level="1.2" data-path="index.html"><a href="index.html#render-book"><i class="fa fa-check"></i><b>1.2</b> Render book</a></li>
+<li class="chapter" data-level="1.3" data-path="index.html"><a href="index.html#preview-book"><i class="fa fa-check"></i><b>1.3</b> Preview book</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html"><i class="fa fa-check"></i><b>2</b> Reproducible research compendia and workflows</a>
+<ul>
+<li class="chapter" data-level="2.1" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#open-science-reproducibility-and-replicability"><i class="fa fa-check"></i><b>2.1</b> Open science, reproducibility and replicability</a></li>
+<li class="chapter" data-level="2.2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#pragmatic-principles-for-designing-reproducible-research-workflows"><i class="fa fa-check"></i><b>2.2</b> Pragmatic principles for designing reproducible research workflows</a>
+<ul>
+<li class="chapter" data-level="2.2.1" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#efficiency"><i class="fa fa-check"></i><b>2.2.1</b> Efficiency</a></li>
+<li class="chapter" data-level="2.2.2" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#flexibility"><i class="fa fa-check"></i><b>2.2.2</b> Flexibility</a></li>
+<li class="chapter" data-level="2.2.3" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#transparency-and-provenance"><i class="fa fa-check"></i><b>2.2.3</b> Transparency and Provenance</a></li>
+<li class="chapter" data-level="2.2.4" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#ethics-and-privacy"><i class="fa fa-check"></i><b>2.2.4</b> Ethics and Privacy</a></li>
+<li class="chapter" data-level="2.2.5" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#compatibility"><i class="fa fa-check"></i><b>2.2.5</b> Compatibility</a></li>
+<li class="chapter" data-level="2.2.6" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#fair-data"><i class="fa fa-check"></i><b>2.2.6</b> FAIR Data</a></li>
+<li class="chapter" data-level="2.2.7" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#transaction-costs"><i class="fa fa-check"></i><b>2.2.7</b> Transaction costs</a></li>
+<li class="chapter" data-level="2.2.8" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#citation"><i class="fa fa-check"></i><b>2.2.8</b> Citation</a></li>
+</ul></li>
+<li class="chapter" data-level="2.3" data-path="reproducible-research-compendia-and-workflows.html"><a href="reproducible-research-compendia-and-workflows.html#organization-structure-of-this"><i class="fa fa-check"></i><b>2.3</b> Organization / Structure of this</a></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="provocation.html"><a href="provocation.html"><i class="fa fa-check"></i><b>3</b> Provocation</a>
+<ul>
+<li class="chapter" data-level="3.1" data-path="provocation.html"><a href="provocation.html#literature-review"><i class="fa fa-check"></i><b>3.1</b> Literature review</a></li>
+<li class="chapter" data-level="3.2" data-path="provocation.html"><a href="provocation.html#reading-a-research-compendium"><i class="fa fa-check"></i><b>3.2</b> Reading a research compendium</a></li>
+<li class="chapter" data-level="3.3" data-path="provocation.html"><a href="provocation.html#literature-for-reproduction-reanalysis-or-replication"><i class="fa fa-check"></i><b>3.3</b> Literature for reproduction, reanalysis, or replication</a>
+<ul>
+<li class="chapter" data-level="3.3.1" data-path="provocation.html"><a href="provocation.html#annotation"><i class="fa fa-check"></i><b>3.3.1</b> Annotation</a></li>
+<li class="chapter" data-level="3.3.2" data-path="provocation.html"><a href="provocation.html#workflow-plan"><i class="fa fa-check"></i><b>3.3.2</b> Workflow plan</a></li>
+</ul></li>
+<li class="chapter" data-level="3.4" data-path="provocation.html"><a href="provocation.html#data-at-the-provocation-phase"><i class="fa fa-check"></i><b>3.4</b> Data at the provocation phase</a></li>
+<li class="chapter" data-level="3.5" data-path="provocation.html"><a href="provocation.html#setting-up-research-compendium"><i class="fa fa-check"></i><b>3.5</b> Setting up research compendium</a>
+<ul>
+<li class="chapter" data-level="3.5.1" data-path="provocation.html"><a href="provocation.html#what-is-a-research-compendium-and-why-start-one-so-early"><i class="fa fa-check"></i><b>3.5.1</b> what is a research compendium, and why start one so early?</a></li>
+<li class="chapter" data-level="3.5.2" data-path="provocation.html"><a href="provocation.html#why-make-your-research-compendium-in-git"><i class="fa fa-check"></i><b>3.5.2</b> why make your research compendium in Git?</a></li>
+<li class="chapter" data-level="3.5.3" data-path="provocation.html"><a href="provocation.html#create-new-git-repository-based-on-our-template"><i class="fa fa-check"></i><b>3.5.3</b> Create new Git repository based on our template</a></li>
+</ul></li>
+<li class="chapter" data-level="3.6" data-path="provocation.html"><a href="provocation.html#conclusion"><i class="fa fa-check"></i><b>3.6</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html"><i class="fa fa-check"></i><b>4</b> Ideation and Research Design</a>
+<ul>
+<li class="chapter" data-level="4.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#develop-your-research-plan"><i class="fa fa-check"></i><b>4.1</b> Develop your Research Plan</a>
+<ul>
+<li class="chapter" data-level="4.1.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#reproduction-studies"><i class="fa fa-check"></i><b>4.1.1</b> Reproduction studies</a></li>
+<li class="chapter" data-level="4.1.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#reanalysis-studies"><i class="fa fa-check"></i><b>4.1.2</b> Reanalysis studies</a></li>
+<li class="chapter" data-level="4.1.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#replication-studies"><i class="fa fa-check"></i><b>4.1.3</b> Replication studies</a></li>
+<li class="chapter" data-level="4.1.4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#original-studies"><i class="fa fa-check"></i><b>4.1.4</b> Original studies</a></li>
+</ul></li>
+<li class="chapter" data-level="4.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#project-metadata-front-matter-for-your-study"><i class="fa fa-check"></i><b>4.2</b> Project metadata: front matter for your study</a></li>
+<li class="chapter" data-level="4.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#create-an-osf-project"><i class="fa fa-check"></i><b>4.3</b> Create an OSF project</a></li>
+<li class="chapter" data-level="4.4" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#data-in-the-ideation-phase"><i class="fa fa-check"></i><b>4.4</b> Data in the ideation phase</a></li>
+<li class="chapter" data-level="4.5" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#writing"><i class="fa fa-check"></i><b>4.5</b> Writing</a></li>
+<li class="chapter" data-level="4.6" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#citing"><i class="fa fa-check"></i><b>4.6</b> Citing</a></li>
+<li class="chapter" data-level="4.7" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#procedures"><i class="fa fa-check"></i><b>4.7</b> Procedures</a>
+<ul>
+<li class="chapter" data-level="4.7.1" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#environment"><i class="fa fa-check"></i><b>4.7.1</b> Environment</a></li>
+<li class="chapter" data-level="4.7.2" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#code"><i class="fa fa-check"></i><b>4.7.2</b> Code</a></li>
+<li class="chapter" data-level="4.7.3" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#protocols"><i class="fa fa-check"></i><b>4.7.3</b> Protocols</a></li>
+</ul></li>
+<li class="chapter" data-level="4.8" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#pilot-study"><i class="fa fa-check"></i><b>4.8</b> Pilot study</a></li>
+<li class="chapter" data-level="4.9" data-path="ideation-and-research-design.html"><a href="ideation-and-research-design.html#conclusion-1"><i class="fa fa-check"></i><b>4.9</b> Conclusion</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html"><i class="fa fa-check"></i><b>5</b> Writing an Analysis Plan for Preregistration</a>
+<ul>
+<li class="chapter" data-level="5.1" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#study-metadata"><i class="fa fa-check"></i><b>5.1</b> Study metadata</a>
+<ul>
+<li class="chapter" data-level="5.1.1" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#studies-with-multiple-spatio-temporal-coverages"><i class="fa fa-check"></i><b>5.1.1</b> Studies with multiple spatio-temporal coverages</a></li>
+<li class="chapter" data-level="5.1.2" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#replication-studies-with-different-spatio-temporal-coverages"><i class="fa fa-check"></i><b>5.1.2</b> Replication studies with different spatio-temporal coverages</a></li>
+</ul></li>
+<li class="chapter" data-level="5.2" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#study-design"><i class="fa fa-check"></i><b>5.2</b> Study design</a></li>
+<li class="chapter" data-level="5.3" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#planned-deviations-of-metascience-studies"><i class="fa fa-check"></i><b>5.3</b> Planned deviations of metascience studies</a></li>
+<li class="chapter" data-level="5.4" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#preregister-your-analysis-plan-on-osf"><i class="fa fa-check"></i><b>5.4</b> Preregister your analysis plan on OSF</a></li>
+<li class="chapter" data-level="5.5" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#amending-the-analysis-plan-registration"><i class="fa fa-check"></i><b>5.5</b> Amending the analysis plan registration</a></li>
+<li class="chapter" data-level="5.6" data-path="writing-an-analysis-plan-for-preregistration.html"><a href="writing-an-analysis-plan-for-preregistration.html#resources"><i class="fa fa-check"></i><b>5.6</b> Resources</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html"><i class="fa fa-check"></i><b>6</b> Data Observation and Curation</a>
+<ul>
+<li class="chapter" data-level="6.1" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#data-management"><i class="fa fa-check"></i><b>6.1</b> Data Management</a></li>
+<li class="chapter" data-level="6.2" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#collect-preliminary-data"><i class="fa fa-check"></i><b>6.2</b> Collect preliminary data</a>
+<ul>
+<li class="chapter" data-level="6.2.1" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#raw-private-data"><i class="fa fa-check"></i><b>6.2.1</b> Raw private data</a></li>
+<li class="chapter" data-level="6.2.2" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#caution-dealing-with-large-files"><i class="fa fa-check"></i><b>6.2.2</b> Caution: Dealing with large files</a></li>
+</ul></li>
+<li class="chapter" data-level="6.3" data-path="data-observation-and-curation.html"><a href="data-observation-and-curation.html#updating-the-analysis-plan"><i class="fa fa-check"></i><b>6.3</b> Updating the analysis plan</a></li>
+</ul></li>
+<li class="chapter" data-level="7" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html"><i class="fa fa-check"></i><b>7</b> Analysis and Validation</a>
+<ul>
+<li class="chapter" data-level="7.1" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#changes-to-the-pre-analysis-plan-registration"><i class="fa fa-check"></i><b>7.1</b> Changes to the pre-analysis plan registration</a></li>
+<li class="chapter" data-level="7.2" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#coding-and-code-style"><i class="fa fa-check"></i><b>7.2</b> Coding and Code style</a></li>
+<li class="chapter" data-level="7.3" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#intermediary-outputs"><i class="fa fa-check"></i><b>7.3</b> Intermediary outputs</a></li>
+<li class="chapter" data-level="7.4" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#function-parameters"><i class="fa fa-check"></i><b>7.4</b> Function parameters</a></li>
+<li class="chapter" data-level="7.5" data-path="analysis-and-validation.html"><a href="analysis-and-validation.html#store-publication-ready-outputs-in-the-results-directory"><i class="fa fa-check"></i><b>7.5</b> Store publication-ready outputs in the results directory</a></li>
+</ul></li>
+<li class="chapter" data-level="8" data-path="dissemination.html"><a href="dissemination.html"><i class="fa fa-check"></i><b>8</b> Dissemination</a></li>
+<li class="chapter" data-level="9" data-path="preservation.html"><a href="preservation.html"><i class="fa fa-check"></i><b>9</b> Preservation</a>
+<ul>
+<li class="chapter" data-level="9.1" data-path="preservation.html"><a href="preservation.html#license"><i class="fa fa-check"></i><b>9.1</b> LICENSE</a></li>
+<li class="chapter" data-level="9.2" data-path="preservation.html"><a href="preservation.html#citation-1"><i class="fa fa-check"></i><b>9.2</b> CITATION</a></li>
+<li class="chapter" data-level="9.3" data-path="preservation.html"><a href="preservation.html#versioning"><i class="fa fa-check"></i><b>9.3</b> versioning</a></li>
+</ul></li>
+<li class="chapter" data-level="10" data-path="reproduction.html"><a href="reproduction.html"><i class="fa fa-check"></i><b>10</b> Reproduction</a>
+<ul>
+<li class="chapter" data-level="10.1" data-path="reproduction.html"><a href="reproduction.html#r"><i class="fa fa-check"></i><b>10.1</b> R</a></li>
+<li class="chapter" data-level="10.2" data-path="reproduction.html"><a href="reproduction.html#python"><i class="fa fa-check"></i><b>10.2</b> Python</a></li>
+<li class="chapter" data-level="10.3" data-path="reproduction.html"><a href="reproduction.html#acknowledgement"><i class="fa fa-check"></i><b>10.3</b> Acknowledgement</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">HEGSRR Manual</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="ideation-and-research-design" class="section level1 hasAnchor" number="4">
+<h1><span class="header-section-number">Chapter 4</span> Ideation and Research Design<a href="ideation-and-research-design.html#ideation-and-research-design" class="anchor-section" aria-label="Anchor link to header"></a></h1>
+<p>In the provocation phase, you already developed a specific research question, chose an archetypical research design, and set up a research compendium.</p>
+<p>Now it is time to develop your research plan!</p>
+<p>Remember, you can amend your research plan later.
+You can even embargo your research plan and git repository for now before making it public later.
+The point is to start increasing the transparency and provenance of your research project <em>now</em>, so that it <em>can</em> be made public later.</p>
+<div id="develop-your-research-plan" class="section level2 hasAnchor" number="4.1">
+<h2><span class="header-section-number">4.1</span> Develop your Research Plan<a href="ideation-and-research-design.html#develop-your-research-plan" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>It is already time to translate your specific research question and archetypical research design, into a specific research plan.</p>
+<div id="reproduction-studies" class="section level3 hasAnchor" number="4.1.1">
+<h3><span class="header-section-number">4.1.1</span> Reproduction studies<a href="ideation-and-research-design.html#reproduction-studies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="reanalysis-studies" class="section level3 hasAnchor" number="4.1.2">
+<h3><span class="header-section-number">4.1.2</span> Reanalysis studies<a href="ideation-and-research-design.html#reanalysis-studies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="replication-studies" class="section level3 hasAnchor" number="4.1.3">
+<h3><span class="header-section-number">4.1.3</span> Replication studies<a href="ideation-and-research-design.html#replication-studies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+<div id="original-studies" class="section level3 hasAnchor" number="4.1.4">
+<h3><span class="header-section-number">4.1.4</span> Original studies<a href="ideation-and-research-design.html#original-studies" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+</div>
+</div>
+<div id="project-metadata-front-matter-for-your-study" class="section level2 hasAnchor" number="4.2">
+<h2><span class="header-section-number">4.2</span> Project metadata: front matter for your study<a href="ideation-and-research-design.html#project-metadata-front-matter-for-your-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Every journal article and book starts with front matter, and this is essentially metadata about the publication, including citation and attribution, copyright license, distribution, and more.
+Open science starts with making your research project <em>findable</em>, which will require specifying standard metadata describing your research project.
+Once you take the time to describe this project metadata, you will likely find that you continue to reuse the same information about your research throughout the full life cycle.
+This is no coincidence, as many publishers and repositories have adopted the same DUBLIN Core standards <a href="https://www.dublincore.org/specifications/dublin-core/" class="uri">https://www.dublincore.org/specifications/dublin-core/</a> for describing research artifacts.
+Therefore, it is never too early to create a working draft of your project metadata in the top readme file of your research compendium.
+This same information will be transferred to your analysis plans and research reports.</p>
+<p>Some research designs may have multiple subcomponents with different spatio-temporal characteristics.
+However, for this project-level metadata, simply report one all-encompassing set of spatio-temporal coverage metadata inclusive of all subcomponents and at the finest resolution.
+Some research designs may be a replication study with plans to alter the prior study’s spatio-temporal characteristics, in which case this project-level metadata for the research compendium should report the planned spatio-temporal coverage for the replication study.</p>
+<ul>
+<li><code>Description</code>: a brief abstract about your research project.</li>
+<li><code>Contributors</code>: names and email contact information for contributors. Note the corresponding author with an asterisk <code>*</code>. This corresponding author should be considered the <code>creator</code> of Dublin Core metadata. On GitHub, you may want to explicitly link to contributors’ GitHub profiles with the <code>@</code> symbol, e.g. <code>@josephholler</code>. On OSF, you will be asked to specify contributors’ permissions (administrator, read &amp; write, or read) and whether they are a bibliographic or non-bibliographic contributor.</li>
+<li><code>Affiliated Institutions</code>: List affiliations of the contributors as one would do for publications. On OSF, this field auto-populates with the registered institutions of any of the contributors as a benefit to institutional subscriptions.</li>
+<li><code>Funding</code>: If applicable, include information on one or more funding sources for the research project.
+<ul>
+<li>Funder Name (for NSF project, the specific division or directorate)</li>
+<li>Award Title</li>
+<li>Award info URI (web address)</li>
+<li>Award number</li>
+</ul></li>
+<li><code>Date created</code>: date when project was started</li>
+<li><code>Date modified</code>: date of most recent revision</li>
+<li><code>Subject</code>: select from a controlled vocabulary</li>
+<li><code>Tags</code>: select a few keywords, separated by commas. This is a feature compatible with GitHub, OSF, and Journal Articles, but is not a Dublin Core element.</li>
+<li><code>Coverage (geographic)</code>: Specify the geographic extent of your study. This may be a place name and link to a feature in a gazetteer like GeoNames or OpenStreetMap, or a well known text (WKT) representation of a bounding box.</li>
+<li><code>Coverage (temporal)</code>: Specify the temporal extent of your study—i.e. the range of time represented by the data observations.</li>
+<li><code>Relation</code>: Identifier links to other related research elements, e.g. the OSF repository, preprints,</li>
+<li><code>Rights</code>: Maintain the link to a license file and also list the license type here.</li>
+<li><code>Resource type</code>: The overall research compendium is a <code>Collection</code> which will eventually include more specific subcomponents, e.g. <code>Preprint</code>, or <code>JournalArticle</code>. Dublin Core maintains a list of resource types: <a href="https://www.dublincore.org/specifications/dublin-core/resource-typelist/" class="uri">https://www.dublincore.org/specifications/dublin-core/resource-typelist/</a> as does OSF: <a href="https://help.osf.io/article/570-resource-types-in-osf" class="uri">https://help.osf.io/article/570-resource-types-in-osf</a></li>
+<li><code>Resource language</code>: most likely <code>English</code></li>
+<li><code>Conforms To</code>: Conforms to the research compendium template for reproducible and replicable human-environment and geographical sciences at <a href="https://hegsrr.github.com/HEGSRR-Template" class="uri">https://hegsrr.github.com/HEGSRR-Template</a></li>
+</ul>
+<p>The project metadata has excluded just a few Dublin Core elements:
+- <code>Title</code> is implied by the first-level header of the Markdown document.
+- <code>Creator</code> is implied by the contributor noted as the corresponding author and by the history of Git commits.
+- <code>Publisher</code> will likely include multiple entities as the repository linked to services like GitHub, GitLab, OSF, Figshare, or other digital Git repositories or archives. Publisher will be implied by the service on which the service is hosted.
+- <code>Format</code> is excluded because the research compendium <em>collection</em> contains digital files of many different formats.</p>
+<p>The metadata also includes a few elements beyond the 15 core elements:
+- <code>Coverage</code> is explicitly subdivided into geographic and temporal coverages.
+- <code>Funding</code> is added for compatibility with OSF and to fulfill requirements of funding agencies.
+- <code>Affiliated Institutions</code> is added for compatibility with OSF and would normally be included with</p>
+</div>
+<div id="create-an-osf-project" class="section level2 hasAnchor" number="4.3">
+<h2><span class="header-section-number">4.3</span> Create an OSF project<a href="ideation-and-research-design.html#create-an-osf-project" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>The Open Science Foundation (OSF, at <a href="https://osf.io" class="uri">https://osf.io</a>) is a digital archive for open science digital artifacts.
+We recommend creating an umbrella OSF project mapping directly to your Git research compendium.</p>
+<p>First, create new project.
+Make the project settings of <code>title</code> and <code>description</code> identical to the information in your compendium <code>readme.md</code> file.
+The best <code>category</code> value for a complete research compendium is <code>project</code>.
+The other project categories are more suitable for specific project components, should you need to register those separately.</p>
+<p>Second, add additional <code>contributors</code>, unless you are developing the project as a solo researcher.
+For each contributor, choose their level of permissions (administer, read and write, or just read) and check the <code>bibliographic contributor</code> if they are to be included in citations to this work.</p>
+<p>Third, the project <code>License</code> can be set on the project home page (click the project title at top-left) under the Description.
+Use the <code>Add a license</code> link to choose a license.
+Stodden (XXXX) suggests the BSD 3-Clause “New”/“Revised” License for computational open science research.
+If you do not choose a license or if you choose “No license”, then full copyright protections are implied and it will be impossible for other researchers to re-use the project content.</p>
+<p>Fourth, complete additional <code>metadata</code>.
+The <code>description</code> field points to the same data as the project settings <code>description</code> and the <code>contributors</code> data points to the same data as the <code>contributors</code> menu.
+The <code>affiliated institutions</code> are controlled by OSF institutional subscriptions, and the <code>date created</code> and <code>date modified</code> are automatically generated.</p>
+<p>This leaves three <code>metadata</code> fields to manage:
+- <code>Resource information</code>: The <code>Resource type</code> should be set to <code>Collection</code> for a research compendium composed of multiple resource types and data formats.
+<code>Resource language</code> should likely be <code>English</code>, unless you have translated the compendium template.
+Other project subcomponents could be registered separately with more specific <code>resource type</code> classifications.
+- <code>Funding/support information</code>: The funding fields match information in your compendium <code>readme.md</code> file.
+- <code>Tags</code>: match information in your compendium <code>readme.md</code> file.</p>
+<p>Fifth, connect your OSF project to your GitHub repository.
+- Add-ons -&gt; GitHub
+- Files -&gt; add repository???
+As you continue to work on your git repository and push changes to GitHub, your OSF project will automatically stay up-to-date with all of the changes.
+Further on in the research life cycle you will create OSF registrations, which will archive a static version of your compendium at the time of registration.</p>
+<p>Finally, projects have a <code>Make Public</code> option, which OSF warns you not to use until you are ready for the contents to be truly public.
+When you <em>are</em> ready for the project to be public, you can also generate a <code>DOI</code> for inclusion in your project <code>Citation</code>.
+Additionally, you can type <code>bibtex</code> into the <code>get more citations</code> dropdown to copy BibTex citation data for your OSF project.
+Once your project is public with a DOI, you may crosslink this information from the GitHub repository:
+- Return to the compendium <code>readme.md</code> and add the OSF project DOI to the <code>Related to:</code> section.
+- Update the <code>CITATION.cff</code> file to cite your OSF Project with DOI.</p>
+</div>
+<div id="data-in-the-ideation-phase" class="section level2 hasAnchor" number="4.4">
+<h2><span class="header-section-number">4.4</span> Data in the ideation phase<a href="ideation-and-research-design.html#data-in-the-ideation-phase" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>At this phase of research, we should avoid directly observing study data to the greatest extent that this can be avoided.
+The pre-analysis plan will require you to disclose any experience or engagement you have had with the data because of the potential biases this engagement introduces into the research process.
+Therefore, our larger discussion about data management with open science research compendiums is in the next chapter on Observation.
+At this stage, we should be more concerned about researching potential secondary data sources and inventing the structure and observation design for primary data to be collected.
+As such, we are more concerned at this phase about <em>metadata</em> about the data we are to acquire, create, and analyze, than we are about the data themselves.
+It is recommended to save information about your data into the <code>data/metadata</code> folder, to start populating the <code>data/data_metadata.csv</code> tabular index to the data directories with a row for each data sources and associated metadata files, and possibly to write preliminary code for accessing data with specialized packages or application programming interfaces (APIs), including using APIs to query and save metadata.</p>
+<p>The <code>data_metadata.csv</code> file may contain information about data files that do not yet exist
+At this phase of research, you may not know specific paths and names for the files you will create.
+However, you will want to keep track of the different <code>layers</code> you intend to create or acquire and their associated metadata files.
+Therefore, you may create temporary working names for the <code>name</code> column, keep an accurate list of metadata files in the <code>metadata</code> column, n</p>
+<p>The <code>data_metadata.csv</code> file is a tabular index of each data file in your project, including the fields:</p>
+<ul>
+<li><code>path</code>: the path to the data folder, likely one of: <code>raw\private</code>, <code>raw\public</code>, <code>derived\private</code> or <code>derived\public</code></li>
+<li><code>name</code>: the file name, including extension. You may refer to individual tables of relational databases (e.g. geopackages) by appending <code>|</code> and the layer name, e.g. the <code>my_layer</code> table of <code>my_geopackage.gpkg</code> could be noted with this name: <code>my_geopackage.gpkg|my_layer</code></li>
+<li><code>metadata</code>: list of metadata files for this data source, stored in the <code>data\metadata</code> folder. These may include ISO-191** or FGDC standard <code>XML</code> files, data dictionaries, licenses or attributions, user guides, webpage printouts, etc. Separate multiple files with semicolons: <code>;</code>.</li>
+<li><code>description</code>: <em>very</em> brief description of the dataset. If the data is <strong>simulated</strong>, <strong>randomized</strong>, or represents only a limited <strong>sample</strong> of the full research dataset, you should note those limitations here.</li>
+</ul>
+<p>In many cases you may document metadata about data sources that will not be directly included in the repository because they are either too large, they are proprietary, or they contain confidential information.
+The <code>data_metadata.csv</code> file should proscribe the location of these types of data as <code>raw\private</code> for data sources that need to be downloaded and/or acquired with permission and/or funding or as <code>derived\private</code> for large or confidential files that will be created with computational code or scripts.</p>
+<p>Researchers are <strong>strongly encouraged</strong> to include additional metadata in the <code>metadata</code> folder.
+Further information about the procedures used to create or acquire data to be stored in <code>private</code> directories should be maintained in the <a href="../procedure/procedure_metadata.csv">procedure_metadata.csv</a>.</p>
+<p>Ideally, metadata should be documented to FGDC or ISO standards and saved in <code>xml</code>, <code>json</code>, or <code>yaml</code> format. Some tools for reading and writing metadata include:</p>
+<ul>
+<li>USGS Metadata Wizard 2.0: <a href="https://www.usgs.gov/software/metadata-wizard-20" class="uri">https://www.usgs.gov/software/metadata-wizard-20</a></li>
+<li>MDEditor: <a href="https://www.mdeditor.org/" class="uri">https://www.mdeditor.org/</a></li>
+<li>GeoNetwork: <a href="https://geonetwork-opensource.org/" class="uri">https://geonetwork-opensource.org/</a></li>
+<li>R geometa: <a href="https://cran.r-project.org/web/packages/geometa" class="uri">https://cran.r-project.org/web/packages/geometa</a></li>
+<li>Python pygeometa: <a href="https://pypi.org/project/pygeometa/" class="uri">https://pypi.org/project/pygeometa/</a></li>
+</ul>
+<p>Social science metadata may follow the Data Documentation Initiative (DDI) Codebook: <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/metadataguide/" class="uri">https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/metadataguide/</a> and Project TIER provides good advice about data metadata: <a href="https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/" class="uri">https://www.projecttier.org/tier-protocol/protocol-4-0/root/data/originaldata/metadata/</a>.</p>
+</div>
+<div id="writing" class="section level2 hasAnchor" number="4.5">
+<h2><span class="header-section-number">4.5</span> Writing<a href="ideation-and-research-design.html#writing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Write in plain text or code</li>
+<li>new sentence on each line</li>
+<li>stored in Git repository with version control</li>
+<li>options:
+<ul>
+<li>non-computational (markdown or latex only)</li>
+<li>Rmarkdown computational notebook</li>
+<li>Jupyter Python</li>
+</ul></li>
+</ul>
+<p>We need to move toward having the pre-analysis plan, code, outputs, everything in the same R markdown file or Jupyter notebook.
+For Markdown, use knitr to generate the report <a href="https://yihui.org/knitr/" class="uri">https://yihui.org/knitr/</a>
+For Jupyter, use stitch <a href="https://pystitch.github.io/" class="uri">https://pystitch.github.io/</a></p>
+<p>When knitr or stitch is run, the report can be saved to the reports folder.
+At that time, the researcher should commit a Version of the Git repository, and then continue revising the main notebook / rmarkdown.
+This will reduce redundancies while recording provenance of the data, research plan, and code.</p>
+</div>
+<div id="citing" class="section level2 hasAnchor" number="4.6">
+<h2><span class="header-section-number">4.6</span> Citing<a href="ideation-and-research-design.html#citing" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<ul>
+<li>Use BibTex for managing citations for integration with Rmarkdown and LaTeX</li>
+<li>Necessary to cite not only literature, but also software and data</li>
+<li>Important to give credit to researchers who developed the software packages and/or data you are using by citing their preferred reference</li>
+<li>GitHub repositories may have .cff files or other information with preferred citations</li>
+<li>Citations to other versions of the paper and work (e.g. preprint, compendium, data, code)</li>
+<li>citation package in R <a href="https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/" class="uri">https://ropensci.org/blog/2021/11/16/how-to-cite-r-and-r-packages/</a></li>
+<li>Guide to intergating Zotero and RMarkdown: <a href="https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/" class="uri">https://christopherjunk.netlify.app/blog/2019/02/25/zotero-rmarkdown/</a></li>
+<li>The <code>worcs</code> package in r supports distinguishing “essential” references from “non-essential” references, so that a full reference list can be rendered in a preprint while a limited reference list can be rendered in a journal article with limitations on the number of references or words. See <a href="https://cjvanlissa.github.io/worcs/articles/citation.html" class="uri">https://cjvanlissa.github.io/worcs/articles/citation.html</a></li>
+</ul>
+</div>
+<div id="procedures" class="section level2 hasAnchor" number="4.7">
+<h2><span class="header-section-number">4.7</span> Procedures<a href="ideation-and-research-design.html#procedures" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Save all methods and procedures and supporting documents in the <code>procedures</code> directory.</p>
+<p>Catalog all procedures in an <em>ordered</em> table documenting any code or other research procedure/protocol documents. Provide a brief description of the purpose of each procedure and piece of code.</p>
+<p>Catalog the files in <code>procedure_metadata.csv</code></p>
+<p>See the example table below, and modify the table to suit your research design.</p>
+<ul>
+<li><code>path</code>: the path to the file or directory, usually one of <code>code</code> for software code and scripts, <code>environment</code> for the hardware/software computational environment, or <code>protocol</code> for non-code protocols like</li>
+<li><code>name</code>: the file name, including extension</li>
+<li><code>purpose</code>: <em>very</em> brief description of the purpose of the file</li>
+</ul>
+<p>The <em>sequence</em> of procedures to be followed is implied by the <em>order</em> in the table and should be explicit in the pre-analysis plan and post-analysis report.</p>
+<table>
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>path</th>
+<th>name</th>
+<th>purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>code</td>
+<td>script1.R</td>
+<td>download and preprocess data</td>
+</tr>
+<tr class="even">
+<td>protocol</td>
+<td>survey_irb.pdf</td>
+<td>Institutional review board protocol for survey sampling and instrument</td>
+</tr>
+<tr class="odd">
+<td>protocol</td>
+<td>mapworkshop.pdf</td>
+<td>participatory mapping workshop protocol</td>
+</tr>
+<tr class="even">
+<td>code</td>
+<td>script2.R</td>
+<td>run analysis</td>
+</tr>
+<tr class="odd">
+<td>code</td>
+<td>script3.R</td>
+<td>generate visualizations for results</td>
+</tr>
+</tbody>
+</table>
+<div id="environment" class="section level3 hasAnchor" number="4.7.1">
+<h3><span class="header-section-number">4.7.1</span> Environment<a href="ideation-and-research-design.html#environment" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Store detailed information about the hardware and software environment requirements for procedures and code here.
+You may also document a recipe or container of the computational environment here.</p>
+<p>This directory is specifically for hardware and software environments.
+Contextual factors or confounds of human subjects research or field research should be communicated in protocol documents and stored in the <code>protocols</code> subdirectory.</p>
+<p>It is imperative to track the versions of software, software packages, and their dependencies for a research project.
+Package versions change frequently, and may even change while you are working on your project.
+We highly recommend keeping one main list of all software packages and versions requried for a project and using this list to install and load the packages in code and to document metadata about the computational environment.
+Many templates and guides to computational research suggest writing code in a series of scripts, one for each phase of the research workflow.
+If you are taking this approach, beware of loading different sets of packages in different scripts without maintaining one comprehensive list of all required packages.</p>
+<p>For users of R, our template code, at a minimum, saves environment information using the <code>sessionInfo()</code> function.
+Our Rmarkdown template includes code for using the <code>groundhog</code> package to manage loading the version of R and packages and their dependencies as they were on a specific date.</p>
+<p>For users of Python, …</p>
+</div>
+<div id="code" class="section level3 hasAnchor" number="4.7.2">
+<h3><span class="header-section-number">4.7.2</span> Code<a href="ideation-and-research-design.html#code" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Store computational code-based research procedures in the <code>code</code> subdirectory.</p>
+</div>
+<div id="protocols" class="section level3 hasAnchor" number="4.7.3">
+<h3><span class="header-section-number">4.7.3</span> Protocols<a href="ideation-and-research-design.html#protocols" class="anchor-section" aria-label="Anchor link to header"></a></h3>
+<p>Store any non-computational protocols and research procedures in the <code>protocols</code> subdirectory.</p>
+<ul>
+<li>store IRB protocol and any forms or instruments in procedures / protocols</li>
+<li>the research compendium is part of the data management plan</li>
+<li>read ahead to dissemination phase for considering privacy and data management</li>
+</ul>
+</div>
+</div>
+<div id="pilot-study" class="section level2 hasAnchor" number="4.8">
+<h2><span class="header-section-number">4.8</span> Pilot study<a href="ideation-and-research-design.html#pilot-study" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>Some research designs will benefit from a pilot study, which will use a limited set of observations to test and revise (the) data collection instrument(s) or test the methodology on a limited set of data.
+Pilot studies should be specified in the analysis plan methodology and disclosed in the <em>Prior observations</em> section of the plan.
+The data observations and findings from a pilot study are not be included in the complete study and will not be disseminated or archived.
+Therefore, pilot study data and materials may be saved in the <code>data/scratch</code> directory for temporary use.</p>
+<ul>
+<li>should pilot study data go into the <code>/scratch</code> folder?</li>
+</ul>
+</div>
+<div id="conclusion-1" class="section level2 hasAnchor" number="4.9">
+<h2><span class="header-section-number">4.9</span> Conclusion<a href="ideation-and-research-design.html#conclusion-1" class="anchor-section" aria-label="Anchor link to header"></a></h2>
+<p>You have developed your archetypical research design into a specific registered research plan.
+You have developed your research compendium
+You have connected your research registration on OSF to a GitHub</p>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="provocation.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="writing-an-analysis-plan-for-preregistration.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"whatsapp": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/USERNAME/REPO/edit/BRANCH/02-ideation.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["_main.pdf", "_main.epub"],
+"search": {
+"engine": "fuse",
+"options": null
+},
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/latest.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
