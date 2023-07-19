@@ -86,11 +86,58 @@ Here is a tutorial from the website RealPython that walks you through using, as 
 
 ## Other compendiums
 
+Here are some general tips for how to recover from a research compendium one might find on the Internet.
+
 ### R
+
+If you encounter a list of packages and their respective versions, you will have to install an old version manually.
+You can do this with the `remotes::install_version()` function documented [here](https://search.r-project.org/CRAN/refmans/remotes/html/install_version.html).
+
+However, older version of packages on CRAN are usually only available in "source" form, and not an immediately usable "binary" form.
+This means that you will need to have an R development environment installed.
+You can check if you do by running `devtools::has_devel()`.
+
+On Windows, the "development environment" is [RTools](https://cran.r-project.org/bin/windows/Rtools/);
+on MacOS [the process](https://mac.r-project.org/tools/) is slightly more complicated.
+
+One further complication is that packages often require system-level dependencies.
+These dependencies are additional software that are not always available, or consistent, across different machines.
+Thus, installing "source" packages is often prone to failure.
+
+#### The `renv` package
+
+Analogous to `venv` in Python, `renv` records the versions of R and its packages for a certain project, and isolates these packages in a separate virtual environment.
+
+Per [the documentation](https://rstudio.github.io/renv/articles/renv.html#collaboration), a project with `renv` will contain a `renv` directory, as well as a `renv.lock` file.
+By opening the project, `renv` will automatically activate itself and prompt you to run `renv::restore()`, which restores the virtual environment.
+
+Note that `renv` usually has to install from "source" when recovering, so this will often fail.
+See `renv`'s [Caveats page](https://rstudio.github.io/renv/articles/renv.html#caveats) for details.
 
 ### Python
 
+Projects using virtual environments (`venv`, `virtualenv`, `conda`, Poetry, etc.) will usually at least mention the method used.
+One can also look for hints in the folder structure, for example a `venv` folder.
+Once the particluar solution is located, the documentation for restoring that environment can then be readily found online.
+
+#### Manually create `requirements.txt`
+
+If you encounter a list of package names in Python, it is possible to convert that list into a reproducible `requirements.txt` file.
+Simply find a package version that works, and record it into the requirements file.
+
+[Here is an example](https://pip.pypa.io/en/stable/reference/requirements-file-format/) requirements file.
+
+Using the package `scipy` as an example:
+
+- `scipy`: install [the latest version](https://pypi.org/project/scipy/) from the Python Package Index (PyPI).
+- `scipy == 1.9.1`: install version 1.9.1 from PyPI.
+- `scipy == 1.9.*`: install the latest version that starts with 1.9.1. This installs 1.9.3, unless `scipy` decides to release version 1.9.4.
+
+To ensure repeatability, it is best practice to specify an exact version of packages; this is called "version pinning".
+
 ### Docker
+
+TODO: dockerfile vs docker container from registry
 
 ## Acknowledgement
 

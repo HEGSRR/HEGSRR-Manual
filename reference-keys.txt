@@ -63,6 +63,8 @@ disposable-environment
 package-management
 other-compendiums
 r-1
+the-renv-package
 python-1
+manually-create-requirements.txt
 docker
 acknowledgement

@@ -155,20 +155,63 @@ Python’s own <a href="https://docs.python.org/3/library/venv.html">venv</a> an
 <h2>
 <span class="header-section-number">8.2</span> Other compendiums<a class="anchor" aria-label="anchor" href="#other-compendiums"><i class="fas fa-link"></i></a>
 </h2>
+<p>Here are some general tips for how to recover from a research compendium one might find on the Internet.</p>
 <div id="r-1" class="section level3" number="8.2.1">
 <h3>
 <span class="header-section-number">8.2.1</span> R<a class="anchor" aria-label="anchor" href="#r-1"><i class="fas fa-link"></i></a>
 </h3>
+<p>If you encounter a list of packages and their respective versions, you will have to install an old version manually.
+You can do this with the <code>remotes::install_version()</code> function documented <a href="https://search.r-project.org/CRAN/refmans/remotes/html/install_version.html">here</a>.</p>
+<p>However, older version of packages on CRAN are usually only available in “source” form, and not an immediately usable “binary” form.
+This means that you will need to have an R development environment installed.
+You can check if you do by running <code>devtools::has_devel()</code>.</p>
+<p>On Windows, the “development environment” is <a href="https://cran.r-project.org/bin/windows/Rtools/">RTools</a>;
+on MacOS <a href="https://mac.r-project.org/tools/">the process</a> is slightly more complicated.</p>
+<p>One further complication is that packages often require system-level dependencies.
+These dependencies are additional software that are not always available, or consistent, across different machines.
+Thus, installing “source” packages is often prone to failure.</p>
+<div id="the-renv-package" class="section level4" number="8.2.1.1">
+<h4>
+<span class="header-section-number">8.2.1.1</span> The <code>renv</code> package<a class="anchor" aria-label="anchor" href="#the-renv-package"><i class="fas fa-link"></i></a>
+</h4>
+<p>Analogous to <code>venv</code> in Python, <code>renv</code> records the versions of R and its packages for a certain project, and isolates these packages in a separate virtual environment.</p>
+<p>Per <a href="https://rstudio.github.io/renv/articles/renv.html#collaboration">the documentation</a>, a project with <code>renv</code> will contain a <code>renv</code> directory, as well as a <code>renv.lock</code> file.
+By opening the project, <code>renv</code> will automatically activate itself and prompt you to run <code>renv::restore()</code>, which restores the virtual environment.</p>
+<p>Note that <code>renv</code> usually has to install from “source” when recovering, so this will often fail.
+See <code>renv</code>’s <a href="https://rstudio.github.io/renv/articles/renv.html#caveats">Caveats page</a> for details.</p>
+</div>
 </div>
 <div id="python-1" class="section level3" number="8.2.2">
 <h3>
 <span class="header-section-number">8.2.2</span> Python<a class="anchor" aria-label="anchor" href="#python-1"><i class="fas fa-link"></i></a>
 </h3>
+<p>Projects using virtual environments (<code>venv</code>, <code>virtualenv</code>, <code>conda</code>, Poetry, etc.) will usually at least mention the method used.
+One can also look for hints in the folder structure, for example a <code>venv</code> folder.
+Once the particluar solution is located, the documentation for restoring that environment can then be readily found online.</p>
+<div id="manually-create-requirements.txt" class="section level4" number="8.2.2.1">
+<h4>
+<span class="header-section-number">8.2.2.1</span> Manually create <code>requirements.txt</code><a class="anchor" aria-label="anchor" href="#manually-create-requirements.txt"><i class="fas fa-link"></i></a>
+</h4>
+<p>If you encounter a list of package names in Python, it is possible to convert that list into a reproducible <code>requirements.txt</code> file.
+Simply find a package version that works, and record it into the requirements file.</p>
+<p><a href="https://pip.pypa.io/en/stable/reference/requirements-file-format/">Here is an example</a> requirements file.</p>
+<p>Using the package <code>scipy</code> as an example:</p>
+<ul>
+<li>
+<code>scipy</code>: install <a href="https://pypi.org/project/scipy/">the latest version</a> from the Python Package Index (PyPI).</li>
+<li>
+<code>scipy == 1.9.1</code>: install version 1.9.1 from PyPI.</li>
+<li>
+<code>scipy == 1.9.*</code>: install the latest version that starts with 1.9.1. This installs 1.9.3, unless <code>scipy</code> decides to release version 1.9.4.</li>
+</ul>
+<p>To ensure repeatability, it is best practice to specify an exact version of packages; this is called “version pinning”.</p>
+</div>
 </div>
 <div id="docker" class="section level3" number="8.2.3">
 <h3>
 <span class="header-section-number">8.2.3</span> Docker<a class="anchor" aria-label="anchor" href="#docker"><i class="fas fa-link"></i></a>
 </h3>
+<p>TODO: dockerfile vs docker container from registry</p>
 </div>
 </div>
 <div id="acknowledgement" class="section level2" number="8.3">
@@ -224,7 +267,7 @@ Python’s own <a href="https://docs.python.org/3/library/venv.html">venv</a> an
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-07-18.</p>
+    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-07-19.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
