@@ -211,7 +211,25 @@ Simply find a package version that works, and record it into the requirements fi
 <h3>
 <span class="header-section-number">8.2.3</span> Docker<a class="anchor" aria-label="anchor" href="#docker"><i class="fas fa-link"></i></a>
 </h3>
-<p>TODO: dockerfile vs docker container from registry</p>
+<p>If you encounter a compedium in the form of a Docker container or Dockerfile, you will need to run Docker.</p>
+<p>Installing Docker (Desktop) on <a href="https://docs.docker.com/desktop/install/windows-install/">Windows</a> or <a href="https://docs.docker.com/desktop/install/mac-install/">MacOS</a> is possible, but complications and caveats exist.
+The preferred way to use Docker (Server) is through a server running <a href="https://docs.docker.com/engine/install/#server">a supported Linux distribution</a>.</p>
+<p>A Dockerfile contains instructions on how to create (“build”) a Docker container; run <a href="https://docs.docker.com/engine/reference/commandline/build/">docker build</a> to turn a project-with-Dockerfile into a container.
+Alternatively, the Docker container may have already been built; in this case, <a href="https://docs.docker.com/engine/reference/commandline/pull/">docker pull</a> the container onto your machine.
+Once we have a container, we can use <a href="https://docs.docker.com/engine/reference/commandline/run/">docker run</a> to execute the container.</p>
+<p>Note that Docker images are essentially virtual machines inside your system, so you may not be able to directly communicate with the virtual machine.
+Often the communication happens through a browser.
+For example, the Docker image can run RStudio Server (or JupyterLab), and you can access the service with a browser.</p>
+<div id="cloud-services" class="section level4" number="8.2.3.1">
+<h4>
+<span class="header-section-number">8.2.3.1</span> Cloud services<a class="anchor" aria-label="anchor" href="#cloud-services"><i class="fas fa-link"></i></a>
+</h4>
+<p>Alternatively, you can utilize an online service to run Docker.</p>
+<p>Many platforms offer “virtual machines” that run Linux distributions, so you can install and run Docker inside these machines.
+Another commonly-seen approach is for the platform to run Docker for you.</p>
+<p>When using cloud services, especially “virtual machines”, it is important to note that there is an increased risk of someone hacking into your cloud machine.
+Therefore, when using a cloud service, it is desirable to follow common best practices, and take extra precautions to guard against unauthorized access to your machine.</p>
+</div>
 </div>
 </div>
 <div id="acknowledgement" class="section level2" number="8.3">

@@ -137,7 +137,28 @@ To ensure repeatability, it is best practice to specify an exact version of pack
 
 ### Docker
 
-TODO: dockerfile vs docker container from registry
+If you encounter a compedium in the form of a Docker container or Dockerfile, you will need to run Docker.
+
+Installing Docker (Desktop) on [Windows](https://docs.docker.com/desktop/install/windows-install/) or [MacOS](https://docs.docker.com/desktop/install/mac-install/) is possible, but complications and caveats exist.
+The preferred way to use Docker (Server) is through a server running [a supported Linux distribution](https://docs.docker.com/engine/install/#server).
+
+A Dockerfile contains instructions on how to create ("build") a Docker container; run [docker build](https://docs.docker.com/engine/reference/commandline/build/) to turn a project-with-Dockerfile into a container.
+Alternatively, the Docker container may have already been built; in this case, [docker pull](https://docs.docker.com/engine/reference/commandline/pull/) the container onto your machine.
+Once we have a container, we can use [docker run](https://docs.docker.com/engine/reference/commandline/run/) to execute the container.
+
+Note that Docker images are essentially virtual machines inside your system, so you may not be able to directly communicate with the virtual machine. 
+Often the communication happens through a browser.
+For example, the Docker image can run RStudio Server (or JupyterLab), and you can access the service with a browser.
+
+#### Cloud services
+
+Alternatively, you can utilize an online service to run Docker.
+
+Many platforms offer "virtual machines" that run Linux distributions, so you can install and run Docker inside these machines.
+Another commonly-seen approach is for the platform to run Docker for you.
+
+When using cloud services, especially "virtual machines", it is important to note that there is an increased risk of someone hacking into your cloud machine.
+Therefore, when using a cloud service, it is desirable to follow common best practices, and take extra precautions to guard against unauthorized access to your machine.
 
 ## Acknowledgement
 

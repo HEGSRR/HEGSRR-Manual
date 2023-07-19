@@ -67,4 +67,5 @@ the-renv-package
 python-1
 manually-create-requirements.txt
 docker
+cloud-services
 acknowledgement
