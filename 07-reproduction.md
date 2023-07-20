@@ -5,19 +5,21 @@ This chapter is devoted to that epilogue: how to engage with a published open sc
 The repurposing of a scientific study will normally start with reproducing the original study results-- a process that will differ depending on the computational environment and original materials.
 We hope that by standardizing a research template, we will have eased the work of reproducing the study.
 
-This chapter provides some guidance for reproducing a study that is specific to research published with an open science workflow and conforming to version 2.0 or greater of the [HEGSRR-Template](https://www.github.com/HEGSRR/HEGSRR-Template).
-The chapter essentially outlines methods for reproducing the computational environment of a prior study.
+This chapter provides some guidance for reproducing a study that has been published with an executable research compendium.
+We first review procedures for studies conforming to version 2.0 or greater of the [HEGSRR-Template](https://www.github.com/HEGSRR/HEGSRR-Template).
+Then, we provide some options for studies published in other formats.
+For each scenario, we review options for two commonly used computational notebook formats: R with R Markdown, and Python with Jupyter.
 
 ## Our template
 
 Our reproducibility template, which can be found at [HEGSRR/HEGSRR-Template](https://github.com/HEGSRR/HEGSRR-Template) on GitHub, is designed to reduce common frustrations when trying to execute a compendium for computational geography.
-Here are some tips on recovering the computational environments recorded in packages using our template.
+Here are some tips on setting up the computational environments equivalent to those used in our template.
 
 ### R
 
 R is "a free software environment for statistical computing and graphics".
 To install R, navigate to <https://cloud.r-project.org/>.
-Additionally, install RStudio (<https://posit.co/downloads/>), the most popular IDE for R. ^[Jetbrains, [The State of Developer Ecosystem in 2020](https://www.jetbrains.com/lp/devecosystem-2020/r/) survey]
+Additionally, install RStudio (<https://posit.co/downloads/>), the most popular IDE (Integrated development environment) for R. ^[Jetbrains, [The State of Developer Ecosystem in 2020](https://www.jetbrains.com/lp/devecosystem-2020/r/) survey]
 
 Those looking for a "cloud" solution may want to try out [Posit Cloud](https://posit.cloud/).
 
@@ -64,10 +66,11 @@ For Python, our template ([HEGSRR/HEGSRR-Template](https://github.com/HEGSRR/HEG
 The generated list is named `requirements.txt`, and can be found under `procedure/environment/`.
 
 #### Disposable environment
-Installing packages, even from `pip`, can make your system environment messy.
+The Python package manager, `pip`, installs packages into a global library.
+This may lead to conflicts, such as when different projects require different versions of the same package.
 
-Fortunately, disposable environments are available so that one does not have to worry about leaving a messy system behind.
-One example is [Google Colab](https://colab.google/), where one is given a fresh machine whenever one connects to a Jupyter runtime.
+Fortunately, if a machine is disposable such that it never runs more than one project, then one does not have to worry about managing packages - one can simply install-and-forget.
+One example of such a "disposable environment" is [Google Colab](https://colab.google/), where one is given a fresh machine whenever one connects to a Jupyter runtime.
 
 If you are using such an environment, then simply run the following code (in Jupyter) to install the required packages:
 
@@ -90,11 +93,11 @@ Here are some general tips for how to recover from a research compendium one mig
 
 ### R
 
-If you encounter a list of packages and their respective versions, you will have to install an old version manually.
+If you encounter a list of packages and their respective versions, you will have to install these versions manually.
 You can do this with the `remotes::install_version()` function documented [here](https://search.r-project.org/CRAN/refmans/remotes/html/install_version.html).
 
 However, older version of packages on CRAN are usually only available in "source" form, and not an immediately usable "binary" form.
-This means that you will need to have an R development environment installed.
+This means that you will need to have an R development environment installed for the package to be compiled from source to binary.
 You can check if you do by running `devtools::has_devel()`.
 
 On Windows, the "development environment" is [RTools](https://cran.r-project.org/bin/windows/Rtools/);
@@ -103,6 +106,13 @@ on MacOS [the process](https://mac.r-project.org/tools/) is slightly more compli
 One further complication is that packages often require system-level dependencies.
 These dependencies are additional software that are not always available, or consistent, across different machines.
 Thus, installing "source" packages is often prone to failure.
+
+#### Recovering with `groundhog`
+Fortunately, the `groundhog` package ([CredibilityLab/groundhog](https://github.com/CredibilityLab/groundhog)) can be used to attempt recovery of a computational environment, especially when the original versions are unknown.
+
+Given a list of packages, the next step is to guess the "groundhog day" for these packages to be up-to-date.
+A good guess is when the research in question was conducted, or the date of publication.
+Once a date (for which the packages function correctly) is identified, that date can be recorded, and a reproducible compedium is produced.
 
 #### The `renv` package
 
@@ -137,18 +147,27 @@ To ensure repeatability, it is best practice to specify an exact version of pack
 
 ### Docker
 
-If you encounter a compedium in the form of a Docker container or Dockerfile, you will need to run Docker.
+You may encounter a compedium in the form of a Docker container or Dockerfile.
+In this case, you will need to run Docker.
+
+Docker is software that can package software into "containers".
+These containers then run inside a virtual machine, within a "host" machine that runs the Docker program.
+
+Docker containers can be distributed directly, usually through a "container registry" that you can "pull" from, and occasionally through a large file.
+
+They can also come in the form of a Dockerfile, which is the "recipe" for producing a Docker container.
+The Dockerfile will need to be accompanied with files (data, software, etc.) that Docker uses as "ingredients" to produce the Docker container.
 
 Installing Docker (Desktop) on [Windows](https://docs.docker.com/desktop/install/windows-install/) or [MacOS](https://docs.docker.com/desktop/install/mac-install/) is possible, but complications and caveats exist.
 The preferred way to use Docker (Server) is through a server running [a supported Linux distribution](https://docs.docker.com/engine/install/#server).
 
 A Dockerfile contains instructions on how to create ("build") a Docker container; run [docker build](https://docs.docker.com/engine/reference/commandline/build/) to turn a project-with-Dockerfile into a container.
-Alternatively, the Docker container may have already been built; in this case, [docker pull](https://docs.docker.com/engine/reference/commandline/pull/) the container onto your machine.
+Alternatively, the Docker container may have already been built; in this case, [docker pull](https://docs.docker.com/engine/reference/commandline/pull/) the container onto the host machine.
 Once we have a container, we can use [docker run](https://docs.docker.com/engine/reference/commandline/run/) to execute the container.
 
-Note that Docker images are essentially virtual machines inside your system, so you may not be able to directly communicate with the virtual machine. 
-Often the communication happens through a browser.
-For example, the Docker image can run RStudio Server (or JupyterLab), and you can access the service with a browser.
+Note that Docker images are essentially virtual machines inside your system, so it is not usually possible to directly access the virtual machine. 
+Often, the communication happens through a browser.
+For example, the Docker image may run RStudio Server (or JupyterLab), in which case you can access the service with a browser.
 
 #### Cloud services
 
@@ -157,8 +176,8 @@ Alternatively, you can utilize an online service to run Docker.
 Many platforms offer "virtual machines" that run Linux distributions, so you can install and run Docker inside these machines.
 Another commonly-seen approach is for the platform to run Docker for you.
 
-When using cloud services, especially "virtual machines", it is important to note that there is an increased risk of someone hacking into your cloud machine.
-Therefore, when using a cloud service, it is desirable to follow common best practices, and take extra precautions to guard against unauthorized access to your machine.
+When using cloud services, especially "virtual machines", it is important to note that there is a risk of someone hacking into your cloud machine, possibly from anywhere in the world.
+Therefore, when using a cloud service, it is desirable to follow common best practices (e.g. use a strong password, use SSH keys, set up a firewall), and take extra precautions to guard against unauthorized access to your machine.
 
 ## Acknowledgement
 

@@ -63,6 +63,7 @@ disposable-environment
 package-management
 other-compendiums
 r-1
+recovering-with-groundhog
 the-renv-package
 python-1
 manually-create-requirements.txt

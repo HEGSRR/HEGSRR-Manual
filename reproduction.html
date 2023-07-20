@@ -71,21 +71,23 @@
 This chapter is devoted to that epilogue: how to engage with a published open science study.
 The repurposing of a scientific study will normally start with reproducing the original study results– a process that will differ depending on the computational environment and original materials.
 We hope that by standardizing a research template, we will have eased the work of reproducing the study.</p>
-<p>This chapter provides some guidance for reproducing a study that is specific to research published with an open science workflow and conforming to version 2.0 or greater of the <a href="https://www.github.com/HEGSRR/HEGSRR-Template">HEGSRR-Template</a>.
-The chapter essentially outlines methods for reproducing the computational environment of a prior study.</p>
+<p>This chapter provides some guidance for reproducing a study that has been published with an executable research compendium.
+We first review procedures for studies conforming to version 2.0 or greater of the <a href="https://www.github.com/HEGSRR/HEGSRR-Template">HEGSRR-Template</a>.
+Then, we provide some options for studies published in other formats.
+For each scenario, we review options for two commonly used computational notebook formats: R with R Markdown, and Python with Jupyter.</p>
 <div id="our-template" class="section level2" number="8.1">
 <h2>
 <span class="header-section-number">8.1</span> Our template<a class="anchor" aria-label="anchor" href="#our-template"><i class="fas fa-link"></i></a>
 </h2>
 <p>Our reproducibility template, which can be found at <a href="https://github.com/HEGSRR/HEGSRR-Template">HEGSRR/HEGSRR-Template</a> on GitHub, is designed to reduce common frustrations when trying to execute a compendium for computational geography.
-Here are some tips on recovering the computational environments recorded in packages using our template.</p>
+Here are some tips on setting up the computational environments equivalent to those used in our template.</p>
 <div id="r" class="section level3" number="8.1.1">
 <h3>
 <span class="header-section-number">8.1.1</span> R<a class="anchor" aria-label="anchor" href="#r"><i class="fas fa-link"></i></a>
 </h3>
 <p>R is “a free software environment for statistical computing and graphics”.
 To install R, navigate to <a href="https://cloud.r-project.org/" class="uri">https://cloud.r-project.org/</a>.
-Additionally, install RStudio (<a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a>), the most popular IDE for R. <a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Jetbrains, &lt;a href="https://www.jetbrains.com/lp/devecosystem-2020/r/"&gt;The State of Developer Ecosystem in 2020&lt;/a&gt; survey&lt;/p&gt;'><sup>1</sup></a></p>
+Additionally, install RStudio (<a href="https://posit.co/downloads/" class="uri">https://posit.co/downloads/</a>), the most popular IDE (Integrated development environment) for R. <a class="footnote-ref" tabindex="0" data-toggle="popover" data-content='&lt;p&gt;Jetbrains, &lt;a href="https://www.jetbrains.com/lp/devecosystem-2020/r/"&gt;The State of Developer Ecosystem in 2020&lt;/a&gt; survey&lt;/p&gt;'><sup>1</sup></a></p>
 <p>Those looking for a “cloud” solution may want to try out <a href="https://posit.cloud/">Posit Cloud</a>.</p>
 <div id="the-groundhog-package" class="section level4" number="8.1.1.1">
 <h4>
@@ -132,9 +134,10 @@ Additional benefits of these cloud notebooks <em>may</em> include:</p>
 <h4>
 <span class="header-section-number">8.1.2.2</span> Disposable environment<a class="anchor" aria-label="anchor" href="#disposable-environment"><i class="fas fa-link"></i></a>
 </h4>
-<p>Installing packages, even from <code>pip</code>, can make your system environment messy.</p>
-<p>Fortunately, disposable environments are available so that one does not have to worry about leaving a messy system behind.
-One example is <a href="https://colab.google/">Google Colab</a>, where one is given a fresh machine whenever one connects to a Jupyter runtime.</p>
+<p>The Python package manager, <code>pip</code>, installs packages into a global library.
+This may lead to conflicts, such as when different projects require different versions of the same package.</p>
+<p>Fortunately, if a machine is disposable such that it never runs more than one project, then one does not have to worry about managing packages - one can simply install-and-forget.
+One example of such a “disposable environment” is <a href="https://colab.google/">Google Colab</a>, where one is given a fresh machine whenever one connects to a Jupyter runtime.</p>
 <p>If you are using such an environment, then simply run the following code (in Jupyter) to install the required packages:</p>
 <div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="reproduction.html#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>r <span class="op">/</span>path<span class="op">/</span>to<span class="op">/</span>requirements.txt</span></code></pre></div>
 </div>
@@ -159,19 +162,28 @@ Python’s own <a href="https://docs.python.org/3/library/venv.html">venv</a> an
 <h3>
 <span class="header-section-number">8.2.1</span> R<a class="anchor" aria-label="anchor" href="#r-1"><i class="fas fa-link"></i></a>
 </h3>
-<p>If you encounter a list of packages and their respective versions, you will have to install an old version manually.
+<p>If you encounter a list of packages and their respective versions, you will have to install these versions manually.
 You can do this with the <code>remotes::install_version()</code> function documented <a href="https://search.r-project.org/CRAN/refmans/remotes/html/install_version.html">here</a>.</p>
 <p>However, older version of packages on CRAN are usually only available in “source” form, and not an immediately usable “binary” form.
-This means that you will need to have an R development environment installed.
+This means that you will need to have an R development environment installed for the package to be compiled from source to binary.
 You can check if you do by running <code>devtools::has_devel()</code>.</p>
 <p>On Windows, the “development environment” is <a href="https://cran.r-project.org/bin/windows/Rtools/">RTools</a>;
 on MacOS <a href="https://mac.r-project.org/tools/">the process</a> is slightly more complicated.</p>
 <p>One further complication is that packages often require system-level dependencies.
 These dependencies are additional software that are not always available, or consistent, across different machines.
 Thus, installing “source” packages is often prone to failure.</p>
-<div id="the-renv-package" class="section level4" number="8.2.1.1">
+<div id="recovering-with-groundhog" class="section level4" number="8.2.1.1">
 <h4>
-<span class="header-section-number">8.2.1.1</span> The <code>renv</code> package<a class="anchor" aria-label="anchor" href="#the-renv-package"><i class="fas fa-link"></i></a>
+<span class="header-section-number">8.2.1.1</span> Recovering with <code>groundhog</code><a class="anchor" aria-label="anchor" href="#recovering-with-groundhog"><i class="fas fa-link"></i></a>
+</h4>
+<p>Fortunately, the <code>groundhog</code> package (<a href="https://github.com/CredibilityLab/groundhog">CredibilityLab/groundhog</a>) can be used to attempt recovery of a computational environment, especially when the original versions are unknown.</p>
+<p>Given a list of packages, the next step is to guess the “groundhog day” for these packages to be up-to-date.
+A good guess is when the research in question was conducted, or the date of publication.
+Once a date (for which the packages function correctly) is identified, that date can be recorded, and a reproducible compedium is produced.</p>
+</div>
+<div id="the-renv-package" class="section level4" number="8.2.1.2">
+<h4>
+<span class="header-section-number">8.2.1.2</span> The <code>renv</code> package<a class="anchor" aria-label="anchor" href="#the-renv-package"><i class="fas fa-link"></i></a>
 </h4>
 <p>Analogous to <code>venv</code> in Python, <code>renv</code> records the versions of R and its packages for a certain project, and isolates these packages in a separate virtual environment.</p>
 <p>Per <a href="https://rstudio.github.io/renv/articles/renv.html#collaboration">the documentation</a>, a project with <code>renv</code> will contain a <code>renv</code> directory, as well as a <code>renv.lock</code> file.
@@ -210,15 +222,21 @@ Simply find a package version that works, and record it into the requirements fi
 <h3>
 <span class="header-section-number">8.2.3</span> Docker<a class="anchor" aria-label="anchor" href="#docker"><i class="fas fa-link"></i></a>
 </h3>
-<p>If you encounter a compedium in the form of a Docker container or Dockerfile, you will need to run Docker.</p>
+<p>You may encounter a compedium in the form of a Docker container or Dockerfile.
+In this case, you will need to run Docker.</p>
+<p>Docker is software that can package software into “containers”.
+These containers then run inside a virtual machine, within a “host” machine that runs the Docker program.</p>
+<p>Docker containers can be distributed directly, usually through a “container registry” that you can “pull” from, and occasionally through a large file.</p>
+<p>They can also come in the form of a Dockerfile, which is the “recipe” for producing a Docker container.
+The Dockerfile will need to be accompanied with files (data, software, etc.) that Docker uses as “ingredients” to produce the Docker container.</p>
 <p>Installing Docker (Desktop) on <a href="https://docs.docker.com/desktop/install/windows-install/">Windows</a> or <a href="https://docs.docker.com/desktop/install/mac-install/">MacOS</a> is possible, but complications and caveats exist.
 The preferred way to use Docker (Server) is through a server running <a href="https://docs.docker.com/engine/install/#server">a supported Linux distribution</a>.</p>
 <p>A Dockerfile contains instructions on how to create (“build”) a Docker container; run <a href="https://docs.docker.com/engine/reference/commandline/build/">docker build</a> to turn a project-with-Dockerfile into a container.
-Alternatively, the Docker container may have already been built; in this case, <a href="https://docs.docker.com/engine/reference/commandline/pull/">docker pull</a> the container onto your machine.
+Alternatively, the Docker container may have already been built; in this case, <a href="https://docs.docker.com/engine/reference/commandline/pull/">docker pull</a> the container onto the host machine.
 Once we have a container, we can use <a href="https://docs.docker.com/engine/reference/commandline/run/">docker run</a> to execute the container.</p>
-<p>Note that Docker images are essentially virtual machines inside your system, so you may not be able to directly communicate with the virtual machine.
-Often the communication happens through a browser.
-For example, the Docker image can run RStudio Server (or JupyterLab), and you can access the service with a browser.</p>
+<p>Note that Docker images are essentially virtual machines inside your system, so it is not usually possible to directly access the virtual machine.
+Often, the communication happens through a browser.
+For example, the Docker image may run RStudio Server (or JupyterLab), in which case you can access the service with a browser.</p>
 <div id="cloud-services" class="section level4" number="8.2.3.1">
 <h4>
 <span class="header-section-number">8.2.3.1</span> Cloud services<a class="anchor" aria-label="anchor" href="#cloud-services"><i class="fas fa-link"></i></a>
@@ -226,8 +244,8 @@ For example, the Docker image can run RStudio Server (or JupyterLab), and you ca
 <p>Alternatively, you can utilize an online service to run Docker.</p>
 <p>Many platforms offer “virtual machines” that run Linux distributions, so you can install and run Docker inside these machines.
 Another commonly-seen approach is for the platform to run Docker for you.</p>
-<p>When using cloud services, especially “virtual machines”, it is important to note that there is an increased risk of someone hacking into your cloud machine.
-Therefore, when using a cloud service, it is desirable to follow common best practices, and take extra precautions to guard against unauthorized access to your machine.</p>
+<p>When using cloud services, especially “virtual machines”, it is important to note that there is a risk of someone hacking into your cloud machine, possibly from anywhere in the world.
+Therefore, when using a cloud service, it is desirable to follow common best practices (e.g. use a strong password, use SSH keys, set up a firewall), and take extra precautions to guard against unauthorized access to your machine.</p>
 </div>
 </div>
 </div>
@@ -284,7 +302,7 @@ Therefore, when using a cloud service, it is desirable to follow common best pra
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-07-19.</p>
+    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-07-20.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">
