@@ -1,25 +1,31 @@
 # Reproduction
 
-The whole concept behind open science is that other researchers or students will be able to reproduce, replicate, and extend scientific studies after they are published.
+The whole concept behind open science is that other researchers or students will be able to reproduce, 
+replicate, and extend scientific studies after they are published.
 This chapter is devoted to that epilogue: how to engage with a published open science study.
-The repurposing of a scientific study will normally start with reproducing the original study results-- a process that will differ depending on the computational environment and original materials.
+The repurposing of a scientific study will normally start with reproducing the original study results - a process that will differ depending on the computational environment and original materials.
 We hope that by standardizing a research template, we will have eased the work of reproducing the study.
 
 This chapter provides some guidance for reproducing a study that has been published with an executable research compendium.
 We first review procedures for studies conforming to version 2.0 or greater of the [HEGSRR-Template](https://www.github.com/HEGSRR/HEGSRR-Template).
 Then, we provide some options for studies published in other formats.
-For each scenario, we review options for two commonly used computational notebook formats: R with R Markdown, and Python with Jupyter.
+For each scenario, we review options for two commonly used computational notebook formats: 
+R with R Markdown, and Python with Jupyter.
 
 ## Our template
 
 Our reproducibility template, which can be found at [HEGSRR/HEGSRR-Template](https://github.com/HEGSRR/HEGSRR-Template) on GitHub, is designed to reduce common frustrations when trying to execute a compendium for computational geography.
 Here are some tips on setting up the computational environments equivalent to those used in our template.
 
+Refer to the `procedure/environment/` folder for a README.md that may contain quick start instructions.
+
 ### R
 
 R is "a free software environment for statistical computing and graphics".
 To install R, navigate to <https://cloud.r-project.org/>.
-Additionally, install RStudio (<https://posit.co/downloads/>), the most popular IDE (Integrated development environment) for R. ^[Jetbrains, [The State of Developer Ecosystem in 2020](https://www.jetbrains.com/lp/devecosystem-2020/r/) survey]
+Additionally, install RStudio (<https://posit.co/downloads/>), 
+the most popular IDE (Integrated development environment) for R. 
+^[Jetbrains, [The State of Developer Ecosystem in 2020](https://www.jetbrains.com/lp/devecosystem-2020/r/) survey]
 
 Those looking for a "cloud" solution may want to try out [Posit Cloud](https://posit.cloud/).
 
@@ -49,7 +55,8 @@ See the article [Changing R version for the RStudio Desktop IDE](https://support
 
 Installing Python locally can be somewhat complicated.
 In addition to Python, [Jupyter](https://jupyter.org/) is also needed to have interactive notebooks.
-Tutorials found on the Internet also frequently mention [conda](https://docs.conda.io/en/latest/), a package manager; [additional packages](https://stackoverflow.com/a/43197286) such as `ipykernel` or `nb_conda_kernels` may also be needed.
+Tutorials found on the Internet also frequently mention [conda](https://docs.conda.io/en/latest/), a package manager; 
+[additional packages](https://stackoverflow.com/a/43197286) such as `ipykernel` or `nb_conda_kernels` may also be needed.
 
 As an alternative, [many platforms](https://datasciencenotebook.org/) offer a "cloud" notebook that requires minimal setup.
 Additional benefits of these cloud notebooks *may* include:
@@ -59,24 +66,13 @@ Additional benefits of these cloud notebooks *may* include:
 - Access to premium hardware for more computational power, usually at a cost
 - Share and collaborate with others
 
-#### The `pigar` package
-
-For Python, our template ([HEGSRR/HEGSRR-Template](https://github.com/HEGSRR/HEGSRR-Template)) uses the package `pigar` ([damnever/pigar](https://github.com/damnever/pigar)) to generate a list of packages needed.
-
-The generated list is named `requirements.txt`, and can be found under `procedure/environment/`.
-
 #### Disposable environment
 The Python package manager, `pip`, installs packages into a global library.
 This may lead to conflicts, such as when different projects require different versions of the same package.
 
 Fortunately, if a machine is disposable such that it never runs more than one project, then one does not have to worry about managing packages - one can simply install-and-forget.
 One example of such a "disposable environment" is [Google Colab](https://colab.google/), where one is given a fresh machine whenever one connects to a Jupyter runtime.
-
-If you are using such an environment, then simply run the following code (in Jupyter) to install the required packages:
-
-```python
-!pip install -r /path/to/requirements.txt
-```
+Another example is <https://mybinder.org/>, which provides a free virtual machine from a repository of Jupyter notebooks.
 
 #### Package management
 However, if you are working on a personal laptop, departmental machine, or another non-disposable environment, then keeping the system tidy is desirable.
@@ -86,6 +82,54 @@ With a virtual environment, no changes are made at the system-level.
 Python's own [venv](https://docs.python.org/3/library/venv.html) and [conda](https://conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html) are two common approaches.
 
 Here is a tutorial from the website RealPython that walks you through using, as well as motivates, venv: [Python Virtual Environments: A Primer](https://realpython.com/python-virtual-environments-a-primer/)
+
+#### The `pipenv` package
+For Python, our template ([HEGSRR/HEGSRR-Template](https://github.com/HEGSRR/HEGSRR-Template)) may have used the package `pipenv` for a virtual environment.
+This is indicated by a `Pipfile` and a `Pipfile.lock` file, found under the `procedure/environment/` folder.
+
+To recover the computational environment, first install `pipenv`:
+
+```python
+!pip install --user pipenv
+```
+
+Then, navigate to the `procedure/environment/` folder.
+If a `Pipfile` and a `Pipfile.lock` file are present, run: 
+
+```python
+!cd ../environment
+!pipenv sync
+```
+
+If a `Pipfile.lock` file is not present, run:
+```python
+!cd ../environment
+!pipenv install
+!pipenv sync
+```
+
+#### The `pigar` package
+If no `Pipfile` or `Pipfile.lock` file is found under `procedure/environment/`, 
+then the project in question may have used `pigar` ([damnever/pigar](https://github.com/damnever/pigar)) to generate `requirements.txt`,
+a list of the packages needed.
+
+If you are using a disposable environment, then simply run the following code (in Jupyter) to install the required packages:
+
+```python
+!pip install -r /path/to/requirements.txt
+```
+
+For non-disposable environments, we recommend installing `pipenv` for virtual environments:
+
+```python
+!pip install --user pipenv
+```
+
+Then, utilize `pipenv` to import the requirements file:
+
+```python
+!pipenv install -r path/to/requirements.txt
+```
 
 ## Other compendiums
 

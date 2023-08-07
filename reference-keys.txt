@@ -58,9 +58,10 @@ our-template
 r
 the-groundhog-package
 python
-the-pigar-package
 disposable-environment
 package-management
+the-pipenv-package
+the-pigar-package
 other-compendiums
 r-1
 recovering-with-groundhog
