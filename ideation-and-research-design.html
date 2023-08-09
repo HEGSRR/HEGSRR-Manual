@@ -357,8 +357,10 @@ We highly recommend keeping one main list of all software packages and versions 
 Many templates and guides to computational research suggest writing code in a series of scripts, one for each phase of the research workflow.
 If you are taking this approach, beware of loading different sets of packages in different scripts without maintaining one comprehensive list of all required packages.</p>
 <p>For users of R, our template code, at a minimum, saves environment information using the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function.
-Our Rmarkdown template includes code for using the <code>groundhog</code> package to manage loading the version of R and packages and their dependencies as they were on a specific date.</p>
-<p>For users of Python, …</p>
+Users are encouraged to install the <code>devtools</code> package and replace this with <code>devtools::session_info()</code>.
+In addition, our Rmarkdown template includes code for using the <code>groundhog</code> package to manage loading the version of R and packages and their dependencies as they were on a specific date.</p>
+<p>For users of Python, this folder should contain either <code>environment.yml</code>, <code>requirements.txt</code>, or <code>Pipfile</code> with <code>Pipfile.lock</code>, depending on the package management tool used.
+Users are asked to include instructions on recovering the computational environment in the README.md file.</p>
 </div>
 <div id="code" class="section level3" number="2.7.2">
 <h3>
@@ -446,7 +448,7 @@ You have connected your research registration on OSF to a GitHub</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-08-07.</p>
+    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-08-09.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

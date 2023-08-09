@@ -211,9 +211,11 @@ Many templates and guides to computational research suggest writing code in a se
 If you are taking this approach, beware of loading different sets of packages in different scripts without maintaining one comprehensive list of all required packages.
 
 For users of R, our template code, at a minimum, saves environment information using the `sessionInfo()` function.
-Our Rmarkdown template includes code for using the `groundhog` package to manage loading the version of R and packages and their dependencies as they were on a specific date.
+Users are encouraged to install the `devtools` package and replace this with `devtools::session_info()`.
+In addition, our Rmarkdown template includes code for using the `groundhog` package to manage loading the version of R and packages and their dependencies as they were on a specific date.
 
-For users of Python, ...
+For users of Python, this folder should contain either `environment.yml`, `requirements.txt`, or `Pipfile` with `Pipfile.lock`, depending on the package management tool used.
+Users are asked to include instructions on recovering the computational environment in the README.md file.
 
 ### Code
 
