@@ -359,12 +359,13 @@ If you are taking this approach, take caution not to load different sets of pack
 <p>If you are using R, we suggest that you also make use of our template Rmarkdown code in <code>01-R-markdown.Rmd</code>.
 The code in the computational environment section creates a list of packages to load in a data object named <code>packages</code>.
 The <code>groundhog</code> package is then used to manage loading the version of R and packages and their dependencies as they were on a specific date, set as <code>groundhog.day</code>.
-Once the packages are loaded, the code uses the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function to query computational environment information, and saves this information in the <code>environment</code> directory in an <code>r-environment.txt</code> text file
+Please keep track of the packages you are using, and instead of using <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> to load them, use <code>groundhog</code> instead.
+Once the packages are loaded, the code uses the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function to query computational environment information, and saves this information in the <code>environment</code> directory in an <code>r-environment.txt</code> text file.
 For more useful environment information, install the <code>devtools</code> package and replace <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> with <code>devtools::session_info()</code>.</p>
-<p>If you are using Python, you likely have your own system for installing required, e.g. <code>pip</code> or <code>conda</code>, prior to writing code.
-Packages are then loaded and aliased individually in the python scripts.
-Regardless of the system, that you have used for installing packages, information about required packages must be recorded in the <code>environment</code> directory.
-Depending on the package management tool used, this information may be recorded in an <code>environment.yml</code>, <code>requirements.txt</code>, or <code>Pipfile</code> with <code>Pipfile.lock</code>.
+<p>If you are using Python, you likely have your own system for installing packages, e.g. <code>pip</code> or <code>conda</code>, prior to writing code.
+Packages are then loaded and aliased as needed with the <code>import</code> statement.
+Regardless of the system that you have used for installing packages, information about required packages must be recorded in the <code>environment</code> directory.
+Depending on the package management tool used, this information may be recorded in an <code>environment.yml</code>, <code>requirements.txt</code>, or <code>Pipfile</code> with <code>Pipfile.lock</code>, file(s).
 Additionally, researchers using Python should include instructions on recovering the computational environment in the <code>environment</code> directory’s <code>README.md</code> file.</p>
 <p>For a sense of how critical it is to record the computational environment, read ahead to the reproduction chapter.</p>
 </div>

@@ -213,13 +213,14 @@ If you are taking this approach, take caution not to load different sets of pack
 If you are using R, we suggest that you also make use of our template Rmarkdown code in `01-R-markdown.Rmd`.
 The code in the computational environment section creates a list of packages to load in a data object named `packages`.
 The `groundhog` package is then used to manage loading the version of R and packages and their dependencies as they were on a specific date, set as `groundhog.day`.
-Once the packages are loaded, the code uses the `sessionInfo()` function to query computational environment information, and saves this information in the `environment` directory in an `r-environment.txt` text file
+Please keep track of the packages you are using, and instead of using `library()` to load them, use `groundhog` instead.
+Once the packages are loaded, the code uses the `sessionInfo()` function to query computational environment information, and saves this information in the `environment` directory in an `r-environment.txt` text file.
 For more useful environment information, install the `devtools` package and replace `sessionInfo()` with `devtools::session_info()`.
 
-If you are using Python, you likely have your own system for installing required, e.g. `pip` or `conda`, prior to writing code.
-Packages are then loaded and aliased individually in the python scripts.
-Regardless of the system, that you have used for installing packages, information about required packages must be recorded in the `environment` directory.
-Depending on the package management tool used, this information may be recorded in an `environment.yml`, `requirements.txt`, or `Pipfile` with `Pipfile.lock`.
+If you are using Python, you likely have your own system for installing packages, e.g. `pip` or `conda`, prior to writing code.
+Packages are then loaded and aliased as needed with the `import` statement.
+Regardless of the system that you have used for installing packages, information about required packages must be recorded in the `environment` directory.
+Depending on the package management tool used, this information may be recorded in an `environment.yml`, `requirements.txt`, or `Pipfile` with `Pipfile.lock`, file(s).
 Additionally, researchers using Python should include instructions on recovering the computational environment in the `environment` directory's `README.md` file.
 
 For a sense of how critical it is to record the computational environment, read ahead to the reproduction chapter.
