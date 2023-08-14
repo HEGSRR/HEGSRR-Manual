@@ -10,7 +10,7 @@ The point is to start increasing the transparency and provenance of your researc
 
 ## Develop your Research Plan
 
-It is already time to translate your specific research question and archetypical research design, into a specific research plan.
+It is already time to translate your specific research question and archetypical research design into a specific research plan.
 
 ### Reproduction studies
 
@@ -206,40 +206,49 @@ Contextual factors or confounds of human subjects research or field research sho
 
 It is imperative to track the versions of software, software packages, and their dependencies for a research project.
 Package versions change frequently, and may even change while you are working on your project.
-We highly recommend keeping one main list of all software packages and versions requried for a project and using this list to install and load the packages in code and to document metadata about the computational environment.
-Many templates and guides to computational research suggest writing code in a series of scripts, one for each phase of the research workflow.
-If you are taking this approach, beware of loading different sets of packages in different scripts without maintaining one comprehensive list of all required packages.
+We highly recommend keeping one main list of all software packages and versions required for a project and using this list to install and load the packages in code and to document metadata about the computational environment.
+Many guides to reproducible computational research suggest writing code in a series of scripts, with one script for each phase of the research workflow.
+If you are taking this approach, take caution not to load different sets of packages in different scripts without maintaining one comprehensive list of all required packages.
 
-For users of R, our template code, at a minimum, saves environment information using the `sessionInfo()` function.
-Users are encouraged to install the `devtools` package and replace this with `devtools::session_info()`.
-In addition, our Rmarkdown template includes code for using the `groundhog` package to manage loading the version of R and packages and their dependencies as they were on a specific date.
+If you are using R, we suggest that you also make use of our template Rmarkdown code in `01-R-markdown.Rmd`.
+The code in the computational environment section creates a list of packages to load in a data object named `packages`.
+The `groundhog` package is then used to manage loading the version of R and packages and their dependencies as they were on a specific date, set as `groundhog.day`.
+Once the packages are loaded, the code uses the `sessionInfo()` function to query computational environment information, and saves this information in the `environment` directory in an `r-environment.txt` text file
+For more useful environment information, install the `devtools` package and replace `sessionInfo()` with `devtools::session_info()`.
 
-For users of Python, this folder should contain either `environment.yml`, `requirements.txt`, or `Pipfile` with `Pipfile.lock`, depending on the package management tool used.
-Users are asked to include instructions on recovering the computational environment in the README.md file.
+If you are using Python, you likely have your own system for installing required, e.g. `pip` or `conda`, prior to writing code.
+Packages are then loaded and aliased individually in the python scripts.
+Regardless of the system, that you have used for installing packages, information about required packages must be recorded in the `environment` directory.
+Depending on the package management tool used, this information may be recorded in an `environment.yml`, `requirements.txt`, or `Pipfile` with `Pipfile.lock`.
+Additionally, researchers using Python should include instructions on recovering the computational environment in the `environment` directory's `README.md` file.
+
+For a sense of how critical it is to record the computational environment, read ahead to the reproduction chapter.
 
 ### Code
 
 Store computational code-based research procedures in the `code` subdirectory.
+Examples include R scripts, Rmarkdown notebooks, Python scripts, Jupyter notebooks, KNIME workflows, executable graphical models (e.g. for QGIS or GRASS), batch processing scripts, macros, parameter files, and so on.
 
 ### Protocols
 
 Store any non-computational protocols and research procedures in the `protocols` subdirectory.
+Examples include Institutional Review Board (IRB) protocols for human subjects research, survey forms or instruments, protocols for field data collection, or protocols for systematic reviews or qualitative coding.
 
 - store IRB protocol and any forms or instruments in procedures / protocols
 - the research compendium is part of the data management plan
 - read ahead to dissemination phase for considering privacy and data management
 
-## Pilot study
+## Pilot studies
 
 Some research designs will benefit from a pilot study, which will use a limited set of observations to test and revise (the) data collection instrument(s) or test the methodology on a limited set of data.
 Pilot studies should be specified in the analysis plan methodology and disclosed in the *Prior observations* section of the plan.
 The data observations and findings from a pilot study are not be included in the complete study and will not be disseminated or archived.
 Therefore, pilot study data and materials may be saved in the `data/scratch` directory for temporary use.
 
-- should pilot study data go into the `/scratch` folder?
-
 ## Conclusion
 
-You have developed your archetypical research design into a specific registered research plan.
-You have developed your research compendium
-You have connected your research registration on OSF to a GitHub
+At this phase of the open science research cycle, you have...
+
+... developed your archetypical research design into a specific registered research plan.  
+... developed your research compendium.  
+... connected your research registration on OSF to a GitHub.  
