@@ -8,7 +8,7 @@
 <meta name="author" content="Peter Kedron">
 <meta name="author" content="Joseph Holler">
 <meta name="description" content="In the provocation phase, you already developed a specific research question, chose an archetypical research design, and set up a research compendium. Now it is time to develop your research plan!...">
-<meta name="generator" content="bookdown 0.34 with bs4_book()">
+<meta name="generator" content="bookdown 0.35 with bs4_book()">
 <meta property="og:title" content="Chapter 2 Ideation and Research Design | HEGSRR Manual">
 <meta property="og:type" content="book">
 <meta property="og:description" content="In the provocation phase, you already developed a specific research question, chose an archetypical research design, and set up a research compendium. Now it is time to develop your research plan!...">
@@ -20,7 +20,7 @@
 <script src="libs/bootstrap-4.6.0/bootstrap.bundle.min.js"></script><link href="libs/Roboto-0.4.7/font.css" rel="stylesheet">
 <link href="libs/Fira_Code-0.4.7/font.css" rel="stylesheet">
 <link href="libs/Roboto_Slab-0.4.7/font.css" rel="stylesheet">
-<script src="libs/bs3compat-0.5.0/transition.js"></script><script src="libs/bs3compat-0.5.0/tabs.js"></script><script src="libs/bs3compat-0.5.0/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
+<script src="libs/bs3compat-0.5.1/transition.js"></script><script src="libs/bs3compat-0.5.1/tabs.js"></script><script src="libs/bs3compat-0.5.1/bs3compat.js"></script><link href="libs/bs4_book-1.0.0/bs4_book.css" rel="stylesheet">
 <script src="libs/bs4_book-1.0.0/bs4_book.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- CSS --><style type="text/css">
     
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
@@ -76,7 +76,7 @@ The point is to start increasing the transparency and provenance of your researc
 <h2>
 <span class="header-section-number">2.1</span> Develop your Research Plan<a class="anchor" aria-label="anchor" href="#develop-your-research-plan"><i class="fas fa-link"></i></a>
 </h2>
-<p>It is already time to translate your specific research question and archetypical research design, into a specific research plan.</p>
+<p>It is already time to translate your specific research question and archetypical research design into a specific research plan.</p>
 <div id="reproduction-studies" class="section level3" number="2.1.1">
 <h3>
 <span class="header-section-number">2.1.1</span> Reproduction studies<a class="anchor" aria-label="anchor" href="#reproduction-studies"><i class="fas fa-link"></i></a>
@@ -353,26 +353,34 @@ You may also document a recipe or container of the computational environment her
 Contextual factors or confounds of human subjects research or field research should be communicated in protocol documents and stored in the <code>protocols</code> subdirectory.</p>
 <p>It is imperative to track the versions of software, software packages, and their dependencies for a research project.
 Package versions change frequently, and may even change while you are working on your project.
-We highly recommend keeping one main list of all software packages and versions requried for a project and using this list to install and load the packages in code and to document metadata about the computational environment.
-Many templates and guides to computational research suggest writing code in a series of scripts, one for each phase of the research workflow.
-If you are taking this approach, beware of loading different sets of packages in different scripts without maintaining one comprehensive list of all required packages.</p>
-<p>For users of R, our template code, at a minimum, saves environment information using the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function.
-Users are encouraged to install the <code>devtools</code> package and replace this with <code>devtools::session_info()</code>.
-In addition, our Rmarkdown template includes code for using the <code>groundhog</code> package to manage loading the version of R and packages and their dependencies as they were on a specific date.</p>
-<p>For users of Python, this folder should contain either <code>environment.yml</code>, <code>requirements.txt</code>, or <code>Pipfile</code> with <code>Pipfile.lock</code>, depending on the package management tool used.
-Users are asked to include instructions on recovering the computational environment in the README.md file.</p>
+We highly recommend keeping one main list of all software packages and versions required for a project and using this list to install and load the packages in code and to document metadata about the computational environment.
+Many guides to reproducible computational research suggest writing code in a series of scripts, with one script for each phase of the research workflow.
+If you are taking this approach, take caution not to load different sets of packages in different scripts without maintaining one comprehensive list of all required packages.</p>
+<p>If you are using R, we suggest that you also make use of our template Rmarkdown code in <code>01-R-markdown.Rmd</code>.
+The code in the computational environment section creates a list of packages to load in a data object named <code>packages</code>.
+The <code>groundhog</code> package is then used to manage loading the version of R and packages and their dependencies as they were on a specific date, set as <code>groundhog.day</code>.
+Once the packages are loaded, the code uses the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function to query computational environment information, and saves this information in the <code>environment</code> directory in an <code>r-environment.txt</code> text file
+For more useful environment information, install the <code>devtools</code> package and replace <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> with <code>devtools::session_info()</code>.</p>
+<p>If you are using Python, you likely have your own system for installing required, e.g. <code>pip</code> or <code>conda</code>, prior to writing code.
+Packages are then loaded and aliased individually in the python scripts.
+Regardless of the system, that you have used for installing packages, information about required packages must be recorded in the <code>environment</code> directory.
+Depending on the package management tool used, this information may be recorded in an <code>environment.yml</code>, <code>requirements.txt</code>, or <code>Pipfile</code> with <code>Pipfile.lock</code>.
+Additionally, researchers using Python should include instructions on recovering the computational environment in the <code>environment</code> directory’s <code>README.md</code> file.</p>
+<p>For a sense of how critical it is to record the computational environment, read ahead to the reproduction chapter.</p>
 </div>
 <div id="code" class="section level3" number="2.7.2">
 <h3>
 <span class="header-section-number">2.7.2</span> Code<a class="anchor" aria-label="anchor" href="#code"><i class="fas fa-link"></i></a>
 </h3>
-<p>Store computational code-based research procedures in the <code>code</code> subdirectory.</p>
+<p>Store computational code-based research procedures in the <code>code</code> subdirectory.
+Examples include R scripts, Rmarkdown notebooks, Python scripts, Jupyter notebooks, KNIME workflows, executable graphical models (e.g. for QGIS or GRASS), batch processing scripts, macros, parameter files, and so on.</p>
 </div>
 <div id="protocols" class="section level3" number="2.7.3">
 <h3>
 <span class="header-section-number">2.7.3</span> Protocols<a class="anchor" aria-label="anchor" href="#protocols"><i class="fas fa-link"></i></a>
 </h3>
-<p>Store any non-computational protocols and research procedures in the <code>protocols</code> subdirectory.</p>
+<p>Store any non-computational protocols and research procedures in the <code>protocols</code> subdirectory.
+Examples include Institutional Review Board (IRB) protocols for human subjects research, survey forms or instruments, protocols for field data collection, or protocols for systematic reviews or qualitative coding.</p>
 <ul>
 <li>store IRB protocol and any forms or instruments in procedures / protocols</li>
 <li>the research compendium is part of the data management plan</li>
@@ -380,25 +388,23 @@ Users are asked to include instructions on recovering the computational environm
 </ul>
 </div>
 </div>
-<div id="pilot-study" class="section level2" number="2.8">
+<div id="pilot-studies" class="section level2" number="2.8">
 <h2>
-<span class="header-section-number">2.8</span> Pilot study<a class="anchor" aria-label="anchor" href="#pilot-study"><i class="fas fa-link"></i></a>
+<span class="header-section-number">2.8</span> Pilot studies<a class="anchor" aria-label="anchor" href="#pilot-studies"><i class="fas fa-link"></i></a>
 </h2>
 <p>Some research designs will benefit from a pilot study, which will use a limited set of observations to test and revise (the) data collection instrument(s) or test the methodology on a limited set of data.
 Pilot studies should be specified in the analysis plan methodology and disclosed in the <em>Prior observations</em> section of the plan.
 The data observations and findings from a pilot study are not be included in the complete study and will not be disseminated or archived.
 Therefore, pilot study data and materials may be saved in the <code>data/scratch</code> directory for temporary use.</p>
-<ul>
-<li>should pilot study data go into the <code>/scratch</code> folder?</li>
-</ul>
 </div>
 <div id="conclusion-1" class="section level2" number="2.9">
 <h2>
 <span class="header-section-number">2.9</span> Conclusion<a class="anchor" aria-label="anchor" href="#conclusion-1"><i class="fas fa-link"></i></a>
 </h2>
-<p>You have developed your archetypical research design into a specific registered research plan.
-You have developed your research compendium
-You have connected your research registration on OSF to a GitHub</p>
+<p>At this phase of the open science research cycle, you have…</p>
+<p>… developed your archetypical research design into a specific registered research plan.<br>
+… developed your research compendium.<br>
+… connected your research registration on OSF to a GitHub.</p>
 
 </div>
 </div>
@@ -429,7 +435,7 @@ You have connected your research registration on OSF to a GitHub</p>
 <li><a class="nav-link" href="#protocols"><span class="header-section-number">2.7.3</span> Protocols</a></li>
 </ul>
 </li>
-<li><a class="nav-link" href="#pilot-study"><span class="header-section-number">2.8</span> Pilot study</a></li>
+<li><a class="nav-link" href="#pilot-studies"><span class="header-section-number">2.8</span> Pilot studies</a></li>
 <li><a class="nav-link" href="#conclusion-1"><span class="header-section-number">2.9</span> Conclusion</a></li>
 </ul>
 
@@ -448,7 +454,7 @@ You have connected your research registration on OSF to a GitHub</p>
 <footer class="bg-primary text-light mt-5"><div class="container"><div class="row">
 
   <div class="col-12 col-md-6 mt-3">
-    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-08-09.</p>
+    <p>"<strong>HEGSRR Manual</strong>" was written by Peter Kedron, Joseph Holler. It was last built on 2023-08-14.</p>
   </div>
 
   <div class="col-12 col-md-6 mt-3">

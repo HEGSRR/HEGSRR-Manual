@@ -25,7 +25,7 @@ procedures
 environment
 code
 protocols
-pilot-study
+pilot-studies
 conclusion-1
 writing-an-analysis-plan-for-preregistration
 study-metadata
