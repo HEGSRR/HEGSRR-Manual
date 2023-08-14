@@ -49,17 +49,23 @@ private/**
 
 ### Caution: Dealing with large files
 
-Git is not designed to track changes in files larger than `100mb` and GitHub is not typically designed to host large files.
-You will receive errors from Git applications if you attempt to commit and push files larger than `100mb`.
+Files can come in two flavors: **plain text**, like source code, Markdown, or system logs; and **binary** files, like images, videos, or shapefiles.
+
+As a version management tool, Git is designed to track changes in **plain text** files; it can store changes in **binary** files as well, but it can only record that the whole file changed.
+
+GitHub will warn you of files larger than `50 MiB`, and reject files larger than `100 MiB`.
 Therefore, large files should generally be placed in `private` directories so that they are not tracked by Git or uploaded to GitHub.
+
 OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs.
 Significant data sources could be registered with their own DOI links.
 
-There are exceptions to this advice.
-The Git LFS (Large File Storage) program combined with enterprise subscriptions to GitHub can manage large files in a git repository.
-However, we still suggest saving large files as separate data resources so that downstream researchers attempting to reproduce or replicate your work are not required to modify your code or install and subscribe for the same large file storage options that you have used.
+If version management of large files is required, GitHub provides **paid** hosting for the Git LFS (Large File Storage) program.
+However, we still suggest saving large files as separate data resources,
+so that downstream researchers attempting to reproduce or replicate your work are not required to 
+modify your code, or install and pay for the same large file storage options that you have used.
 
-If you have accidentally attempted to commit changes with large files and you are using GitHub Desktop, go to the History tab of your repository and **undo** the last commit.
+If you have already commit changes with large files, follow GitHub's instructions here: [Removing files from a repository's history](https://docs.github.com/en/repositories/working-with-files/managing-large-files/about-large-files-on-github?platform=mac#removing-files-from-a-repositorys-history).
+On GitHub Desktop, go to the History tab of your repository and **undo** the last commit.
 The changes tab will repopulate with the changes from that commit, where you should be able uncheck any large files from inclusion in the commit.
 Meanwhile, move the large files into the appropriate `private` directory, and the `gitignore` file should take over and make them disappear from the list of changes in GitHub Desktop.
 
