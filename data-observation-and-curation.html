@@ -146,12 +146,14 @@ private/**
 <h3>
 <span class="header-section-number">4.2.2</span> Caution: Dealing with large files<a class="anchor" aria-label="anchor" href="#caution-dealing-with-large-files"><i class="fas fa-link"></i></a>
 </h3>
-<ul>
-<li>GitHub will not store files larger than 100mb</li>
-<li>These should be placed in <code>private</code> directories so that they are not tracked by Git or uploaded to GitHub</li>
-<li>OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs. Significant data sources could be registered with their own DOI links.</li>
-</ul>
-<p>Git and GitHub are not designed to track or store large files over 100 mb.</p>
+<p>Git is not designed to track changes in files larger than <code>100mb</code> and GitHub is not typically designed to host large files.
+You will receive errors from Git applications if you attempt to commit and push files larger than <code>100mb</code>.
+Therefore, large files should generally be placed in <code>private</code> directories so that they are not tracked by Git or uploaded to GitHub.
+OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs.
+Significant data sources could be registered with their own DOI links.</p>
+<p>There are exceptions to this advice.
+The Git LFS (Large File Storage) program combined with enterprise subscriptions to GitHub can manage large files in a git repository.
+However, we still suggest saving large files as separate data resources so that downstream researchers attempting to reproduce or replicate your work are not required to modify your code or install and subscribe for the same large file storage options that you have used.</p>
 <ul>
 <li>If you have accidentally attempted to commit changes with large files, do this… <strong>INSTRUCTIONS</strong>
 </li>

@@ -39,8 +39,6 @@ See more about metadata in the engaging with data section of the previous chapte
 
 Store raw data in this folder as it is collected or downloaded if the data cannot be publicly redistributed. For example, data versioning and sharing my be restricted because of large file sizes, licensing, ethics, privacy, or confidentiality. Best practices are to include code to automate the process of downloading or simulating raw private data in the first step of the methods, or to include instructions here for accessing any private or restricted-access data.
 
-
-
 *This folder is ignored by Git versioning* with the exception of this `readme.md` file by the following lines in `.gitignore`
 
 ```gitignore
@@ -51,11 +49,15 @@ private/**
 
 ### Caution: Dealing with large files
 
-- GitHub will not store files larger than 100mb
-- These should be placed in `private` directories so that they are not tracked by Git or uploaded to GitHub
-- OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs. Significant data sources could be registered with their own DOI links.
+Git is not designed to track changes in files larger than `100mb` and GitHub is not typically designed to host large files.
+You will receive errors from Git applications if you attempt to commit and push files larger than `100mb`.
+Therefore, large files should generally be placed in `private` directories so that they are not tracked by Git or uploaded to GitHub.
+OSF and Figshare both allow for larger file storage options, so you may store large files on those services and write code for downloading those files to private directories as the analysis runs.
+Significant data sources could be registered with their own DOI links.
 
-Git and GitHub are not designed to track or store large files over 100 mb.
+There are exceptions to this advice.
+The Git LFS (Large File Storage) program combined with enterprise subscriptions to GitHub can manage large files in a git repository.
+However, we still suggest saving large files as separate data resources so that downstream researchers attempting to reproduce or replicate your work are not required to modify your code or install and subscribe for the same large file storage options that you have used.
 
 - If you have accidentally attempted to commit changes with large files, do this... **INSTRUCTIONS**
 
