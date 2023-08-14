@@ -59,8 +59,9 @@ There are exceptions to this advice.
 The Git LFS (Large File Storage) program combined with enterprise subscriptions to GitHub can manage large files in a git repository.
 However, we still suggest saving large files as separate data resources so that downstream researchers attempting to reproduce or replicate your work are not required to modify your code or install and subscribe for the same large file storage options that you have used.
 
-- If you have accidentally attempted to commit changes with large files, do this... **INSTRUCTIONS**
-
+If you have accidentally attempted to commit changes with large files and you are using GitHub Desktop, go to the History tab of your repository and **undo** the last commit.
+The changes tab will repopulate with the changes from that commit, where you should be able uncheck any large files from inclusion in the commit.
+Meanwhile, move the large files into the appropriate `private` directory, and the `gitignore` file should take over and make them disappear from the list of changes in GitHub Desktop.
 
 ## Updating the analysis plan
 
