@@ -3,7 +3,7 @@ title: "HEGSRR Manual"
 author:
   - "Peter Kedron"
   - "Joseph Holler"
-date: "2023-08-14"
+date: "2023-08-15"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]

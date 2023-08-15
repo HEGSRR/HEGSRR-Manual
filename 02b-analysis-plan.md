@@ -4,7 +4,7 @@ Pre-analysis plan templates were designed to help researchers specify the resear
 It follows intuitively that the templates address research issues in biomedical research, psychology, econometrics, and other disciplines at the forefront of discovering and addressing the "replication crisis".
 The templates are well suited to experimental and quasi-experimental research designs in which the researcher has significant control over sampling and observations.
 
-However, we have not found pre-analysis plans the human-environment and geographical sciences or related disciplines, in which many research designs integrate many different data sources with different spatio-temporal supports.
+However, we have not found pre-analysis plans in the human-environment and geographical sciences or related disciplines, in which many research designs integrate many different data sources with different spatio-temporal supports.
 These research designs require sophisticated methods involving many researcher decisions and multiple threats to validity: therefore they require attention and detail in any analysis plan for preregistration.
 At the same time, we recognize that other disciplines look to geography when it comes time to specify details about their (spatial) data sources, referring researchers to the Federal Geographic Data Committee (FGDC) or the ISO 191* series of standards for geographic metadata.
 Furthermore, the highest standards for reproducible research compendia and for research data archiving require documentation with international standards.
