@@ -230,6 +230,8 @@ Once the packages are loaded, the code uses the `sessionInfo()` function to quer
 For more useful environment information, install the `devtools` package and replace `sessionInfo()` with `devtools::session_info()`.
 
 If you are using Python, you likely have your own system for installing packages, e.g. `pip` or `conda`, prior to writing code.
+Refer to `00-Python-environment-setup.ipynb` for instructions on setting up your computational environment.
+Note that choosing a package management system requires some deliberate thought and conscious choices.
 Packages are then loaded and aliased as needed with the `import` statement.
 Regardless of the system that you have used for installing packages, information about required packages must be recorded in the `environment` directory.
 Depending on the package management tool used, this information may be recorded in an `environment.yml`, `requirements.txt`, or `Pipfile` with `Pipfile.lock`, file(s).
