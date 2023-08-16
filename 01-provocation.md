@@ -117,6 +117,7 @@ Other researchers may easily `fork` new versions of the project for the purpose 
   - changes are tracked with commits
 - Orientation to the template structure / file system
   - top-level readme
+    - readme starts with a reminder to cite our template. Once you have cited our template in your research, you may remove these lines.
   - license
   - Markdown language
   - metadata
@@ -124,6 +125,7 @@ Other researchers may easily `fork` new versions of the project for the purpose 
 - committing some changes to the template
 - Recommended prefixes: Or / RPl / RPr
 - Choose appropriate `LICENSE` file for the work
+- Please cite
 
 ## Conclusion
 

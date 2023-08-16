@@ -14,11 +14,23 @@ It is already time to translate your specific research question and archetypical
 
 ### Reproduction studies
 
+For a reproduction study, the design is to use the same data and methods to produce the same results.
+Therefore, the research design will emphasize which study is to be reproduced, the motivation for reproducing it, the characteristics of the original data, the details of the original methodology, and the approach to comparing the reproduction results to the original results.
+
 ### Reanalysis studies
+
+For a reanalysis study, the design is to repeat a prior study while modifying the methodology.
+Therefore, the research design will emphasize which study is to be reanalyzed, the motivation for reanalyzing it, the characteristics of the original data, the details of the original methodology, the aspects of the methodology to be modified and rationale for doing so, and the approach to comparing the reanalysis results to the original results.
 
 ### Replication studies
 
+For a reanalysis study, the design is to repeat the methods of a prior study with new data, in a new spatial or temporal context.
+Therefore, the research design will emphasize which study is to be replicated, the motivation for replicating it, the details of the original methodology, the aspects of data/data collection and spatial or temporal context to be changed and rationale for doing so, and the approach to comparing the replication results to the original results.
+
 ### Original studies
+
+Original studies are still based on prior literature, but entail new data collection and new methods.
+Write more on archetypical original study designs here... and consider including meta-analysis as one.
 
 ## Project metadata: front matter for your study
 
