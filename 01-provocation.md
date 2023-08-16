@@ -123,6 +123,10 @@ Other researchers may easily `fork` new versions of the project for the purpose 
   - metadata
   - docs / reports
 - committing some changes to the template
+  - conflicts
+    - Command line: [Happy Git with R](https://happygitwithr.com/git-branches.html#dealing-with-conflicts)
+    - GitHub Desktop will tell you to open your editor, e.g. [Merge conflicts in VS Code](https://code.visualstudio.com/docs/sourcecontrol/overview#_merge-conflicts)
+    - Other Git GUIs may have built-in resolution strategies.
 - Recommended prefixes: Or / RPl / RPr
 - Choose appropriate `LICENSE` file for the work
 - Please cite
