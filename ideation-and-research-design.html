@@ -371,6 +371,8 @@ Please keep track of the packages you are using, and instead of using <code><a h
 Once the packages are loaded, the code uses the <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> function to query computational environment information, and saves this information in the <code>environment</code> directory in an <code>r-environment.txt</code> text file.
 For more useful environment information, install the <code>devtools</code> package and replace <code><a href="https://rdrr.io/r/utils/sessionInfo.html">sessionInfo()</a></code> with <code>devtools::session_info()</code>.</p>
 <p>If you are using Python, you likely have your own system for installing packages, e.g. <code>pip</code> or <code>conda</code>, prior to writing code.
+Refer to <code>00-Python-environment-setup.ipynb</code> for instructions on setting up your computational environment.
+Note that choosing a package management system requires some deliberate thought and conscious choices.
 Packages are then loaded and aliased as needed with the <code>import</code> statement.
 Regardless of the system that you have used for installing packages, information about required packages must be recorded in the <code>environment</code> directory.
 Depending on the package management tool used, this information may be recorded in an <code>environment.yml</code>, <code>requirements.txt</code>, or <code>Pipfile</code> with <code>Pipfile.lock</code>, file(s).
